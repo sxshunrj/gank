@@ -1,0 +1,12 @@
+
+ShiroConfiguration 初始化的类：
+    EhCacheManager
+    MyShiroRealm(EhCacheManager)
+    FilterRegistrationBean
+    LifecycleBeanPostProcessor
+    DefaultAdvisorAutoProxyCreator
+    DefaultWebSecurityManager(MyShiroRealm)
+    AuthorizationAttributeSourceAdvisor(DefaultWebSecurityManager)
+    ShiroFilterFactoryBean(DefaultWebSecurityManager)
+
+

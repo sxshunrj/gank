@@ -1,0 +1,15 @@
+.idea
+gradle
+gradle.bat
+*.iml
+*.ipr
+*.iws
+build
+out
+.gradle
+/gradlew
+/gradlew.bat
+/tmp/
+/log/
+*.properties
+!/src/main/resources/application.properties
