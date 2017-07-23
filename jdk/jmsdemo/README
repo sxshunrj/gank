@@ -1,0 +1,94 @@
+
+http://blog.csdn.net/erica_1230/article/details/51661381
+第一种：全局配置。
+1）在tomcat的conf文件夹下的context.xml配置文件中加入：
+    <Resource name="jndi/mybatis"
+                auth="Container"
+                type="javax.sql.DataSource"
+                driverClassName="com.mysql.jdbc.Driver"
+                url="jdbc:mysql://localhost:3306/appdb"
+                username="root"
+                password="123456"
+                maxActive="20"
+                maxIdle="10"
+                maxWait="10000"/>
+2)在项目的web.xml中加入资源引用：其中res-ref-name值要和context.xml的name值一致。
+    <resource-ref>
+      <description>JNDI DataSource</description>
+      <res-ref-name>jndi/mybatis</res-ref-name>
+      <res-ref-type>javax.sql.DataSource</res-ref-type>
+      <res-auth>Container</res-auth>
+    </resource-ref>
+3）jndi测试方法：
+    public void testJNDI() throws NamingException, SQLException{
+        Context ctx = new InitialContext();
+        DataSource ds = (DataSource) ctx.lookup("java:comp/env/jndi/mybatis");
+        Connection conn = ds.getConnection();
+        System.out.println(conn.isClosed());
+
+    }
+4）在jsp中调用加载jndi方式，不可以直接用main方法测试，必须通过启动容器从jsp中调用：
+    TestPageAccessURL test = new TestPageAccessURL();
+    test.testJNDI();
+
+第二种：局部配置（不推荐）。
+1）在tomcat的server.xml的<host>标签内，添加：  其他配置同第一种方式。
+    <Context path="/demo_jndi" docBase="/demo_jndi">
+       <Resource
+         name="jndi/mybatis"
+         type="javax.sql.DataSource"
+         driverClassName="com.mysql.jdbc.Driver"
+         maxIdle="2"
+         maxWait="5000"
+         username="root"
+         password="123456"
+         url="jdbc:mysql://localhost:3306/appdb"
+         maxActive="4"/>
+    </Context>
+
+第三种：局部配置。
+1）在项目的META-INFO下面新建context.xml。加入：  其他配置同第一种方式。
+    <?xml version="1.0" encoding="UTF-8"?>
+    <Context>
+        <Resource name="jndi/mybatis"
+                    auth="Container"
+                    type="javax.sql.DataSource"
+                    driverClassName="com.mysql.jdbc.Driver"
+                    url="jdbc:mysql://localhost:3306/appdb"
+                    username="root"
+                    password="123456"
+                    maxActive="20"
+                    maxIdle="10"
+                    maxWait="10000"/>
+    </Context>
+
+总结：如果要配置局部的话，推荐使用第三种方式，这样不依赖tomcat了。但是还是推荐使用第一种方式好，虽然依赖tomat，但是是全局的，而且可以配置
+多个。对于以后切换使用方便。
+在项目的web.xml中添加的资源引用可有可无。
+
+
+
+https://wenku.baidu.com/view/be1901bf1a37f111f1855b7e.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
