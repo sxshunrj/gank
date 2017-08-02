@@ -1,0 +1,66 @@
+Solr6.6 Tomcat8部署
+    准备工作：
+    [solr-6.6.0](http://www.apache.org/dyn/closer.lua/lucene/solr/6.6.0)
+    [apache-tomcat-8.5.15](http://tomcat.apache.org/download-80.cgi)
+    [jdk1.8.0_131](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+    ---
+    部署：
+    1. 首先把solr-6.6.0\server\solr-webapp中的webapp目录拷贝到apache-tomcat-8.5.15下的webapps目录里，重命名为solr；
+    2. 将solr-6.6.0\server\lib\ext下的所有jar包，以及solr-6.6.0\server\lib下以metrics开头的jar包复制到apache-tomcat-8.5.15\webapps\solr\WEB-INF\lib下；
+    3. 在apache-tomcat-8.5.15\webapps\webapp\WEB-INF中，新建classes文件夹，将solr-6.6.0\server\resources下的log4j.properties文件拷贝到里面，修改里面的solr.log=输出日志的路径（请使用/分割，注意不要有中文，避免乱码问题）；
+    4. [创建一个core](https://github.com/x113773/testall/issues/7)，然后将solr-6.6.0\server中的solr目录拷贝到E盘，重命名为solrhome；
+    5. 修改apache-tomcat-8.5.15\webapps\solr\WEB-INF中的web.xml文件：
+    打开如下注释，修改为solrhome路径
+    ```
+    <env-entry>
+    <env-entry-name>solr/home</env-entry-name>
+    <env-entry-value>E:/solrhome</env-entry-value>
+    <env-entry-type>java.lang.String</env-entry-type>
+    </env-entry>
+    ```
+    并注释掉如下代码
+    ```
+    <!-- <security-constraint>
+    <web-resource-collection>
+    <web-resource-name>Disable TRACE</web-resource-name>
+    <url-pattern>/</url-pattern>
+    <http-method>TRACE</http-method>
+    </web-resource-collection>
+    <auth-constraint/>
+    </security-constraint>
+    <security-constraint>
+    <web-resource-collection>
+    <web-resource-name>Enable everything but TRACE</web-resource-name>
+    <url-pattern>/</url-pattern>
+    <http-method-omission>TRACE</http-method-omission>
+    </web-resource-collection>
+    </security-constraint>-->
+    ```
+    6. 启动tomcat，访问http://localhost:8080/solr/index.html
+
+
+
+solr安装过程中遇到的问题和解决方案
+    org.apache.solr.common.SolrException: Error loading class ‘org.apache.solr.handler.dataimport.DataImportHandler
+        编辑solrconfig.xml
+        <lib dir="../../../contrib/dataimporthandler/lib" regex=".*\.jar" />
+        <lib dir="../../../dist/" regex="solr-dataimporthandler-.*\.jar" />
+
+
+Solr6.5配置中文分词器 http://www.cnblogs.com/immortal-ghost/p/6954360.html#top
+    复制lucene-analyzers-smartcn-6.5.1.jar该文件到 Tomcat下的 solr web应用中的lib目录下，不清楚的可以看 执行命令的地址。复制的文件就是 solr自带的中文分词器。
+        cp ./contrib/analysis-extras/lucene-libs/lucene-analyzers-smartcn-6.5.1.jar /opt/tomcat-solr/webapps/solr/WEB-INF/lib/
+    managed-schema文件
+        <!--solr cnAnalyzer-->
+          <fieldType name="solr_cnAnalyzer" class="solr.TextField" positionIncrementGap="100">
+              <analyzer type="index">
+                <tokenizer class="org.apache.lucene.analysis.cn.smart.HMMChineseTokenizerFactory"/>
+              </analyzer>
+              <analyzer type="query">
+                <tokenizer class="org.apache.lucene.analysis.cn.smart.HMMChineseTokenizerFactory"/>
+              </analyzer>
+          </fieldType>
+
+           <field name="zhname" type="solr_cnAnalyzer" indexed="true" stored="true"/>
+    重新启动 Tomcat服务器
+

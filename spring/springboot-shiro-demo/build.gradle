@@ -1,0 +1,45 @@
+
+buildscript {
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.0.RELEASE")
+    }
+}
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'idea'
+apply plugin: 'maven'
+apply plugin: 'spring-boot'
+
+group = 'com.sxshunrj.test'
+version = '1.0.0'
+
+[compileJava, compileTestJava, compileGroovy, compileTestGroovy, javadoc]*.options*.encoding = 'UTF-8'
+
+test {
+    jvmArgs '-noverify'
+}
+
+targetCompatibility = '1.8'
+sourceCompatibility = '1.8'
+
+configurations {
+    compile.exclude module: 'slf4j-nop'
+    compile.exclude module: 'logback-classic'
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    compile 'org.springframework.boot:spring-boot-starter-log4j2'
+
+    compile 'org.springframework.boot:spring-boot-starter-jdbc'
+    compile 'mysql:mysql-connector-java:5.1.20'
+
+    compile 'org.apache.shiro:shiro-spring:1.2.2'
+    compile 'org.apache.shiro:shiro-ehcache:1.2.2'
+
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+    testCompile 'com.alibaba:fastjson:1.2.4'
+    testCompile 'junit:junit:4.12'
+}
