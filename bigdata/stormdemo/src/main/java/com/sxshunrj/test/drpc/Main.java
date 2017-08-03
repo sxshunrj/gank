@@ -17,22 +17,22 @@ import org.apache.storm.topology.TopologyBuilder;
  */
 public class Main {
     public static void main(String[] args) {
-
-        LinearDRPCTopologyBuilder builder = new LinearDRPCTopologyBuilder("reach");
-
+        TopologyBuilder builder = new TopologyBuilder();
         LocalDRPC drpc = new LocalDRPC();
+
+        DRPCSpout spout = new DRPCSpout("exclamation", drpc);
+        builder.setSpout("drpc", spout);
+        builder.setBolt("exclaim", new ExclaimBolt(), 3).shuffleGrouping("drpc");
+        builder.setBolt("return", new ReturnResults(), 3).shuffleGrouping("exclaim");
+
         LocalCluster cluster = new LocalCluster();
-
-
         Config conf = new Config();
-        conf.setDebug(false);
-        conf.setMaxTaskParallelism(3);
+        cluster.submitTopology("exclaim", conf, builder.createTopology());
 
-        cluster.submitTopology("drpc-demo", conf, builder.createLocalTopology(drpc));
 
-        System.out.println("Results for 'hello':" + drpc.execute("exclamation", "hello"));
+        System.out.println(drpc.execute("exclamation", "aaa"));
+        System.out.println(drpc.execute("exclamation", "bbb"));
 
-        cluster.shutdown();
-        drpc.shutdown();
+
     }
 }
