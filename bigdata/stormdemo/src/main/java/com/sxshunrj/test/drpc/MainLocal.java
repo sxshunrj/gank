@@ -13,9 +13,9 @@ import org.apache.storm.topology.TopologyBuilder;
  * Created by IntelliJ IDEA.
  * User: sunxs
  * Date: 2017/8/3 16:05
- * Desc：
+ * Desc：本地模式
  */
-public class Main {
+public class MainLocal {
     public static void main(String[] args) {
         TopologyBuilder builder = new TopologyBuilder();
         LocalDRPC drpc = new LocalDRPC();
@@ -29,10 +29,8 @@ public class Main {
         Config conf = new Config();
         cluster.submitTopology("exclaim", conf, builder.createTopology());
 
-
         System.out.println(drpc.execute("exclamation", "aaa"));
         System.out.println(drpc.execute("exclamation", "bbb"));
-
 
     }
 }
