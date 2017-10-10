@@ -9,6 +9,7 @@ apply plugin: 'groovy'
 apply plugin: 'idea'
 apply plugin: 'maven'
 apply plugin: 'spring-boot'
+//apply plugin: 'war'
 
 group = 'com.sxshunrj.test'
 version = '1.0.0'
@@ -32,10 +33,11 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.springframework.boot:spring-boot-starter-log4j2'
 
+
     compile 'org.springframework.boot:spring-boot-starter-jdbc'
     compile 'mysql:mysql-connector-java:5.1.20'
     compile 'org.mybatis.spring.boot:mybatis-spring-boot-starter:1.1.1'
-
+	
     testCompile 'org.springframework.boot:spring-boot-starter-test'
     testCompile 'com.alibaba:fastjson:1.2.4'
     testCompile 'junit:junit:4.12'

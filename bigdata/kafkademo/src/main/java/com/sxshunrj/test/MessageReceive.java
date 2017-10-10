@@ -18,7 +18,7 @@ public class MessageReceive extends Thread{
     public MessageReceive() {
         consumer =kafka.consumer.Consumer    
                 .createJavaConsumerConnector(createConsumerConfig());    
-        this.topic = "test";
+        this.topic = "test10";
     }  
 
 	private static ConsumerConfig createConsumerConfig() {
@@ -33,7 +33,7 @@ public class MessageReceive extends Thread{
 	    props.put("zookeeper.session.timeout.ms", "100");
 	    props.put("zookeeper.sync.time.ms", "100");
 	    props.put("auto.commit.interval.ms", "100");
-	    props.put("auto.offset.reset", "none");
+	    props.put("auto.offset.reset", "largest");
 	    //序列化类  
 	    props.put("serializer.class", "kafka.serializer.StringEncoder");  
 	    
