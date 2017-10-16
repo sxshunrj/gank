@@ -1,4 +1,4 @@
-package com.sxshunrj.kafka.test;
+package com.sxshunrj.kafka.test
 
 import com.alibaba.fastjson.JSON;
 import kafka.admin.AdminUtils;
@@ -42,8 +42,6 @@ public class MyController {
             String message = request.getParameter("message");
             String topicName = request.getParameter("topicName")
 
-            topicService.createTopic(topicName)
-
             ListenableFuture<SendResult<String, String>> future = kafkaTemplate.send(topicName, "key", message);
 //            future.addCallback(new SuccessCallback<SendResult>() {
 //                @Override
@@ -73,8 +71,9 @@ public class MyController {
 
 //        return topicService.getTopic(topicName)
 //        return topicService.deleteTopic(topicName)
-        return topicService.createTopic(topicName)
+//        return topicService.createTopic(topicName)
 //        return topicService.describe(topicName)
+        return topicService.getAllTopicName()
     }
 
 }

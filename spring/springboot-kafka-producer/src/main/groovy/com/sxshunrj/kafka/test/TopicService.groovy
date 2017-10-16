@@ -1,5 +1,6 @@
 package com.sxshunrj.kafka.test
 
+import com.alibaba.fastjson.JSON
 import kafka.admin.AdminUtils
 import kafka.admin.RackAwareMode
 import kafka.admin.TopicCommand
@@ -8,6 +9,9 @@ import kafka.utils.ZkUtils
 import org.apache.kafka.common.errors.TopicExistsException
 import org.apache.kafka.common.security.JaasUtils
 import org.springframework.stereotype.Component
+import scala.Option
+import scala.collection.JavaConversions
+import scala.collection.Map
 
 /**
  * Created by IntelliJ IDEA.
@@ -20,6 +24,18 @@ class TopicService {
     private static ZkUtils zkUtils = null
     static {
         zkUtils = ZkUtils.apply("192.168.10.14:2181", 30000, 30000, JaasUtils.isZkSecurityEnabled());
+    }
+
+
+    def getAllTopicName(){
+        def allTopicConfigs = AdminUtils.fetchAllTopicConfigs(zkUtils)
+        def names = allTopicConfigs.keySet()
+        println(JSON.toJSONString(names))
+
+        Set<String> ret = JavaConversions.asJavaSet(names)
+        println(JSON.toJSONString(ret))
+
+        ret
     }
 
     def getTopic(topicName){
@@ -49,7 +65,7 @@ class TopicService {
             def createRet = AdminUtils.createTopic(zkUtils, topicName, 1, 1, new Properties(), RackAwareMode.Enforced$.MODULE$);
         }catch (TopicExistsException e){
             exists = true
-            e
+            e.printStackTrace()
         }
         exists
     }
