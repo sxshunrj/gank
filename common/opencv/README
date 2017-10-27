@@ -1,0 +1,5 @@
+人脸识别
+1：下载并安装opencv库 https://opencv.org/releases.html
+2：将opencv\sources\data\haarcascades路径下的haarcascade_frontalface_alt.xml文件拷贝到classpath
+3：将opencv\build\java下的opencv-249.jar引用到classpath
+4：将opencv\build\java\x64下的opencv_java249.dll拷贝到java bin下
