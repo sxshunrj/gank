@@ -1,0 +1,49 @@
+
+buildscript {
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.4.RELEASE")
+    }
+}
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'idea'
+apply plugin: 'maven'
+apply plugin: 'spring-boot'
+//apply plugin: 'war'
+
+group = 'com.sxshunrj.test'
+version = '1.0.0'
+
+[compileJava, compileTestJava, compileGroovy, compileTestGroovy, javadoc]*.options*.encoding = 'UTF-8'
+
+test {
+    jvmArgs '-noverify'
+}
+
+targetCompatibility = '1.8'
+sourceCompatibility = '1.8'
+
+configurations {
+    compile.exclude module: 'slf4j-nop'
+    compile.exclude module: 'logback-classic'
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-log4j2'
+    compile 'org.springframework.boot:spring-boot-starter-aop'
+
+    compile 'org.springframework.kafka:spring-kafka'
+    compile group: 'org.apache.kafka', name: 'kafka_2.10', version: '0.10.2.0'
+
+
+    compile 'org.aspectj:aspectjrt:1.8.9'
+    compile 'org.aspectj:aspectjweaver:1.8.9'
+    compile 'com.alibaba:fastjson:1.2.4'
+    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.2'
+    compile group: 'com.google.guava', name: 'guava', version: '19.0'
+
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+    testCompile 'junit:junit:4.12'
+}

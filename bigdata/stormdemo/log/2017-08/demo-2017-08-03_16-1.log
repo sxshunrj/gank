@@ -1,0 +1,505 @@
+2017-08-03 16:41:49.642 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 16:41:51.166 [main] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 2001ms (NOT MAX)
+2017-08-03 16:41:54.177 [main] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 2002ms (NOT MAX)
+2017-08-03 16:41:57.179 [main] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 2005ms (NOT MAX)
+2017-08-03 16:42:00.187 [main] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 2014ms (NOT MAX)
+2017-08-03 16:42:03.201 [main] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 2024ms (NOT MAX)
+2017-08-03 16:42:06.225 [main] WARN  NimbusClient - Ignoring exception while trying to get leader nimbus info from localhost. will retry with a different seed host.
+java.lang.RuntimeException: java.lang.RuntimeException: org.apache.storm.thrift.transport.TTransportException: java.net.ConnectException: Connection refused: connect
+	at org.apache.storm.security.auth.ThriftClient.reconnect(ThriftClient.java:108) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.security.auth.ThriftClient.<init>(ThriftClient.java:69) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.NimbusClient.<init>(NimbusClient.java:127) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.NimbusClient.getConfiguredClientAs(NimbusClient.java:83) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.NimbusClient.getConfiguredClient(NimbusClient.java:57) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.blobstore.NimbusBlobStore.prepare(NimbusBlobStore.java:268) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.StormSubmitter.getListOfKeysFromBlobStore(StormSubmitter.java:595) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.StormSubmitter.validateConfs(StormSubmitter.java:561) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.StormSubmitter.submitTopologyAs(StormSubmitter.java:207) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.StormSubmitter.submitTopology(StormSubmitter.java:387) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.StormSubmitter.submitTopology(StormSubmitter.java:159) [storm-core-1.1.1.jar:1.1.1]
+	at com.sxshunrj.test.kafka.KafkaTopology.main(KafkaTopology.java:30) [stormdemo/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_91]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_91]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_91]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_91]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147) [idea_rt.jar:?]
+Caused by: java.lang.RuntimeException: org.apache.storm.thrift.transport.TTransportException: java.net.ConnectException: Connection refused: connect
+	at org.apache.storm.security.auth.TBackoffConnect.retryNext(TBackoffConnect.java:64) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.security.auth.TBackoffConnect.doConnectWithRetry(TBackoffConnect.java:56) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.security.auth.ThriftClient.reconnect(ThriftClient.java:100) ~[storm-core-1.1.1.jar:1.1.1]
+	... 16 more
+Caused by: org.apache.storm.thrift.transport.TTransportException: java.net.ConnectException: Connection refused: connect
+	at org.apache.storm.thrift.transport.TSocket.open(TSocket.java:226) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.thrift.transport.TFramedTransport.open(TFramedTransport.java:81) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.security.auth.SimpleTransportPlugin.connect(SimpleTransportPlugin.java:105) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.security.auth.TBackoffConnect.doConnectWithRetry(TBackoffConnect.java:53) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.security.auth.ThriftClient.reconnect(ThriftClient.java:100) ~[storm-core-1.1.1.jar:1.1.1]
+	... 16 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_91]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_91]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_91]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_91]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_91]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_91]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_91]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_91]
+	at org.apache.storm.thrift.transport.TSocket.open(TSocket.java:221) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.thrift.transport.TFramedTransport.open(TFramedTransport.java:81) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.security.auth.SimpleTransportPlugin.connect(SimpleTransportPlugin.java:105) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.security.auth.TBackoffConnect.doConnectWithRetry(TBackoffConnect.java:53) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.security.auth.ThriftClient.reconnect(ThriftClient.java:100) ~[storm-core-1.1.1.jar:1.1.1]
+	... 16 more
+2017-08-03 16:45:01.091 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 16:45:06.789 [Curator-Framework-0] WARN  ZKPaths - The version of ZooKeeper being used doesn't support Container nodes. CreateMode.PERSISTENT will be used instead.
+2017-08-03 16:45:07.089 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\fee117a8-2879-478a-a9f0-21f197c2e47f\supervisor\usercache
+2017-08-03 16:45:07.128 [main] WARN  Slot - SLOT ThinkPad-PC:1024 Starting in state EMPTY - assignment null
+2017-08-03 16:45:07.129 [main] WARN  Slot - SLOT ThinkPad-PC:1025 Starting in state EMPTY - assignment null
+2017-08-03 16:45:07.129 [main] WARN  Slot - SLOT ThinkPad-PC:1026 Starting in state EMPTY - assignment null
+2017-08-03 16:45:07.189 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da74506cb000b, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 16:45:07.220 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\0468c04c-eb25-42ac-8313-7e727e5e273a\supervisor\usercache
+2017-08-03 16:45:07.241 [main] WARN  Slot - SLOT ThinkPad-PC:1027 Starting in state EMPTY - assignment null
+2017-08-03 16:45:07.242 [main] WARN  Slot - SLOT ThinkPad-PC:1028 Starting in state EMPTY - assignment null
+2017-08-03 16:45:07.242 [main] WARN  Slot - SLOT ThinkPad-PC:1029 Starting in state EMPTY - assignment null
+2017-08-03 16:45:07.243 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 16:45:07.249 [main] WARN  Utils - STORM-VERSION new 1.1.1 old 1.1.1
+2017-08-03 16:45:07.596 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da74506cb000e, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 16:45:09.197 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da74506cb000f, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 16:45:10.625 [Thread-24-outFile-executor[6 6]] ERROR util - Async loop died!
+java.lang.RuntimeException: java.io.FileNotFoundException: \usr\local\apache-storm-1.1.1\user_files\kafka\75bf0f7b-f741-4abf-aac6-35897f106abb (系统找不到指定的路径。)
+	at com.sxshunrj.test.kafka.OutFile.prepare(OutFile.java:22) ~[stormdemo/:?]
+	at org.apache.storm.topology.BasicBoltExecutor.prepare(BasicBoltExecutor.java:43) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__5030$fn__5043.invoke(executor.clj:793) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.util$async_loop$fn__557.invoke(util.clj:482) [storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.7.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+Caused by: java.io.FileNotFoundException: \usr\local\apache-storm-1.1.1\user_files\kafka\75bf0f7b-f741-4abf-aac6-35897f106abb (系统找不到指定的路径。)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:1.8.0_91]
+	at java.io.FileOutputStream.open(FileOutputStream.java:270) ~[?:1.8.0_91]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213) ~[?:1.8.0_91]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:101) ~[?:1.8.0_91]
+	at java.io.FileWriter.<init>(FileWriter.java:63) ~[?:1.8.0_91]
+	at com.sxshunrj.test.kafka.OutFile.prepare(OutFile.java:20) ~[stormdemo/:?]
+	... 5 more
+2017-08-03 16:45:10.627 [Thread-24-outFile-executor[6 6]] ERROR executor - 
+java.lang.RuntimeException: java.io.FileNotFoundException: \usr\local\apache-storm-1.1.1\user_files\kafka\75bf0f7b-f741-4abf-aac6-35897f106abb (系统找不到指定的路径。)
+	at com.sxshunrj.test.kafka.OutFile.prepare(OutFile.java:22) ~[stormdemo/:?]
+	at org.apache.storm.topology.BasicBoltExecutor.prepare(BasicBoltExecutor.java:43) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__5030$fn__5043.invoke(executor.clj:793) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.util$async_loop$fn__557.invoke(util.clj:482) [storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.7.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+Caused by: java.io.FileNotFoundException: \usr\local\apache-storm-1.1.1\user_files\kafka\75bf0f7b-f741-4abf-aac6-35897f106abb (系统找不到指定的路径。)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:1.8.0_91]
+	at java.io.FileOutputStream.open(FileOutputStream.java:270) ~[?:1.8.0_91]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213) ~[?:1.8.0_91]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:101) ~[?:1.8.0_91]
+	at java.io.FileWriter.<init>(FileWriter.java:63) ~[?:1.8.0_91]
+	at com.sxshunrj.test.kafka.OutFile.prepare(OutFile.java:20) ~[stormdemo/:?]
+	... 5 more
+2017-08-03 16:45:10.657 [Thread-30-outFile-executor[4 4]] ERROR util - Async loop died!
+java.lang.RuntimeException: java.io.FileNotFoundException: \usr\local\apache-storm-1.1.1\user_files\kafka\521a3560-749d-48fb-a96e-e1a078615daf (系统找不到指定的路径。)
+	at com.sxshunrj.test.kafka.OutFile.prepare(OutFile.java:22) ~[stormdemo/:?]
+	at org.apache.storm.topology.BasicBoltExecutor.prepare(BasicBoltExecutor.java:43) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__5030$fn__5043.invoke(executor.clj:793) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.util$async_loop$fn__557.invoke(util.clj:482) [storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.7.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+Caused by: java.io.FileNotFoundException: \usr\local\apache-storm-1.1.1\user_files\kafka\521a3560-749d-48fb-a96e-e1a078615daf (系统找不到指定的路径。)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:1.8.0_91]
+	at java.io.FileOutputStream.open(FileOutputStream.java:270) ~[?:1.8.0_91]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213) ~[?:1.8.0_91]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:101) ~[?:1.8.0_91]
+	at java.io.FileWriter.<init>(FileWriter.java:63) ~[?:1.8.0_91]
+	at com.sxshunrj.test.kafka.OutFile.prepare(OutFile.java:20) ~[stormdemo/:?]
+	... 5 more
+2017-08-03 16:45:10.658 [Thread-30-outFile-executor[4 4]] ERROR executor - 
+java.lang.RuntimeException: java.io.FileNotFoundException: \usr\local\apache-storm-1.1.1\user_files\kafka\521a3560-749d-48fb-a96e-e1a078615daf (系统找不到指定的路径。)
+	at com.sxshunrj.test.kafka.OutFile.prepare(OutFile.java:22) ~[stormdemo/:?]
+	at org.apache.storm.topology.BasicBoltExecutor.prepare(BasicBoltExecutor.java:43) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__5030$fn__5043.invoke(executor.clj:793) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.util$async_loop$fn__557.invoke(util.clj:482) [storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.7.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+Caused by: java.io.FileNotFoundException: \usr\local\apache-storm-1.1.1\user_files\kafka\521a3560-749d-48fb-a96e-e1a078615daf (系统找不到指定的路径。)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:1.8.0_91]
+	at java.io.FileOutputStream.open(FileOutputStream.java:270) ~[?:1.8.0_91]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213) ~[?:1.8.0_91]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:101) ~[?:1.8.0_91]
+	at java.io.FileWriter.<init>(FileWriter.java:63) ~[?:1.8.0_91]
+	at com.sxshunrj.test.kafka.OutFile.prepare(OutFile.java:20) ~[stormdemo/:?]
+	... 5 more
+2017-08-03 16:45:10.692 [Thread-28-outFile-executor[5 5]] ERROR util - Async loop died!
+java.lang.RuntimeException: java.io.FileNotFoundException: \usr\local\apache-storm-1.1.1\user_files\kafka\542659e3-2806-484c-b997-50682d053c8d (系统找不到指定的路径。)
+	at com.sxshunrj.test.kafka.OutFile.prepare(OutFile.java:22) ~[stormdemo/:?]
+	at org.apache.storm.topology.BasicBoltExecutor.prepare(BasicBoltExecutor.java:43) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__5030$fn__5043.invoke(executor.clj:793) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.util$async_loop$fn__557.invoke(util.clj:482) [storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.7.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+Caused by: java.io.FileNotFoundException: \usr\local\apache-storm-1.1.1\user_files\kafka\542659e3-2806-484c-b997-50682d053c8d (系统找不到指定的路径。)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:1.8.0_91]
+	at java.io.FileOutputStream.open(FileOutputStream.java:270) ~[?:1.8.0_91]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213) ~[?:1.8.0_91]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:101) ~[?:1.8.0_91]
+	at java.io.FileWriter.<init>(FileWriter.java:63) ~[?:1.8.0_91]
+	at com.sxshunrj.test.kafka.OutFile.prepare(OutFile.java:20) ~[stormdemo/:?]
+	... 5 more
+2017-08-03 16:45:10.693 [Thread-28-outFile-executor[5 5]] ERROR executor - 
+java.lang.RuntimeException: java.io.FileNotFoundException: \usr\local\apache-storm-1.1.1\user_files\kafka\542659e3-2806-484c-b997-50682d053c8d (系统找不到指定的路径。)
+	at com.sxshunrj.test.kafka.OutFile.prepare(OutFile.java:22) ~[stormdemo/:?]
+	at org.apache.storm.topology.BasicBoltExecutor.prepare(BasicBoltExecutor.java:43) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__5030$fn__5043.invoke(executor.clj:793) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.util$async_loop$fn__557.invoke(util.clj:482) [storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.7.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+Caused by: java.io.FileNotFoundException: \usr\local\apache-storm-1.1.1\user_files\kafka\542659e3-2806-484c-b997-50682d053c8d (系统找不到指定的路径。)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:1.8.0_91]
+	at java.io.FileOutputStream.open(FileOutputStream.java:270) ~[?:1.8.0_91]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213) ~[?:1.8.0_91]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:101) ~[?:1.8.0_91]
+	at java.io.FileWriter.<init>(FileWriter.java:63) ~[?:1.8.0_91]
+	at com.sxshunrj.test.kafka.OutFile.prepare(OutFile.java:20) ~[stormdemo/:?]
+	... 5 more
+2017-08-03 16:45:10.695 [Thread-20-outFile-executor[3 3]] ERROR util - Async loop died!
+java.lang.RuntimeException: java.io.FileNotFoundException: \usr\local\apache-storm-1.1.1\user_files\kafka\558d195a-f045-41e9-97a5-d6dc491fd7c1 (系统找不到指定的路径。)
+	at com.sxshunrj.test.kafka.OutFile.prepare(OutFile.java:22) ~[stormdemo/:?]
+	at org.apache.storm.topology.BasicBoltExecutor.prepare(BasicBoltExecutor.java:43) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__5030$fn__5043.invoke(executor.clj:793) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.util$async_loop$fn__557.invoke(util.clj:482) [storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.7.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+Caused by: java.io.FileNotFoundException: \usr\local\apache-storm-1.1.1\user_files\kafka\558d195a-f045-41e9-97a5-d6dc491fd7c1 (系统找不到指定的路径。)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:1.8.0_91]
+	at java.io.FileOutputStream.open(FileOutputStream.java:270) ~[?:1.8.0_91]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213) ~[?:1.8.0_91]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:101) ~[?:1.8.0_91]
+	at java.io.FileWriter.<init>(FileWriter.java:63) ~[?:1.8.0_91]
+	at com.sxshunrj.test.kafka.OutFile.prepare(OutFile.java:20) ~[stormdemo/:?]
+	... 5 more
+2017-08-03 16:45:10.696 [Thread-20-outFile-executor[3 3]] ERROR executor - 
+java.lang.RuntimeException: java.io.FileNotFoundException: \usr\local\apache-storm-1.1.1\user_files\kafka\558d195a-f045-41e9-97a5-d6dc491fd7c1 (系统找不到指定的路径。)
+	at com.sxshunrj.test.kafka.OutFile.prepare(OutFile.java:22) ~[stormdemo/:?]
+	at org.apache.storm.topology.BasicBoltExecutor.prepare(BasicBoltExecutor.java:43) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__5030$fn__5043.invoke(executor.clj:793) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.util$async_loop$fn__557.invoke(util.clj:482) [storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.7.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+Caused by: java.io.FileNotFoundException: \usr\local\apache-storm-1.1.1\user_files\kafka\558d195a-f045-41e9-97a5-d6dc491fd7c1 (系统找不到指定的路径。)
+	at java.io.FileOutputStream.open0(Native Method) ~[?:1.8.0_91]
+	at java.io.FileOutputStream.open(FileOutputStream.java:270) ~[?:1.8.0_91]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213) ~[?:1.8.0_91]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:101) ~[?:1.8.0_91]
+	at java.io.FileWriter.<init>(FileWriter.java:63) ~[?:1.8.0_91]
+	at com.sxshunrj.test.kafka.OutFile.prepare(OutFile.java:20) ~[stormdemo/:?]
+	... 5 more
+2017-08-03 16:45:10.730 [Thread-30-outFile-executor[4 4]] ERROR util - Halting process: ("Worker died")
+java.lang.RuntimeException: ("Worker died")
+	at org.apache.storm.util$exit_process_BANG_.doInvoke(util.clj:341) [storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.RestFn.invoke(RestFn.java:423) [clojure-1.7.0.jar:?]
+	at org.apache.storm.daemon.worker$fn__5628$fn__5629.invoke(worker.clj:759) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$mk_executor_data$fn__4848$fn__4849.invoke(executor.clj:276) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.util$async_loop$fn__557.invoke(util.clj:494) [storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.7.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 16:45:10.758 [Thread-24-outFile-executor[6 6]] ERROR util - Halting process: ("Worker died")
+java.lang.RuntimeException: ("Worker died")
+	at org.apache.storm.util$exit_process_BANG_.doInvoke(util.clj:341) [storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.RestFn.invoke(RestFn.java:423) [clojure-1.7.0.jar:?]
+	at org.apache.storm.daemon.worker$fn__5628$fn__5629.invoke(worker.clj:759) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$mk_executor_data$fn__4848$fn__4849.invoke(executor.clj:276) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.util$async_loop$fn__557.invoke(util.clj:494) [storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.7.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 16:46:03.181 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 16:46:13.821 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 16:46:18.302 [Curator-Framework-0] WARN  ZKPaths - The version of ZooKeeper being used doesn't support Container nodes. CreateMode.PERSISTENT will be used instead.
+2017-08-03 16:46:18.547 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da74622ae0009, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 16:46:18.583 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\a2c87d42-8737-4dd3-9c59-e208685b8093\supervisor\usercache
+2017-08-03 16:46:18.619 [main] WARN  Slot - SLOT ThinkPad-PC:1024 Starting in state EMPTY - assignment null
+2017-08-03 16:46:18.619 [main] WARN  Slot - SLOT ThinkPad-PC:1025 Starting in state EMPTY - assignment null
+2017-08-03 16:46:18.619 [main] WARN  Slot - SLOT ThinkPad-PC:1026 Starting in state EMPTY - assignment null
+2017-08-03 16:46:18.706 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\65a96279-483a-4bd9-be36-7a71dca9a34e\supervisor\usercache
+2017-08-03 16:46:18.728 [main] WARN  Slot - SLOT ThinkPad-PC:1027 Starting in state EMPTY - assignment null
+2017-08-03 16:46:18.728 [main] WARN  Slot - SLOT ThinkPad-PC:1028 Starting in state EMPTY - assignment null
+2017-08-03 16:46:18.729 [main] WARN  Slot - SLOT ThinkPad-PC:1029 Starting in state EMPTY - assignment null
+2017-08-03 16:46:18.730 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 16:46:18.735 [main] WARN  Utils - STORM-VERSION new 1.1.1 old 1.1.1
+2017-08-03 16:46:41.661 [Thread-18-kafkaStorm-executor[2 2]] INFO  KafkaSpout - (consumer)==>nihao
+2017-08-03 16:47:09.593 [Thread-18-kafkaStorm-executor[2 2]] INFO  KafkaSpout - (consumer)==>哈哈
+2017-08-03 16:47:19.316 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da74622ae0006, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 16:47:20.420 [SLOT_1024] WARN  Slot - SLOT 1024: Assignment Changed from LocalAssignment(topology_id:counter-1-1501749978, executors:[ExecutorInfo(task_start:4, task_end:4), ExecutorInfo(task_start:3, task_end:3), ExecutorInfo(task_start:2, task_end:2), ExecutorInfo(task_start:6, task_end:6), ExecutorInfo(task_start:1, task_end:1), ExecutorInfo(task_start:5, task_end:5)], resources:WorkerResources(mem_on_heap:0.0, mem_off_heap:0.0, cpu:0.0), owner:Administrator) to null
+2017-08-03 16:47:20.433 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:20.533 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:20.633 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:20.733 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:20.834 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:20.934 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:21.034 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:21.134 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:21.234 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:21.334 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:21.434 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:21.534 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:21.634 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:21.734 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:21.836 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:21.937 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:22.039 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:22.139 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:22.239 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:22.339 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:22.439 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:22.539 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:22.639 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:22.739 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:22.839 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:22.940 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:23.040 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:23.140 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:23.240 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:23.340 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:23.440 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:23.461 [SLOT_1024] WARN  Slot - SLOT 1024 all processes are dead...
+2017-08-03 16:47:23.540 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:23.640 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1024,5,main] is still not shut down.
+2017-08-03 16:47:23.740 [Thread-10] ERROR ReadClusterState - Failed to Sync Supervisor
+java.lang.RuntimeException: java.lang.InterruptedException
+	at org.apache.storm.utils.Utils.wrapInRuntime(Utils.java:1531) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.zookeeper.Zookeeper.getChildren(Zookeeper.java:265) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.cluster.ZKStateStorage.get_children(ZKStateStorage.java:174) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.cluster.StormClusterStateImpl.assignments(StormClusterStateImpl.java:153) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.supervisor.ReadClusterState.run(ReadClusterState.java:126) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.event.EventManagerImp$1.run(EventManagerImp.java:54) [storm-core-1.1.1.jar:1.1.1]
+Caused by: java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method) ~[?:1.8.0_91]
+	at java.lang.Object.wait(Object.java:502) ~[?:1.8.0_91]
+	at org.apache.storm.shade.org.apache.zookeeper.ClientCnxn.submitRequest(ClientCnxn.java:1342) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.ZooKeeper.getChildren(ZooKeeper.java:1588) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.ZooKeeper.getChildren(ZooKeeper.java:1625) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.curator.framework.imps.GetChildrenBuilderImpl$3.call(GetChildrenBuilderImpl.java:226) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.curator.framework.imps.GetChildrenBuilderImpl$3.call(GetChildrenBuilderImpl.java:219) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.curator.RetryLoop.callWithRetry(RetryLoop.java:109) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.curator.framework.imps.GetChildrenBuilderImpl.pathInForeground(GetChildrenBuilderImpl.java:216) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.curator.framework.imps.GetChildrenBuilderImpl.forPath(GetChildrenBuilderImpl.java:207) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.curator.framework.imps.GetChildrenBuilderImpl.forPath(GetChildrenBuilderImpl.java:40) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.zookeeper.Zookeeper.getChildren(Zookeeper.java:260) ~[storm-core-1.1.1.jar:1.1.1]
+	... 4 more
+2017-08-03 16:47:23.777 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da74622ae000c, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 16:48:43.302 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 16:48:48.367 [Curator-Framework-0] WARN  ZKPaths - The version of ZooKeeper being used doesn't support Container nodes. CreateMode.PERSISTENT will be used instead.
+2017-08-03 16:48:48.488 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da7486cc70007, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 16:48:48.617 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\b0555aed-b1c8-4b5e-a8f4-b8f90d6c99ce\supervisor\usercache
+2017-08-03 16:48:48.656 [main] WARN  Slot - SLOT ThinkPad-PC:1024 Starting in state EMPTY - assignment null
+2017-08-03 16:48:48.657 [main] WARN  Slot - SLOT ThinkPad-PC:1025 Starting in state EMPTY - assignment null
+2017-08-03 16:48:48.657 [main] WARN  Slot - SLOT ThinkPad-PC:1026 Starting in state EMPTY - assignment null
+2017-08-03 16:48:48.713 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da7486cc7000b, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 16:48:48.741 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\e9e4e25e-163e-42f8-a544-bd4fa1e40ce4\supervisor\usercache
+2017-08-03 16:48:48.761 [main] WARN  Slot - SLOT ThinkPad-PC:1027 Starting in state EMPTY - assignment null
+2017-08-03 16:48:48.761 [main] WARN  Slot - SLOT ThinkPad-PC:1028 Starting in state EMPTY - assignment null
+2017-08-03 16:48:48.761 [main] WARN  Slot - SLOT ThinkPad-PC:1029 Starting in state EMPTY - assignment null
+2017-08-03 16:48:48.763 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 16:48:48.768 [main] WARN  Utils - STORM-VERSION new 1.1.1 old 1.1.1
+2017-08-03 16:48:49.972 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da7486cc70010, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 16:50:33.385 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 16:50:37.742 [Curator-Framework-0] WARN  ZKPaths - The version of ZooKeeper being used doesn't support Container nodes. CreateMode.PERSISTENT will be used instead.
+2017-08-03 16:50:37.883 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da74a18280007, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 16:50:38.019 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da74a18280009, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 16:50:38.058 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\f5ce9176-fa42-4d56-ad51-6a24857a42e5\supervisor\usercache
+2017-08-03 16:50:38.097 [main] WARN  Slot - SLOT ThinkPad-PC:1024 Starting in state EMPTY - assignment null
+2017-08-03 16:50:38.098 [main] WARN  Slot - SLOT ThinkPad-PC:1025 Starting in state EMPTY - assignment null
+2017-08-03 16:50:38.098 [main] WARN  Slot - SLOT ThinkPad-PC:1026 Starting in state EMPTY - assignment null
+2017-08-03 16:50:38.182 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\6040e7d4-89f2-4310-b0e8-9303f32982db\supervisor\usercache
+2017-08-03 16:50:38.204 [main] WARN  Slot - SLOT ThinkPad-PC:1027 Starting in state EMPTY - assignment null
+2017-08-03 16:50:38.204 [main] WARN  Slot - SLOT ThinkPad-PC:1028 Starting in state EMPTY - assignment null
+2017-08-03 16:50:38.205 [main] WARN  Slot - SLOT ThinkPad-PC:1029 Starting in state EMPTY - assignment null
+2017-08-03 16:50:38.206 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 16:50:38.210 [main] WARN  Utils - STORM-VERSION new 1.1.1 old 1.1.1
+2017-08-03 16:50:38.560 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da74a1828000e, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 16:50:42.534 [Thread-18-kafkaStorm-executor[2 2]] INFO  KafkaSpout - (consumer)==>你好啊
+2017-08-03 16:50:42.539 [Thread-18-kafkaStorm-executor[2 2]] INFO  KafkaSpout - (consumer)==>123
+2017-08-03 16:50:42.540 [Thread-18-kafkaStorm-executor[2 2]] INFO  KafkaSpout - (consumer)==>88888
+2017-08-03 16:50:42.545 [Thread-30-outFile-executor[4 4]] ERROR util - Async loop died!
+java.lang.RuntimeException: java.lang.RuntimeException: java.io.IOException: Stream closed
+	at org.apache.storm.utils.DisruptorQueue.consumeBatchToCursor(DisruptorQueue.java:495) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.DisruptorQueue.consumeBatchWhenAvailable(DisruptorQueue.java:460) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.disruptor$consume_batch_when_available.invoke(disruptor.clj:73) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__5030$fn__5043$fn__5096.invoke(executor.clj:848) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.util$async_loop$fn__557.invoke(util.clj:484) [storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.7.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+Caused by: java.lang.RuntimeException: java.io.IOException: Stream closed
+	at com.sxshunrj.test.kafka.OutFile.execute(OutFile.java:37) ~[stormdemo/:?]
+	at org.apache.storm.topology.BasicBoltExecutor.execute(BasicBoltExecutor.java:50) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__5030$tuple_action_fn__5032.invoke(executor.clj:729) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$mk_task_receiver$fn__4951.invoke(executor.clj:461) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.disruptor$clojure_handler$reify__4465.onEvent(disruptor.clj:40) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.DisruptorQueue.consumeBatchToCursor(DisruptorQueue.java:482) ~[storm-core-1.1.1.jar:1.1.1]
+	... 6 more
+Caused by: java.io.IOException: Stream closed
+	at sun.nio.cs.StreamEncoder.ensureOpen(StreamEncoder.java:45) ~[?:1.8.0_91]
+	at sun.nio.cs.StreamEncoder.write(StreamEncoder.java:118) ~[?:1.8.0_91]
+	at sun.nio.cs.StreamEncoder.write(StreamEncoder.java:135) ~[?:1.8.0_91]
+	at java.io.OutputStreamWriter.write(OutputStreamWriter.java:220) ~[?:1.8.0_91]
+	at java.io.Writer.write(Writer.java:157) ~[?:1.8.0_91]
+	at com.sxshunrj.test.kafka.OutFile.execute(OutFile.java:33) ~[stormdemo/:?]
+	at org.apache.storm.topology.BasicBoltExecutor.execute(BasicBoltExecutor.java:50) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__5030$tuple_action_fn__5032.invoke(executor.clj:729) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$mk_task_receiver$fn__4951.invoke(executor.clj:461) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.disruptor$clojure_handler$reify__4465.onEvent(disruptor.clj:40) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.DisruptorQueue.consumeBatchToCursor(DisruptorQueue.java:482) ~[storm-core-1.1.1.jar:1.1.1]
+	... 6 more
+2017-08-03 16:50:42.547 [Thread-30-outFile-executor[4 4]] ERROR executor - 
+java.lang.RuntimeException: java.lang.RuntimeException: java.io.IOException: Stream closed
+	at org.apache.storm.utils.DisruptorQueue.consumeBatchToCursor(DisruptorQueue.java:495) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.DisruptorQueue.consumeBatchWhenAvailable(DisruptorQueue.java:460) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.disruptor$consume_batch_when_available.invoke(disruptor.clj:73) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__5030$fn__5043$fn__5096.invoke(executor.clj:848) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.util$async_loop$fn__557.invoke(util.clj:484) [storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.7.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+Caused by: java.lang.RuntimeException: java.io.IOException: Stream closed
+	at com.sxshunrj.test.kafka.OutFile.execute(OutFile.java:37) ~[stormdemo/:?]
+	at org.apache.storm.topology.BasicBoltExecutor.execute(BasicBoltExecutor.java:50) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__5030$tuple_action_fn__5032.invoke(executor.clj:729) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$mk_task_receiver$fn__4951.invoke(executor.clj:461) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.disruptor$clojure_handler$reify__4465.onEvent(disruptor.clj:40) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.DisruptorQueue.consumeBatchToCursor(DisruptorQueue.java:482) ~[storm-core-1.1.1.jar:1.1.1]
+	... 6 more
+Caused by: java.io.IOException: Stream closed
+	at sun.nio.cs.StreamEncoder.ensureOpen(StreamEncoder.java:45) ~[?:1.8.0_91]
+	at sun.nio.cs.StreamEncoder.write(StreamEncoder.java:118) ~[?:1.8.0_91]
+	at sun.nio.cs.StreamEncoder.write(StreamEncoder.java:135) ~[?:1.8.0_91]
+	at java.io.OutputStreamWriter.write(OutputStreamWriter.java:220) ~[?:1.8.0_91]
+	at java.io.Writer.write(Writer.java:157) ~[?:1.8.0_91]
+	at com.sxshunrj.test.kafka.OutFile.execute(OutFile.java:33) ~[stormdemo/:?]
+	at org.apache.storm.topology.BasicBoltExecutor.execute(BasicBoltExecutor.java:50) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__5030$tuple_action_fn__5032.invoke(executor.clj:729) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$mk_task_receiver$fn__4951.invoke(executor.clj:461) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.disruptor$clojure_handler$reify__4465.onEvent(disruptor.clj:40) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.DisruptorQueue.consumeBatchToCursor(DisruptorQueue.java:482) ~[storm-core-1.1.1.jar:1.1.1]
+	... 6 more
+2017-08-03 16:50:42.637 [Thread-30-outFile-executor[4 4]] ERROR util - Halting process: ("Worker died")
+java.lang.RuntimeException: ("Worker died")
+	at org.apache.storm.util$exit_process_BANG_.doInvoke(util.clj:341) [storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.RestFn.invoke(RestFn.java:423) [clojure-1.7.0.jar:?]
+	at org.apache.storm.daemon.worker$fn__5628$fn__5629.invoke(worker.clj:759) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$mk_executor_data$fn__4848$fn__4849.invoke(executor.clj:276) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.util$async_loop$fn__557.invoke(util.clj:494) [storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.7.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 16:51:18.710 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 16:51:23.070 [Curator-Framework-0] WARN  ZKPaths - The version of ZooKeeper being used doesn't support Container nodes. CreateMode.PERSISTENT will be used instead.
+2017-08-03 16:51:23.334 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\5ddc35bc-dc0f-4847-af8b-4db09e7611f3\supervisor\usercache
+2017-08-03 16:51:23.367 [main] WARN  Slot - SLOT ThinkPad-PC:1024 Starting in state EMPTY - assignment null
+2017-08-03 16:51:23.367 [main] WARN  Slot - SLOT ThinkPad-PC:1025 Starting in state EMPTY - assignment null
+2017-08-03 16:51:23.367 [main] WARN  Slot - SLOT ThinkPad-PC:1026 Starting in state EMPTY - assignment null
+2017-08-03 16:51:23.453 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\59c8f55f-38fc-4a83-8ceb-e925076c4243\supervisor\usercache
+2017-08-03 16:51:23.477 [main] WARN  Slot - SLOT ThinkPad-PC:1027 Starting in state EMPTY - assignment null
+2017-08-03 16:51:23.477 [main] WARN  Slot - SLOT ThinkPad-PC:1028 Starting in state EMPTY - assignment null
+2017-08-03 16:51:23.477 [main] WARN  Slot - SLOT ThinkPad-PC:1029 Starting in state EMPTY - assignment null
+2017-08-03 16:51:23.478 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 16:51:23.484 [main] WARN  Utils - STORM-VERSION new 1.1.1 old 1.1.1
+2017-08-03 16:51:23.700 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da74ac951000d, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 16:51:24.448 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da74ac951000f, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 16:51:24.755 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da74ac9510010, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 16:51:50.659 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 16:51:55.255 [Curator-Framework-0] WARN  ZKPaths - The version of ZooKeeper being used doesn't support Container nodes. CreateMode.PERSISTENT will be used instead.
+2017-08-03 16:51:55.521 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\2f197d32-653f-4168-b44b-0dfb3c9cd951\supervisor\usercache
+2017-08-03 16:51:55.559 [main] WARN  Slot - SLOT ThinkPad-PC:1024 Starting in state EMPTY - assignment null
+2017-08-03 16:51:55.559 [main] WARN  Slot - SLOT ThinkPad-PC:1025 Starting in state EMPTY - assignment null
+2017-08-03 16:51:55.559 [main] WARN  Slot - SLOT ThinkPad-PC:1026 Starting in state EMPTY - assignment null
+2017-08-03 16:51:55.640 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\83cd68e7-7859-42be-bccd-3b5ad8347192\supervisor\usercache
+2017-08-03 16:51:55.664 [main] WARN  Slot - SLOT ThinkPad-PC:1027 Starting in state EMPTY - assignment null
+2017-08-03 16:51:55.664 [main] WARN  Slot - SLOT ThinkPad-PC:1028 Starting in state EMPTY - assignment null
+2017-08-03 16:51:55.664 [main] WARN  Slot - SLOT ThinkPad-PC:1029 Starting in state EMPTY - assignment null
+2017-08-03 16:51:55.665 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 16:51:55.670 [main] WARN  Utils - STORM-VERSION new 1.1.1 old 1.1.1
+2017-08-03 16:51:56.884 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da74b46e50010, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 16:53:18.154 [Thread-18-kafkaStorm-executor[2 2]] INFO  KafkaSpout - (consumer)==>你好啊
+2017-08-03 16:53:18.156 [Thread-18-kafkaStorm-executor[2 2]] INFO  KafkaSpout - (consumer)==>123
+2017-08-03 16:53:18.156 [Thread-18-kafkaStorm-executor[2 2]] INFO  KafkaSpout - (consumer)==>88888
+2017-08-03 16:53:18.157 [Thread-18-kafkaStorm-executor[2 2]] INFO  KafkaSpout - (consumer)==>石头人吗
+2017-08-03 16:53:18.157 [Thread-18-kafkaStorm-executor[2 2]] INFO  KafkaSpout - (consumer)==>呃呃呃
+2017-08-03 16:53:18.158 [Thread-18-kafkaStorm-executor[2 2]] INFO  KafkaSpout - (consumer)==>颠三倒四
+2017-08-03 16:53:18.158 [Thread-18-kafkaStorm-executor[2 2]] INFO  KafkaSpout - (consumer)==>打点
+2017-08-03 16:53:18.159 [Thread-18-kafkaStorm-executor[2 2]] INFO  KafkaSpout - (consumer)==>反反复复
+2017-08-03 16:53:18.159 [Thread-18-kafkaStorm-executor[2 2]] INFO  KafkaSpout - (consumer)==>
+2017-08-03 16:53:18.159 [Thread-18-kafkaStorm-executor[2 2]] INFO  KafkaSpout - (consumer)==>
+2017-08-03 16:53:18.160 [Thread-18-kafkaStorm-executor[2 2]] INFO  KafkaSpout - (consumer)==>发发发地方的
+2017-08-03 16:58:28.079 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 16:58:32.365 [Curator-Framework-0] WARN  ZKPaths - The version of ZooKeeper being used doesn't support Container nodes. CreateMode.PERSISTENT will be used instead.
+2017-08-03 16:58:32.631 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\128016b7-66c7-438a-8638-ef58e400abe0\supervisor\usercache
+2017-08-03 16:58:32.666 [main] WARN  Slot - SLOT ThinkPad-PC:1024 Starting in state EMPTY - assignment null
+2017-08-03 16:58:32.667 [main] WARN  Slot - SLOT ThinkPad-PC:1025 Starting in state EMPTY - assignment null
+2017-08-03 16:58:32.667 [main] WARN  Slot - SLOT ThinkPad-PC:1026 Starting in state EMPTY - assignment null
+2017-08-03 16:58:32.742 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\e9ac8a0a-0200-4152-97c0-3cab59c87358\supervisor\usercache
+2017-08-03 16:58:32.764 [main] WARN  Slot - SLOT ThinkPad-PC:1027 Starting in state EMPTY - assignment null
+2017-08-03 16:58:32.764 [main] WARN  Slot - SLOT ThinkPad-PC:1028 Starting in state EMPTY - assignment null
+2017-08-03 16:58:32.764 [main] WARN  Slot - SLOT ThinkPad-PC:1029 Starting in state EMPTY - assignment null
+2017-08-03 16:58:32.765 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 16:58:32.771 [main] WARN  Utils - STORM-VERSION new 1.1.1 old 1.1.1

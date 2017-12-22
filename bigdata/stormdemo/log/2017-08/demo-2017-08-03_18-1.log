@@ -1,0 +1,424 @@
+2017-08-03 18:21:19.082 [Curator-Framework-0] WARN  ZKPaths - The version of ZooKeeper being used doesn't support Container nodes. CreateMode.PERSISTENT will be used instead.
+2017-08-03 18:21:19.333 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\4f735686-61ca-4ac1-98fc-0a0ee4f25145\supervisor\usercache
+2017-08-03 18:21:19.368 [main] WARN  Slot - SLOT ThinkPad-PC:1024 Starting in state EMPTY - assignment null
+2017-08-03 18:21:19.369 [main] WARN  Slot - SLOT ThinkPad-PC:1025 Starting in state EMPTY - assignment null
+2017-08-03 18:21:19.369 [main] WARN  Slot - SLOT ThinkPad-PC:1026 Starting in state EMPTY - assignment null
+2017-08-03 18:21:19.440 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\19c769c1-ed08-4615-b00a-9080e541d869\supervisor\usercache
+2017-08-03 18:21:19.461 [main] WARN  Slot - SLOT ThinkPad-PC:1027 Starting in state EMPTY - assignment null
+2017-08-03 18:21:19.462 [main] WARN  Slot - SLOT ThinkPad-PC:1028 Starting in state EMPTY - assignment null
+2017-08-03 18:21:19.462 [main] WARN  Slot - SLOT ThinkPad-PC:1029 Starting in state EMPTY - assignment null
+2017-08-03 18:21:19.482 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 18:21:19.488 [main] WARN  Utils - STORM-VERSION new 1.1.1 old 1.1.1
+2017-08-03 18:21:19.838 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da79d1f47000e, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:21:21.449 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da79d1f47000f, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:21:22.819 [Thread-23-return-executor[7 7]] ERROR ReturnResults - Parseing returnInfo failed
+org.apache.storm.shade.org.json.simple.parser.ParseException: null
+	at org.apache.storm.shade.org.json.simple.parser.Yylex.yylex(Unknown Source) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.json.simple.parser.JSONParser.nextToken(Unknown Source) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.json.simple.parser.JSONParser.parse(Unknown Source) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.json.simple.parser.JSONParser.parse(Unknown Source) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.json.simple.parser.JSONParser.parse(Unknown Source) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.json.simple.JSONValue.parseWithException(Unknown Source) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.drpc.ReturnResults.execute(ReturnResults.java:66) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__5030$tuple_action_fn__5032.invoke(executor.clj:729) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$mk_task_receiver$fn__4951.invoke(executor.clj:461) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.disruptor$clojure_handler$reify__4465.onEvent(disruptor.clj:40) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.DisruptorQueue.consumeBatchToCursor(DisruptorQueue.java:482) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.DisruptorQueue.consumeBatchWhenAvailable(DisruptorQueue.java:460) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.disruptor$consume_batch_when_available.invoke(disruptor.clj:73) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__5030$fn__5043$fn__5096.invoke(executor.clj:848) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.util$async_loop$fn__557.invoke(util.clj:484) [storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.7.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:21:22.825 [main] ERROR NIOServerCnxnFactory - Thread Thread[main,5,main] died
+org.apache.storm.generated.DRPCExecutionException: null
+	at org.apache.storm.daemon.drpc$service_handler$reify__7920.failRequest(drpc.clj:155) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.drpc.DRPCSpout.fail(DRPCSpout.java:251) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fail_spout_msg.invoke(executor.clj:436) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__4962$tuple_action_fn__4968.invoke(executor.clj:536) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$mk_task_receiver$fn__4951.invoke(executor.clj:461) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.disruptor$clojure_handler$reify__4465.onEvent(disruptor.clj:40) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.DisruptorQueue.consumeBatchToCursor(DisruptorQueue.java:482) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.DisruptorQueue.consumeBatchWhenAvailable(DisruptorQueue.java:460) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.DisruptorQueue.consumeBatch(DisruptorQueue.java:450) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.disruptor$consume_batch.invoke(disruptor.clj:69) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__4962$fn__4977$fn__5008.invoke(executor.clj:626) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.util$async_loop$fn__557.invoke(util.clj:484) ~[storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.AFn.run(AFn.java:22) ~[clojure-1.7.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:23:15.966 [Curator-Framework-0] WARN  ZKPaths - The version of ZooKeeper being used doesn't support Container nodes. CreateMode.PERSISTENT will be used instead.
+2017-08-03 18:23:16.198 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da79ee8190009, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:23:16.232 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\691841f3-1eab-4d98-b6b4-0a073761d1da\supervisor\usercache
+2017-08-03 18:23:16.265 [main] WARN  Slot - SLOT ThinkPad-PC:1024 Starting in state EMPTY - assignment null
+2017-08-03 18:23:16.266 [main] WARN  Slot - SLOT ThinkPad-PC:1025 Starting in state EMPTY - assignment null
+2017-08-03 18:23:16.267 [main] WARN  Slot - SLOT ThinkPad-PC:1026 Starting in state EMPTY - assignment null
+2017-08-03 18:23:16.336 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\d7a9a514-6078-4a8b-92f4-82eb1411c62d\supervisor\usercache
+2017-08-03 18:23:16.355 [main] WARN  Slot - SLOT ThinkPad-PC:1027 Starting in state EMPTY - assignment null
+2017-08-03 18:23:16.356 [main] WARN  Slot - SLOT ThinkPad-PC:1028 Starting in state EMPTY - assignment null
+2017-08-03 18:23:16.356 [main] WARN  Slot - SLOT ThinkPad-PC:1029 Starting in state EMPTY - assignment null
+2017-08-03 18:23:16.374 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 18:23:16.380 [main] WARN  Utils - STORM-VERSION new 1.1.1 old 1.1.1
+2017-08-03 18:23:16.698 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da79ee819000e, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:23:18.344 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da79ee819000f, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:23:19.732 [Thread-23-return-executor[7 7]] ERROR ReturnResults - Parseing returnInfo failed
+org.apache.storm.shade.org.json.simple.parser.ParseException: null
+	at org.apache.storm.shade.org.json.simple.parser.Yylex.yylex(Unknown Source) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.json.simple.parser.JSONParser.nextToken(Unknown Source) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.json.simple.parser.JSONParser.parse(Unknown Source) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.json.simple.parser.JSONParser.parse(Unknown Source) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.json.simple.parser.JSONParser.parse(Unknown Source) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.json.simple.JSONValue.parseWithException(Unknown Source) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.drpc.ReturnResults.execute(ReturnResults.java:66) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__5030$tuple_action_fn__5032.invoke(executor.clj:729) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$mk_task_receiver$fn__4951.invoke(executor.clj:461) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.disruptor$clojure_handler$reify__4465.onEvent(disruptor.clj:40) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.DisruptorQueue.consumeBatchToCursor(DisruptorQueue.java:482) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.DisruptorQueue.consumeBatchWhenAvailable(DisruptorQueue.java:460) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.disruptor$consume_batch_when_available.invoke(disruptor.clj:73) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__5030$fn__5043$fn__5096.invoke(executor.clj:848) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.util$async_loop$fn__557.invoke(util.clj:484) [storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.7.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:23:19.738 [main] ERROR NIOServerCnxnFactory - Thread Thread[main,5,main] died
+org.apache.storm.generated.DRPCExecutionException: null
+	at org.apache.storm.daemon.drpc$service_handler$reify__7920.failRequest(drpc.clj:155) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.drpc.DRPCSpout.fail(DRPCSpout.java:251) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fail_spout_msg.invoke(executor.clj:436) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__4962$tuple_action_fn__4968.invoke(executor.clj:536) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$mk_task_receiver$fn__4951.invoke(executor.clj:461) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.disruptor$clojure_handler$reify__4465.onEvent(disruptor.clj:40) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.DisruptorQueue.consumeBatchToCursor(DisruptorQueue.java:482) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.DisruptorQueue.consumeBatchWhenAvailable(DisruptorQueue.java:460) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.DisruptorQueue.consumeBatch(DisruptorQueue.java:450) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.disruptor$consume_batch.invoke(disruptor.clj:69) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__4962$fn__4977$fn__5008.invoke(executor.clj:626) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.util$async_loop$fn__557.invoke(util.clj:484) ~[storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.AFn.run(AFn.java:22) ~[clojure-1.7.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:28:04.728 [Curator-Framework-0] WARN  ZKPaths - The version of ZooKeeper being used doesn't support Container nodes. CreateMode.PERSISTENT will be used instead.
+2017-08-03 18:28:05.057 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\e0f73341-5f3c-49f4-a67d-21ac41c02741\supervisor\usercache
+2017-08-03 18:28:05.095 [main] WARN  Slot - SLOT ThinkPad-PC:1024 Starting in state EMPTY - assignment null
+2017-08-03 18:28:05.096 [main] WARN  Slot - SLOT ThinkPad-PC:1025 Starting in state EMPTY - assignment null
+2017-08-03 18:28:05.096 [main] WARN  Slot - SLOT ThinkPad-PC:1026 Starting in state EMPTY - assignment null
+2017-08-03 18:28:05.173 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\6bf5e0cd-3f9a-4d5d-8cae-5355dfce7aa6\supervisor\usercache
+2017-08-03 18:28:05.193 [main] WARN  Slot - SLOT ThinkPad-PC:1027 Starting in state EMPTY - assignment null
+2017-08-03 18:28:05.193 [main] WARN  Slot - SLOT ThinkPad-PC:1028 Starting in state EMPTY - assignment null
+2017-08-03 18:28:05.193 [main] WARN  Slot - SLOT ThinkPad-PC:1029 Starting in state EMPTY - assignment null
+2017-08-03 18:28:05.207 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 18:28:05.211 [main] WARN  Utils - STORM-VERSION new 1.1.1 old 1.1.1
+2017-08-03 18:28:08.673 [Thread-23-return-executor[7 7]] ERROR ReturnResults - Parseing returnInfo failed
+org.apache.storm.shade.org.json.simple.parser.ParseException: null
+	at org.apache.storm.shade.org.json.simple.parser.Yylex.yylex(Unknown Source) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.json.simple.parser.JSONParser.nextToken(Unknown Source) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.json.simple.parser.JSONParser.parse(Unknown Source) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.json.simple.parser.JSONParser.parse(Unknown Source) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.json.simple.parser.JSONParser.parse(Unknown Source) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.json.simple.JSONValue.parseWithException(Unknown Source) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.drpc.ReturnResults.execute(ReturnResults.java:66) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__5030$tuple_action_fn__5032.invoke(executor.clj:729) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$mk_task_receiver$fn__4951.invoke(executor.clj:461) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.disruptor$clojure_handler$reify__4465.onEvent(disruptor.clj:40) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.DisruptorQueue.consumeBatchToCursor(DisruptorQueue.java:482) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.DisruptorQueue.consumeBatchWhenAvailable(DisruptorQueue.java:460) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.disruptor$consume_batch_when_available.invoke(disruptor.clj:73) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__5030$fn__5043$fn__5096.invoke(executor.clj:848) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.util$async_loop$fn__557.invoke(util.clj:484) [storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.7.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:28:08.693 [main] ERROR NIOServerCnxnFactory - Thread Thread[main,5,main] died
+org.apache.storm.generated.DRPCExecutionException: null
+	at org.apache.storm.daemon.drpc$service_handler$reify__7920.failRequest(drpc.clj:155) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.drpc.DRPCSpout.fail(DRPCSpout.java:251) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fail_spout_msg.invoke(executor.clj:436) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__4962$tuple_action_fn__4968.invoke(executor.clj:536) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$mk_task_receiver$fn__4951.invoke(executor.clj:461) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.disruptor$clojure_handler$reify__4465.onEvent(disruptor.clj:40) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.DisruptorQueue.consumeBatchToCursor(DisruptorQueue.java:482) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.DisruptorQueue.consumeBatchWhenAvailable(DisruptorQueue.java:460) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.DisruptorQueue.consumeBatch(DisruptorQueue.java:450) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.disruptor$consume_batch.invoke(disruptor.clj:69) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__4962$fn__4977$fn__5008.invoke(executor.clj:626) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.util$async_loop$fn__557.invoke(util.clj:484) ~[storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.AFn.run(AFn.java:22) ~[clojure-1.7.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:29:01.185 [Curator-Framework-0] WARN  ZKPaths - The version of ZooKeeper being used doesn't support Container nodes. CreateMode.PERSISTENT will be used instead.
+2017-08-03 18:29:01.483 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\aea237e1-36ed-418d-b59b-1899066577dd\supervisor\usercache
+2017-08-03 18:29:01.522 [main] WARN  Slot - SLOT ThinkPad-PC:1024 Starting in state EMPTY - assignment null
+2017-08-03 18:29:01.523 [main] WARN  Slot - SLOT ThinkPad-PC:1025 Starting in state EMPTY - assignment null
+2017-08-03 18:29:01.523 [main] WARN  Slot - SLOT ThinkPad-PC:1026 Starting in state EMPTY - assignment null
+2017-08-03 18:29:01.601 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\c3d2b264-cd6f-43fc-8c0e-221d87df185c\supervisor\usercache
+2017-08-03 18:29:01.623 [main] WARN  Slot - SLOT ThinkPad-PC:1027 Starting in state EMPTY - assignment null
+2017-08-03 18:29:01.624 [main] WARN  Slot - SLOT ThinkPad-PC:1028 Starting in state EMPTY - assignment null
+2017-08-03 18:29:01.624 [main] WARN  Slot - SLOT ThinkPad-PC:1029 Starting in state EMPTY - assignment null
+2017-08-03 18:29:01.643 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 18:29:01.648 [main] WARN  Utils - STORM-VERSION new 1.1.1 old 1.1.1
+2017-08-03 18:29:16.647 [SyncThread:0] WARN  FileTxnLog - fsync-ing the write ahead log in SyncThread:0 took 4157ms which will adversely effect operation latency. See the ZooKeeper troubleshooting guide
+2017-08-03 18:29:16.657 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - Exception causing close of session 0x15da7a42c3e0004 due to java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2017-08-03 18:29:16.658 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - Exception causing close of session 0x15da7a42c3e0001 due to java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2017-08-03 18:29:16.659 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - Exception causing close of session 0x15da7a42c3e0003 due to java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2017-08-03 18:29:16.659 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - Exception causing close of session 0x15da7a42c3e0000 due to java.io.IOException: 您的主机中的软件中止了一个已建立的连接。
+2017-08-03 18:29:28.206 [timer] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 1001ms (NOT MAX)
+2017-08-03 18:29:28.209 [main-EventThread] WARN  zookeeper-state-factory - Received event :disconnected::none: with disconnected Reader Zookeeper.
+2017-08-03 18:29:28.211 [main-EventThread] WARN  zookeeper-state-factory - Received event :disconnected::none: with disconnected Writer Zookeeper.
+2017-08-03 18:29:28.306 [main-EventThread] WARN  zookeeper-state-factory - Received event :disconnected::none: with disconnected Writer Zookeeper.
+2017-08-03 18:29:28.214 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da7a42c3e0006, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:29:28.309 [main-EventThread] WARN  zookeeper-state-factory - Received event :disconnected::none: with disconnected Writer Zookeeper.
+2017-08-03 18:29:28.342 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - Exception causing close of session 0x15da7a42c3e0008 due to java.io.IOException: 您的主机中的软件中止了一个已建立的连接。
+2017-08-03 18:30:16.811 [Curator-Framework-0] WARN  ConnectionState - Connection attempt unsuccessful after 48589 (greater than max timeout of 20000). Resetting connection and trying again with a new connection.
+2017-08-03 18:30:16.812 [Curator-Framework-0] WARN  ConnectionState - Connection attempt unsuccessful after 48602 (greater than max timeout of 20000). Resetting connection and trying again with a new connection.
+2017-08-03 18:30:16.812 [Curator-Framework-0] WARN  ConnectionState - Connection attempt unsuccessful after 48605 (greater than max timeout of 20000). Resetting connection and trying again with a new connection.
+2017-08-03 18:30:16.819 [Thread-23-return-executor[7 7]] ERROR ReturnResults - Parseing returnInfo failed
+org.apache.storm.shade.org.json.simple.parser.ParseException: null
+	at org.apache.storm.shade.org.json.simple.parser.Yylex.yylex(Unknown Source) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.json.simple.parser.JSONParser.nextToken(Unknown Source) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.json.simple.parser.JSONParser.parse(Unknown Source) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.json.simple.parser.JSONParser.parse(Unknown Source) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.json.simple.parser.JSONParser.parse(Unknown Source) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.json.simple.JSONValue.parseWithException(Unknown Source) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.drpc.ReturnResults.execute(ReturnResults.java:66) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__5030$tuple_action_fn__5032.invoke(executor.clj:729) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$mk_task_receiver$fn__4951.invoke(executor.clj:461) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.disruptor$clojure_handler$reify__4465.onEvent(disruptor.clj:40) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.DisruptorQueue.consumeBatchToCursor(DisruptorQueue.java:482) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.DisruptorQueue.consumeBatchWhenAvailable(DisruptorQueue.java:460) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.disruptor$consume_batch_when_available.invoke(disruptor.clj:73) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__5030$fn__5043$fn__5096.invoke(executor.clj:848) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.util$async_loop$fn__557.invoke(util.clj:484) [storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.7.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:30:16.820 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - Exception causing close of session 0x15da7a42c3e000a due to java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2017-08-03 18:30:16.821 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da7a42c3e000c, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:30:16.822 [Curator-Framework-0] WARN  ConnectionState - Connection attempt unsuccessful after 48619 (greater than max timeout of 20000). Resetting connection and trying again with a new connection.
+2017-08-03 18:30:16.823 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x0, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:30:16.823 [Curator-Framework-0] WARN  ConnectionState - Connection attempt unsuccessful after 48514 (greater than max timeout of 20000). Resetting connection and trying again with a new connection.
+2017-08-03 18:30:16.824 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - Exception causing close of session 0x15da7a42c3e0011 due to java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2017-08-03 18:30:16.882 [SyncThread:0] ERROR NIOServerCnxn - Unexpected Exception: 
+java.nio.channels.CancelledKeyException: null
+	at sun.nio.ch.SelectionKeyImpl.ensureValid(SelectionKeyImpl.java:73) ~[?:1.8.0_91]
+	at sun.nio.ch.SelectionKeyImpl.interestOps(SelectionKeyImpl.java:77) ~[?:1.8.0_91]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.sendBuffer(NIOServerCnxn.java:151) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.sendResponse(NIOServerCnxn.java:1081) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.FinalRequestProcessor.processRequest(FinalRequestProcessor.java:404) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.SyncRequestProcessor.flush(SyncRequestProcessor.java:200) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.SyncRequestProcessor.run(SyncRequestProcessor.java:131) [storm-core-1.1.1.jar:1.1.1]
+2017-08-03 18:30:16.824 [Curator-Framework-0] WARN  ConnectionState - Connection attempt unsuccessful after 48519 (greater than max timeout of 20000). Resetting connection and trying again with a new connection.
+2017-08-03 18:30:16.883 [SyncThread:0] ERROR NIOServerCnxn - Unexpected Exception: 
+java.nio.channels.CancelledKeyException: null
+	at sun.nio.ch.SelectionKeyImpl.ensureValid(SelectionKeyImpl.java:73) ~[?:1.8.0_91]
+	at sun.nio.ch.SelectionKeyImpl.interestOps(SelectionKeyImpl.java:77) ~[?:1.8.0_91]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.sendBuffer(NIOServerCnxn.java:151) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.sendResponse(NIOServerCnxn.java:1081) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.FinalRequestProcessor.processRequest(FinalRequestProcessor.java:404) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.SyncRequestProcessor.flush(SyncRequestProcessor.java:200) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.SyncRequestProcessor.run(SyncRequestProcessor.java:131) [storm-core-1.1.1.jar:1.1.1]
+2017-08-03 18:30:16.883 [SyncThread:0] ERROR NIOServerCnxn - Unexpected Exception: 
+java.nio.channels.CancelledKeyException: null
+	at sun.nio.ch.SelectionKeyImpl.ensureValid(SelectionKeyImpl.java:73) ~[?:1.8.0_91]
+	at sun.nio.ch.SelectionKeyImpl.interestOps(SelectionKeyImpl.java:77) ~[?:1.8.0_91]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.sendBuffer(NIOServerCnxn.java:151) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.sendResponse(NIOServerCnxn.java:1081) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.FinalRequestProcessor.processRequest(FinalRequestProcessor.java:404) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.SyncRequestProcessor.flush(SyncRequestProcessor.java:200) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.SyncRequestProcessor.run(SyncRequestProcessor.java:131) [storm-core-1.1.1.jar:1.1.1]
+2017-08-03 18:30:16.909 [timer] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 1001ms (NOT MAX)
+2017-08-03 18:30:16.911 [Thread-15] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 1001ms (NOT MAX)
+2017-08-03 18:30:16.921 [timer] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 1001ms (NOT MAX)
+2017-08-03 18:30:16.924 [Thread-11] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 1001ms (NOT MAX)
+2017-08-03 18:30:16.929 [refresh-active-timer] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 1001ms (NOT MAX)
+2017-08-03 18:30:16.929 [executor-heartbeat-timer] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 1001ms (NOT MAX)
+2017-08-03 18:30:16.929 [refresh-credentials-timer] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 1001ms (NOT MAX)
+2017-08-03 18:30:16.930 [refresh-connections-timer] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 1001ms (NOT MAX)
+2017-08-03 18:30:16.931 [SLOT_1024-EventThread] WARN  zookeeper-state-factory - Received event :disconnected::none: with disconnected Writer Zookeeper.
+2017-08-03 18:30:16.944 [Curator-Framework-0] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 1001ms (NOT MAX)
+2017-08-03 18:30:16.944 [main] ERROR NIOServerCnxnFactory - Thread Thread[main,5,main] died
+org.apache.storm.generated.DRPCExecutionException: null
+	at org.apache.storm.daemon.drpc$service_handler$reify__7920.failRequest(drpc.clj:155) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.drpc.DRPCSpout.fail(DRPCSpout.java:251) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fail_spout_msg.invoke(executor.clj:436) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__4962$tuple_action_fn__4968.invoke(executor.clj:536) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$mk_task_receiver$fn__4951.invoke(executor.clj:461) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.disruptor$clojure_handler$reify__4465.onEvent(disruptor.clj:40) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.DisruptorQueue.consumeBatchToCursor(DisruptorQueue.java:482) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.DisruptorQueue.consumeBatchWhenAvailable(DisruptorQueue.java:460) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.DisruptorQueue.consumeBatch(DisruptorQueue.java:450) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.disruptor$consume_batch.invoke(disruptor.clj:69) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__4962$fn__4977$fn__5008.invoke(executor.clj:626) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.util$async_loop$fn__557.invoke(util.clj:484) ~[storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.AFn.run(AFn.java:22) ~[clojure-1.7.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:30:16.958 [Curator-Framework-0] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 1001ms (NOT MAX)
+2017-08-03 18:30:16.958 [Curator-Framework-0] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 1001ms (NOT MAX)
+2017-08-03 18:30:16.990 [Curator-Framework-0] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 1001ms (NOT MAX)
+2017-08-03 18:30:17.811 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x0, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:30:17.814 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x0, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:30:17.916 [Curator-Framework-0] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 1001ms (NOT MAX)
+2017-08-03 18:30:17.930 [Curator-Framework-0] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 1001ms (NOT MAX)
+2017-08-03 18:30:18.043 [timer] ERROR BlobStoreUtils - Could not update the blob with keyexclaim-1-1501756141-stormconf.ser
+2017-08-03 18:30:18.064 [timer] ERROR BlobStoreUtils - Could not update the blob with keyexclaim-1-1501756141-stormcode.ser
+2017-08-03 18:30:18.072 [main-EventThread] WARN  ConnectionState - Session expired event received
+2017-08-03 18:30:18.107 [timer] ERROR BlobStoreUtils - Could not update the blob with keyexclaim-1-1501756141-stormconf.ser
+2017-08-03 18:30:18.143 [timer] ERROR BlobStoreUtils - Could not update the blob with keyexclaim-1-1501756141-stormcode.ser
+2017-08-03 18:30:18.192 [timer] ERROR BlobStoreUtils - Could not update the blob with keyexclaim-1-1501756141-stormcode.ser
+2017-08-03 18:30:18.208 [timer] ERROR BlobStoreUtils - Could not update the blob with keyexclaim-1-1501756141-stormconf.ser
+2017-08-03 18:30:18.240 [timer] ERROR BlobStoreUtils - Could not update the blob with keyexclaim-1-1501756141-stormconf.ser
+2017-08-03 18:30:18.259 [timer] ERROR BlobStoreUtils - Could not update the blob with keyexclaim-1-1501756141-stormcode.ser
+2017-08-03 18:30:18.555 [main-EventThread] WARN  ConnectionState - Session expired event received
+2017-08-03 18:30:18.685 [SLOT_1024-EventThread] WARN  zookeeper-state-factory - Received event :expired::none: with disconnected Writer Zookeeper.
+2017-08-03 18:30:18.685 [SLOT_1024-EventThread] WARN  ConnectionState - Session expired event received
+2017-08-03 18:30:48.750 [Curator-Framework-0] WARN  ZKPaths - The version of ZooKeeper being used doesn't support Container nodes. CreateMode.PERSISTENT will be used instead.
+2017-08-03 18:30:49.024 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\4f7ddbc6-25d3-411a-9c49-e3892c91cdff\supervisor\usercache
+2017-08-03 18:30:49.063 [main] WARN  Slot - SLOT ThinkPad-PC:1024 Starting in state EMPTY - assignment null
+2017-08-03 18:30:49.063 [main] WARN  Slot - SLOT ThinkPad-PC:1025 Starting in state EMPTY - assignment null
+2017-08-03 18:30:49.063 [main] WARN  Slot - SLOT ThinkPad-PC:1026 Starting in state EMPTY - assignment null
+2017-08-03 18:30:49.138 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\fb53f7e8-8e6e-4f77-aab4-c852f96cd4c1\supervisor\usercache
+2017-08-03 18:30:49.158 [main] WARN  Slot - SLOT ThinkPad-PC:1027 Starting in state EMPTY - assignment null
+2017-08-03 18:30:49.158 [main] WARN  Slot - SLOT ThinkPad-PC:1028 Starting in state EMPTY - assignment null
+2017-08-03 18:30:49.159 [main] WARN  Slot - SLOT ThinkPad-PC:1029 Starting in state EMPTY - assignment null
+2017-08-03 18:30:49.195 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 18:30:49.202 [main] WARN  Utils - STORM-VERSION new 1.1.1 old 1.1.1
+2017-08-03 18:30:49.432 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da7a5d037000d, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:30:51.229 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da7a5d037000f, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:30:58.765 [SyncThread:0] WARN  FileTxnLog - fsync-ing the write ahead log in SyncThread:0 took 3409ms which will adversely effect operation latency. See the ZooKeeper troubleshooting guide
+2017-08-03 18:31:26.238 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da7a5d0370004, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:31:26.241 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da7a5d037000a, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:31:26.245 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da7a5d037000c, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:31:26.249 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da7a5d0370011, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:31:26.251 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da7a5d0370001, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:31:26.253 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da7a5d0370006, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:31:26.255 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da7a5d0370008, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:31:26.259 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da7a5d0370000, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:31:26.261 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da7a5d0370003, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 18:31:26.347 [main-EventThread] WARN  zookeeper-state-factory - Received event :disconnected::none: with disconnected Writer Zookeeper.
+2017-08-03 18:31:26.348 [main-EventThread] WARN  zookeeper-state-factory - Received event :disconnected::none: with disconnected Reader Zookeeper.
+2017-08-03 18:31:26.349 [timer] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 1001ms (NOT MAX)
+2017-08-03 18:31:26.354 [refresh-active-timer] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 1001ms (NOT MAX)
+2017-08-03 18:31:26.354 [executor-heartbeat-timer] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 1001ms (NOT MAX)
+2017-08-03 18:31:26.354 [refresh-connections-timer] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 1001ms (NOT MAX)
+2017-08-03 18:31:26.355 [timer] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 1001ms (NOT MAX)
+2017-08-03 18:31:26.355 [refresh-credentials-timer] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 1001ms (NOT MAX)
+2017-08-03 18:31:26.355 [timer] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 1001ms (NOT MAX)
+2017-08-03 18:31:26.355 [Thread-11] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 1001ms (NOT MAX)
+2017-08-03 18:31:26.355 [Thread-15] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 1001ms (NOT MAX)
+2017-08-03 18:31:26.356 [SLOT_1027-EventThread] WARN  zookeeper-state-factory - Received event :disconnected::none: with disconnected Writer Zookeeper.
+2017-08-03 18:31:26.363 [main-EventThread] WARN  zookeeper-state-factory - Received event :disconnected::none: with disconnected Writer Zookeeper.
+2017-08-03 18:31:26.364 [main-EventThread] WARN  zookeeper-state-factory - Received event :disconnected::none: with disconnected Writer Zookeeper.
+2017-08-03 18:31:27.444 [main-EventThread] WARN  ConnectionState - Session expired event received
+2017-08-03 18:31:28.290 [main-EventThread] WARN  ConnectionState - Session expired event received
+2017-08-03 18:31:28.296 [main-EventThread] WARN  zookeeper-state-factory - Received event :expired::none: with disconnected Writer Zookeeper.
+2017-08-03 18:31:28.297 [main-EventThread] WARN  ConnectionState - Session expired event received
+2017-08-03 18:31:28.300 [main-EventThread] WARN  zookeeper-state-factory - Received event :expired::none: with disconnected Writer Zookeeper.
+2017-08-03 18:31:28.301 [main-EventThread] WARN  ConnectionState - Session expired event received
+2017-08-03 18:31:28.311 [main-EventThread] WARN  zookeeper-state-factory - Received event :expired::none: with disconnected Reader Zookeeper.
+2017-08-03 18:31:28.312 [SLOT_1027-EventThread] WARN  zookeeper-state-factory - Received event :expired::none: with disconnected Writer Zookeeper.
+2017-08-03 18:31:28.312 [main-EventThread] WARN  ConnectionState - Session expired event received
+2017-08-03 18:31:28.313 [SLOT_1027-EventThread] WARN  ConnectionState - Session expired event received
+2017-08-03 18:31:28.313 [main-EventThread] WARN  ConnectionState - Session expired event received
+2017-08-03 18:31:28.380 [main-EventThread] WARN  zookeeper-state-factory - Received event :expired::none: with disconnected Writer Zookeeper.
+2017-08-03 18:31:28.380 [main-EventThread] WARN  ConnectionState - Session expired event received
+2017-08-03 18:31:28.380 [main-EventThread] WARN  ConnectionState - Session expired event received
+2017-08-03 18:31:28.508 [timer] ERROR BlobStoreUtils - Could not update the blob with keyexclaim-1-1501756249-stormconf.ser
+2017-08-03 18:31:28.596 [timer] ERROR BlobStoreUtils - Could not update the blob with keyexclaim-1-1501756249-stormcode.ser
+2017-08-03 18:31:29.356 [timer] ERROR BlobStoreUtils - Could not update the blob with keyexclaim-1-1501756249-stormcode.ser
+2017-08-03 18:31:31.217 [timer] ERROR BlobStoreUtils - Could not update the blob with keyexclaim-1-1501756249-stormconf.ser
+2017-08-03 18:31:32.268 [timer] ERROR BlobStoreUtils - Could not update the blob with keyexclaim-1-1501756249-stormconf.ser
+2017-08-03 18:31:32.894 [timer] ERROR BlobStoreUtils - Could not update the blob with keyexclaim-1-1501756249-stormcode.ser
+2017-08-03 18:51:58.369 [Curator-Framework-0] WARN  ZKPaths - The version of ZooKeeper being used doesn't support Container nodes. CreateMode.PERSISTENT will be used instead.
+2017-08-03 18:51:58.679 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\0f7f80c7-71f2-4f02-8a91-8a256d7a15df\supervisor\usercache
+2017-08-03 18:51:58.730 [main] WARN  Slot - SLOT ThinkPad-PC:1024 Starting in state EMPTY - assignment null
+2017-08-03 18:51:58.731 [main] WARN  Slot - SLOT ThinkPad-PC:1025 Starting in state EMPTY - assignment null
+2017-08-03 18:51:58.731 [main] WARN  Slot - SLOT ThinkPad-PC:1026 Starting in state EMPTY - assignment null
+2017-08-03 18:51:58.866 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\fe5ba460-a928-45a9-acaa-d831de383ccf\supervisor\usercache
+2017-08-03 18:51:58.886 [main] WARN  Slot - SLOT ThinkPad-PC:1027 Starting in state EMPTY - assignment null
+2017-08-03 18:51:58.887 [main] WARN  Slot - SLOT ThinkPad-PC:1028 Starting in state EMPTY - assignment null
+2017-08-03 18:51:58.887 [main] WARN  Slot - SLOT ThinkPad-PC:1029 Starting in state EMPTY - assignment null
+2017-08-03 18:51:58.913 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 18:51:58.918 [main] WARN  Utils - STORM-VERSION new 1.1.1 old 1.1.1
+2017-08-03 18:51:59.321 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da7b92fe8000e, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]

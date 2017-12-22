@@ -1,0 +1,78 @@
+2017-08-03 19:06:52.304 [Curator-Framework-0] WARN  ZKPaths - The version of ZooKeeper being used doesn't support Container nodes. CreateMode.PERSISTENT will be used instead.
+2017-08-03 19:06:52.632 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\7b309bdc-1038-47da-9e41-fcc7aa9f7659\supervisor\usercache
+2017-08-03 19:06:52.675 [main] WARN  Slot - SLOT ThinkPad-PC:1024 Starting in state EMPTY - assignment null
+2017-08-03 19:06:52.675 [main] WARN  Slot - SLOT ThinkPad-PC:1025 Starting in state EMPTY - assignment null
+2017-08-03 19:06:52.675 [main] WARN  Slot - SLOT ThinkPad-PC:1026 Starting in state EMPTY - assignment null
+2017-08-03 19:06:52.771 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\91170d8e-cfc4-487b-a689-84afe8304f88\supervisor\usercache
+2017-08-03 19:06:52.790 [main] WARN  Slot - SLOT ThinkPad-PC:1027 Starting in state EMPTY - assignment null
+2017-08-03 19:06:52.790 [main] WARN  Slot - SLOT ThinkPad-PC:1028 Starting in state EMPTY - assignment null
+2017-08-03 19:06:52.791 [main] WARN  Slot - SLOT ThinkPad-PC:1029 Starting in state EMPTY - assignment null
+2017-08-03 19:06:52.831 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 19:06:52.837 [main] WARN  Utils - STORM-VERSION new 1.1.1 old 1.1.1
+2017-08-03 19:07:03.882 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da7c6d364000f, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 19:07:05.526 [Thread-24-spout-executor[6 6]] ERROR util - Async loop died!
+java.lang.RuntimeException: No DRPC servers configured for topology
+	at org.apache.storm.drpc.DRPCSpout.open(DRPCSpout.java:149) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__4962$fn__4977.invoke(executor.clj:602) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.util$async_loop$fn__557.invoke(util.clj:482) [storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.7.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 19:07:05.529 [Thread-24-spout-executor[6 6]] ERROR executor - 
+java.lang.RuntimeException: No DRPC servers configured for topology
+	at org.apache.storm.drpc.DRPCSpout.open(DRPCSpout.java:149) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__4962$fn__4977.invoke(executor.clj:602) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.util$async_loop$fn__557.invoke(util.clj:482) [storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.7.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 19:07:05.626 [Thread-24-spout-executor[6 6]] ERROR util - Halting process: ("Worker died")
+java.lang.RuntimeException: ("Worker died")
+	at org.apache.storm.util$exit_process_BANG_.doInvoke(util.clj:341) [storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.RestFn.invoke(RestFn.java:423) [clojure-1.7.0.jar:?]
+	at org.apache.storm.daemon.worker$fn__5628$fn__5629.invoke(worker.clj:759) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$mk_executor_data$fn__4848$fn__4849.invoke(executor.clj:276) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.util$async_loop$fn__557.invoke(util.clj:494) [storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.7.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 19:08:02.980 [Curator-Framework-0] WARN  ZKPaths - The version of ZooKeeper being used doesn't support Container nodes. CreateMode.PERSISTENT will be used instead.
+2017-08-03 19:08:03.272 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\f92b4700-262e-4ae0-bde6-45c6e3fb8f58\supervisor\usercache
+2017-08-03 19:08:03.315 [main] WARN  Slot - SLOT ThinkPad-PC:1024 Starting in state EMPTY - assignment null
+2017-08-03 19:08:03.315 [main] WARN  Slot - SLOT ThinkPad-PC:1025 Starting in state EMPTY - assignment null
+2017-08-03 19:08:03.315 [main] WARN  Slot - SLOT ThinkPad-PC:1026 Starting in state EMPTY - assignment null
+2017-08-03 19:08:03.395 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\db0d4c4c-e09f-408f-8e65-0771fcce5d2a\supervisor\usercache
+2017-08-03 19:08:03.417 [main] WARN  Slot - SLOT ThinkPad-PC:1027 Starting in state EMPTY - assignment null
+2017-08-03 19:08:03.417 [main] WARN  Slot - SLOT ThinkPad-PC:1028 Starting in state EMPTY - assignment null
+2017-08-03 19:08:03.417 [main] WARN  Slot - SLOT ThinkPad-PC:1029 Starting in state EMPTY - assignment null
+2017-08-03 19:08:03.448 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 19:08:03.453 [main] WARN  Utils - STORM-VERSION new 1.1.1 old 1.1.1
+2017-08-03 19:08:05.755 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da7c7e8210010, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 19:08:07.073 [Thread-24-spout-executor[6 6]] ERROR util - Async loop died!
+java.lang.RuntimeException: No DRPC servers configured for topology
+	at org.apache.storm.drpc.DRPCSpout.open(DRPCSpout.java:149) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__4962$fn__4977.invoke(executor.clj:602) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.util$async_loop$fn__557.invoke(util.clj:482) [storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.7.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 19:08:07.074 [Thread-24-spout-executor[6 6]] ERROR executor - 
+java.lang.RuntimeException: No DRPC servers configured for topology
+	at org.apache.storm.drpc.DRPCSpout.open(DRPCSpout.java:149) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$fn__4962$fn__4977.invoke(executor.clj:602) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.util$async_loop$fn__557.invoke(util.clj:482) [storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.7.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 19:08:07.220 [Thread-24-spout-executor[6 6]] ERROR util - Halting process: ("Worker died")
+java.lang.RuntimeException: ("Worker died")
+	at org.apache.storm.util$exit_process_BANG_.doInvoke(util.clj:341) [storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.RestFn.invoke(RestFn.java:423) [clojure-1.7.0.jar:?]
+	at org.apache.storm.daemon.worker$fn__5628$fn__5629.invoke(worker.clj:759) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.daemon.executor$mk_executor_data$fn__4848$fn__4849.invoke(executor.clj:276) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.util$async_loop$fn__557.invoke(util.clj:494) [storm-core-1.1.1.jar:1.1.1]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.7.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:sxs="http://sxshunrj.com/schema/sxs/people"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://sxshunrj.com/schema/sxs/people http://sxshunrj.com/schema/sxs/people.xsd">
+
+    <sxs:people id="people1" name="sxshunrj" age="16"></sxs:people>
+
+</beans>

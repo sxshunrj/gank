@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Git-Branch: master
+Target-Compatibility: 1.8
+Build-Date: 2017-08-03T19:10:09+0800
+Built-OS: Windows 7/6.1
+Built-By: Administrator
+Source-Compatibility: 1.8
+Rev-Revision: 1.0.0
+Built-JDK: 1.8.0_91
+Git-Revision: 7d7d0418d4bd3a6e738e2e00a87f632f157b4067
+

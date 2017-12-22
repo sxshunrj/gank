@@ -1,0 +1,173 @@
+2017-08-04 10:15:12.009 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15dab066e4d0002, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-04 10:15:12.311 [Curator-Framework-0] WARN  ZKPaths - The version of ZooKeeper being used doesn't support Container nodes. CreateMode.PERSISTENT will be used instead.
+2017-08-04 10:15:12.482 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15dab066e4d0007, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-04 10:15:12.614 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\31a90578-5bdf-43e7-90fd-7fa19298d4a5\supervisor\usercache
+2017-08-04 10:15:12.653 [main] WARN  Slot - SLOT ThinkPad-PC:1024 Starting in state EMPTY - assignment null
+2017-08-04 10:15:12.654 [main] WARN  Slot - SLOT ThinkPad-PC:1025 Starting in state EMPTY - assignment null
+2017-08-04 10:15:12.654 [main] WARN  Slot - SLOT ThinkPad-PC:1026 Starting in state EMPTY - assignment null
+2017-08-04 10:15:12.731 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\03289da4-9fd9-4515-a019-756ef5940d76\supervisor\usercache
+2017-08-04 10:15:12.751 [main] WARN  Slot - SLOT ThinkPad-PC:1027 Starting in state EMPTY - assignment null
+2017-08-04 10:15:12.751 [main] WARN  Slot - SLOT ThinkPad-PC:1028 Starting in state EMPTY - assignment null
+2017-08-04 10:15:12.751 [main] WARN  Slot - SLOT ThinkPad-PC:1029 Starting in state EMPTY - assignment null
+2017-08-04 10:15:12.781 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-04 10:15:12.786 [main] WARN  Utils - STORM-VERSION new 1.1.1 old 1.1.1
+2017-08-04 10:15:14.806 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15dab066e4d000f, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-04 10:15:17.252 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15dab066e4d0006, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-04 10:15:18.442 [SLOT_1027] WARN  Slot - SLOT 1027: Assignment Changed from LocalAssignment(topology_id:firstTopo-1-1501812912, executors:[ExecutorInfo(task_start:2, task_end:2), ExecutorInfo(task_start:1, task_end:1), ExecutorInfo(task_start:3, task_end:3)], resources:WorkerResources(mem_on_heap:0.0, mem_off_heap:0.0, cpu:0.0), owner:Administrator) to null
+2017-08-04 10:15:18.445 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:18.545 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:18.646 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:18.746 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:18.846 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:18.946 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:19.046 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:19.146 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:19.246 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:19.347 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:19.447 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:19.547 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:19.647 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:19.747 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:19.848 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:19.948 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:20.049 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:20.149 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:20.249 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:20.349 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:20.449 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:20.549 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:20.649 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:20.750 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:20.850 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:20.950 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:21.050 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:21.150 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:21.251 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:21.352 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:21.452 [main] WARN  ReadClusterState - It has taken 1000ms so far and Thread[SLOT_1027,5,main] is still not shut down.
+2017-08-04 10:15:21.489 [SLOT_1027] WARN  Slot - SLOT 1027 all processes are dead...
+2017-08-04 10:15:21.570 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15dab066e4d000c, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-04 10:16:10.441 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-04 10:16:11.988 [main] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 2001ms (NOT MAX)
+2017-08-04 10:16:14.989 [main] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 2003ms (NOT MAX)
+2017-08-04 10:16:17.992 [main] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 2007ms (NOT MAX)
+2017-08-04 10:16:20.999 [main] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 2013ms (NOT MAX)
+2017-08-04 10:16:24.012 [main] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 2021ms (NOT MAX)
+2017-08-04 10:16:27.034 [main] WARN  NimbusClient - Ignoring exception while trying to get leader nimbus info from localhost. will retry with a different seed host.
+java.lang.RuntimeException: java.lang.RuntimeException: org.apache.storm.thrift.transport.TTransportException: java.net.ConnectException: Connection refused: connect
+	at org.apache.storm.security.auth.ThriftClient.reconnect(ThriftClient.java:108) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.security.auth.ThriftClient.<init>(ThriftClient.java:69) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.NimbusClient.<init>(NimbusClient.java:127) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.NimbusClient.getConfiguredClientAs(NimbusClient.java:83) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.NimbusClient.getConfiguredClient(NimbusClient.java:57) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.blobstore.NimbusBlobStore.prepare(NimbusBlobStore.java:268) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.StormSubmitter.getListOfKeysFromBlobStore(StormSubmitter.java:595) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.StormSubmitter.validateConfs(StormSubmitter.java:561) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.StormSubmitter.submitTopologyAs(StormSubmitter.java:207) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.StormSubmitter.submitTopology(StormSubmitter.java:387) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.StormSubmitter.submitTopology(StormSubmitter.java:159) [storm-core-1.1.1.jar:1.1.1]
+	at com.sxshunrj.test.test2.TopoMain.main(TopoMain.java:40) [stormdemo/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_91]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_91]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_91]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_91]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147) [idea_rt.jar:?]
+Caused by: java.lang.RuntimeException: org.apache.storm.thrift.transport.TTransportException: java.net.ConnectException: Connection refused: connect
+	at org.apache.storm.security.auth.TBackoffConnect.retryNext(TBackoffConnect.java:64) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.security.auth.TBackoffConnect.doConnectWithRetry(TBackoffConnect.java:56) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.security.auth.ThriftClient.reconnect(ThriftClient.java:100) ~[storm-core-1.1.1.jar:1.1.1]
+	... 16 more
+Caused by: org.apache.storm.thrift.transport.TTransportException: java.net.ConnectException: Connection refused: connect
+	at org.apache.storm.thrift.transport.TSocket.open(TSocket.java:226) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.thrift.transport.TFramedTransport.open(TFramedTransport.java:81) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.security.auth.SimpleTransportPlugin.connect(SimpleTransportPlugin.java:105) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.security.auth.TBackoffConnect.doConnectWithRetry(TBackoffConnect.java:53) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.security.auth.ThriftClient.reconnect(ThriftClient.java:100) ~[storm-core-1.1.1.jar:1.1.1]
+	... 16 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_91]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_91]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_91]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_91]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_91]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_91]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_91]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_91]
+	at org.apache.storm.thrift.transport.TSocket.open(TSocket.java:221) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.thrift.transport.TFramedTransport.open(TFramedTransport.java:81) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.security.auth.SimpleTransportPlugin.connect(SimpleTransportPlugin.java:105) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.security.auth.TBackoffConnect.doConnectWithRetry(TBackoffConnect.java:53) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.security.auth.ThriftClient.reconnect(ThriftClient.java:100) ~[storm-core-1.1.1.jar:1.1.1]
+	... 16 more
+2017-08-04 10:17:08.963 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-04 10:17:10.604 [main] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 2001ms (NOT MAX)
+2017-08-04 10:17:13.605 [main] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 2003ms (NOT MAX)
+2017-08-04 10:17:16.610 [main] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 2005ms (NOT MAX)
+2017-08-04 10:17:19.615 [main] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 2012ms (NOT MAX)
+2017-08-04 10:17:22.629 [main] WARN  StormBoundedExponentialBackoffRetry - WILL SLEEP FOR 2023ms (NOT MAX)
+2017-08-04 10:17:25.653 [main] WARN  NimbusClient - Ignoring exception while trying to get leader nimbus info from localhost. will retry with a different seed host.
+java.lang.RuntimeException: java.lang.RuntimeException: org.apache.storm.thrift.transport.TTransportException: java.net.ConnectException: Connection refused: connect
+	at org.apache.storm.security.auth.ThriftClient.reconnect(ThriftClient.java:108) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.security.auth.ThriftClient.<init>(ThriftClient.java:69) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.NimbusClient.<init>(NimbusClient.java:127) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.NimbusClient.getConfiguredClientAs(NimbusClient.java:83) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.utils.NimbusClient.getConfiguredClient(NimbusClient.java:57) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.blobstore.NimbusBlobStore.prepare(NimbusBlobStore.java:268) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.StormSubmitter.getListOfKeysFromBlobStore(StormSubmitter.java:595) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.StormSubmitter.validateConfs(StormSubmitter.java:561) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.StormSubmitter.submitTopologyAs(StormSubmitter.java:207) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.StormSubmitter.submitTopology(StormSubmitter.java:387) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.StormSubmitter.submitTopology(StormSubmitter.java:159) [storm-core-1.1.1.jar:1.1.1]
+	at com.sxshunrj.test.test2.TopoMain.main(TopoMain.java:40) [stormdemo/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_91]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_91]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_91]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_91]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147) [idea_rt.jar:?]
+Caused by: java.lang.RuntimeException: org.apache.storm.thrift.transport.TTransportException: java.net.ConnectException: Connection refused: connect
+	at org.apache.storm.security.auth.TBackoffConnect.retryNext(TBackoffConnect.java:64) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.security.auth.TBackoffConnect.doConnectWithRetry(TBackoffConnect.java:56) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.security.auth.ThriftClient.reconnect(ThriftClient.java:100) ~[storm-core-1.1.1.jar:1.1.1]
+	... 16 more
+Caused by: org.apache.storm.thrift.transport.TTransportException: java.net.ConnectException: Connection refused: connect
+	at org.apache.storm.thrift.transport.TSocket.open(TSocket.java:226) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.thrift.transport.TFramedTransport.open(TFramedTransport.java:81) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.security.auth.SimpleTransportPlugin.connect(SimpleTransportPlugin.java:105) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.security.auth.TBackoffConnect.doConnectWithRetry(TBackoffConnect.java:53) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.security.auth.ThriftClient.reconnect(ThriftClient.java:100) ~[storm-core-1.1.1.jar:1.1.1]
+	... 16 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_91]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_91]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_91]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_91]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_91]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_91]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_91]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_91]
+	at org.apache.storm.thrift.transport.TSocket.open(TSocket.java:221) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.thrift.transport.TFramedTransport.open(TFramedTransport.java:81) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.security.auth.SimpleTransportPlugin.connect(SimpleTransportPlugin.java:105) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.security.auth.TBackoffConnect.doConnectWithRetry(TBackoffConnect.java:53) ~[storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.security.auth.ThriftClient.reconnect(ThriftClient.java:100) ~[storm-core-1.1.1.jar:1.1.1]
+	... 16 more

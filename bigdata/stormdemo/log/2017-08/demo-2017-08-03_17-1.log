@@ -1,0 +1,114 @@
+2017-08-03 17:00:22.205 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 17:00:26.384 [Curator-Framework-0] WARN  ZKPaths - The version of ZooKeeper being used doesn't support Container nodes. CreateMode.PERSISTENT will be used instead.
+2017-08-03 17:00:26.634 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\fe4d8675-6b21-419f-936a-c7b379d81741\supervisor\usercache
+2017-08-03 17:00:26.672 [main] WARN  Slot - SLOT ThinkPad-PC:1024 Starting in state EMPTY - assignment null
+2017-08-03 17:00:26.672 [main] WARN  Slot - SLOT ThinkPad-PC:1025 Starting in state EMPTY - assignment null
+2017-08-03 17:00:26.673 [main] WARN  Slot - SLOT ThinkPad-PC:1026 Starting in state EMPTY - assignment null
+2017-08-03 17:00:26.764 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\fff2d305-0d10-4bbe-9216-1d6cb1090767\supervisor\usercache
+2017-08-03 17:00:26.785 [main] WARN  Slot - SLOT ThinkPad-PC:1027 Starting in state EMPTY - assignment null
+2017-08-03 17:00:26.785 [main] WARN  Slot - SLOT ThinkPad-PC:1028 Starting in state EMPTY - assignment null
+2017-08-03 17:00:26.785 [main] WARN  Slot - SLOT ThinkPad-PC:1029 Starting in state EMPTY - assignment null
+2017-08-03 17:00:26.787 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 17:00:26.792 [main] WARN  Utils - STORM-VERSION new 1.1.1 old 1.1.1
+2017-08-03 17:00:27.809 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da7531347000d, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 17:00:28.033 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da7531347000e, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 17:00:28.750 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da7531347000f, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 17:00:28.981 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da75313470010, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 17:00:48.060 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 17:00:52.244 [Curator-Framework-0] WARN  ZKPaths - The version of ZooKeeper being used doesn't support Container nodes. CreateMode.PERSISTENT will be used instead.
+2017-08-03 17:00:52.493 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\d5f2e1f8-ff66-423e-b961-1295eaed19b0\supervisor\usercache
+2017-08-03 17:00:52.531 [main] WARN  Slot - SLOT ThinkPad-PC:1024 Starting in state EMPTY - assignment null
+2017-08-03 17:00:52.531 [main] WARN  Slot - SLOT ThinkPad-PC:1025 Starting in state EMPTY - assignment null
+2017-08-03 17:00:52.531 [main] WARN  Slot - SLOT ThinkPad-PC:1026 Starting in state EMPTY - assignment null
+2017-08-03 17:00:52.631 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\ec44e766-28f4-4735-b6fd-c65a25a774fc\supervisor\usercache
+2017-08-03 17:00:52.652 [main] WARN  Slot - SLOT ThinkPad-PC:1027 Starting in state EMPTY - assignment null
+2017-08-03 17:00:52.652 [main] WARN  Slot - SLOT ThinkPad-PC:1028 Starting in state EMPTY - assignment null
+2017-08-03 17:00:52.653 [main] WARN  Slot - SLOT ThinkPad-PC:1029 Starting in state EMPTY - assignment null
+2017-08-03 17:00:52.654 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 17:00:52.661 [main] WARN  Utils - STORM-VERSION new 1.1.1 old 1.1.1
+2017-08-03 17:02:37.136 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 17:02:41.692 [Curator-Framework-0] WARN  ZKPaths - The version of ZooKeeper being used doesn't support Container nodes. CreateMode.PERSISTENT will be used instead.
+2017-08-03 17:02:41.955 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\74a58787-e846-4ff0-b94d-d8c073744477\supervisor\usercache
+2017-08-03 17:02:42.012 [main] WARN  Slot - SLOT ThinkPad-PC:1024 Starting in state EMPTY - assignment null
+2017-08-03 17:02:42.012 [main] WARN  Slot - SLOT ThinkPad-PC:1025 Starting in state EMPTY - assignment null
+2017-08-03 17:02:42.012 [main] WARN  Slot - SLOT ThinkPad-PC:1026 Starting in state EMPTY - assignment null
+2017-08-03 17:02:42.102 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\7ffcc9c0-0cdd-43b9-89df-2b3b7d13a80d\supervisor\usercache
+2017-08-03 17:02:42.126 [main] WARN  Slot - SLOT ThinkPad-PC:1027 Starting in state EMPTY - assignment null
+2017-08-03 17:02:42.126 [main] WARN  Slot - SLOT ThinkPad-PC:1028 Starting in state EMPTY - assignment null
+2017-08-03 17:02:42.126 [main] WARN  Slot - SLOT ThinkPad-PC:1029 Starting in state EMPTY - assignment null
+2017-08-03 17:02:42.127 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 17:02:42.132 [main] WARN  Utils - STORM-VERSION new 1.1.1 old 1.1.1
+2017-08-03 17:04:45.798 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 17:04:50.078 [Curator-Framework-0] WARN  ZKPaths - The version of ZooKeeper being used doesn't support Container nodes. CreateMode.PERSISTENT will be used instead.
+2017-08-03 17:04:50.163 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da75719840005, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 17:04:50.349 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\f6b0ecb9-9be4-4ccd-9c04-05f24274498e\supervisor\usercache
+2017-08-03 17:04:50.386 [main] WARN  Slot - SLOT ThinkPad-PC:1024 Starting in state EMPTY - assignment null
+2017-08-03 17:04:50.386 [main] WARN  Slot - SLOT ThinkPad-PC:1025 Starting in state EMPTY - assignment null
+2017-08-03 17:04:50.386 [main] WARN  Slot - SLOT ThinkPad-PC:1026 Starting in state EMPTY - assignment null
+2017-08-03 17:04:50.478 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\c8747761-1de6-45d9-b9de-2e34a83d93e5\supervisor\usercache
+2017-08-03 17:04:50.500 [main] WARN  Slot - SLOT ThinkPad-PC:1027 Starting in state EMPTY - assignment null
+2017-08-03 17:04:50.500 [main] WARN  Slot - SLOT ThinkPad-PC:1028 Starting in state EMPTY - assignment null
+2017-08-03 17:04:50.501 [main] WARN  Slot - SLOT ThinkPad-PC:1029 Starting in state EMPTY - assignment null
+2017-08-03 17:04:50.502 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 17:04:50.508 [main] WARN  Utils - STORM-VERSION new 1.1.1 old 1.1.1
+2017-08-03 17:04:50.864 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da7571984000e, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 17:04:52.560 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da7571984000f, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 17:36:31.219 [Curator-Framework-0] WARN  ZKPaths - The version of ZooKeeper being used doesn't support Container nodes. CreateMode.PERSISTENT will be used instead.
+2017-08-03 17:36:31.508 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\7d82678c-e705-413c-9739-1a7b9edc10d9\supervisor\usercache
+2017-08-03 17:36:31.544 [main] WARN  Slot - SLOT ThinkPad-PC:1024 Starting in state EMPTY - assignment null
+2017-08-03 17:36:31.544 [main] WARN  Slot - SLOT ThinkPad-PC:1025 Starting in state EMPTY - assignment null
+2017-08-03 17:36:31.544 [main] WARN  Slot - SLOT ThinkPad-PC:1026 Starting in state EMPTY - assignment null
+2017-08-03 17:36:31.619 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\fc4ef891-8ec3-4adb-8f2d-f49e0c3b16d3\supervisor\usercache
+2017-08-03 17:36:31.638 [main] WARN  Slot - SLOT ThinkPad-PC:1027 Starting in state EMPTY - assignment null
+2017-08-03 17:36:31.638 [main] WARN  Slot - SLOT ThinkPad-PC:1028 Starting in state EMPTY - assignment null
+2017-08-03 17:36:31.638 [main] WARN  Slot - SLOT ThinkPad-PC:1029 Starting in state EMPTY - assignment null
+2017-08-03 17:36:31.659 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 17:36:31.664 [main] WARN  Utils - STORM-VERSION new 1.1.1 old 1.1.1
+2017-08-03 17:36:33.713 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  NIOServerCnxn - caught end of stream exception
+org.apache.storm.shade.org.apache.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x15da7741baa000f, likely client has closed socket
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) [storm-core-1.1.1.jar:1.1.1]
+	at org.apache.storm.shade.org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-1.1.1.jar:1.1.1]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_91]
+2017-08-03 17:40:50.693 [Curator-Framework-0] WARN  ZKPaths - The version of ZooKeeper being used doesn't support Container nodes. CreateMode.PERSISTENT will be used instead.
+2017-08-03 17:40:51.017 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\d2452eba-040d-436e-99db-f55734c66bb7\supervisor\usercache
+2017-08-03 17:40:51.055 [main] WARN  Slot - SLOT ThinkPad-PC:1024 Starting in state EMPTY - assignment null
+2017-08-03 17:40:51.056 [main] WARN  Slot - SLOT ThinkPad-PC:1025 Starting in state EMPTY - assignment null
+2017-08-03 17:40:51.056 [main] WARN  Slot - SLOT ThinkPad-PC:1026 Starting in state EMPTY - assignment null
+2017-08-03 17:40:51.128 [main] WARN  Localizer - No left over resources found for any user during reconstructing of local resources at: C:\Users\ADMINI~1\AppData\Local\Temp\9d82e862-78fa-466f-9e43-62cce21e9e9d\supervisor\usercache
+2017-08-03 17:40:51.149 [main] WARN  Slot - SLOT ThinkPad-PC:1027 Starting in state EMPTY - assignment null
+2017-08-03 17:40:51.149 [main] WARN  Slot - SLOT ThinkPad-PC:1028 Starting in state EMPTY - assignment null
+2017-08-03 17:40:51.150 [main] WARN  Slot - SLOT ThinkPad-PC:1029 Starting in state EMPTY - assignment null
+2017-08-03 17:40:51.170 [main] WARN  Utils - STORM-VERSION new 1.1.1 old null
+2017-08-03 17:40:51.176 [main] WARN  Utils - STORM-VERSION new 1.1.1 old 1.1.1
+2017-08-03 17:43:17.140 [Thread-18-kafkaSpout-executor[2 2]-SendThread(192.168.10.14:2181)] WARN  ClientCnxn - Unable to reconnect to ZooKeeper service, session 0x35da163b17d1d45 has expired
+2017-08-03 17:43:17.140 [Thread-18-kafkaSpout-executor[2 2]-EventThread] WARN  ConnectionState - Session expired event received
+2017-08-03 17:43:17.441 [Thread-18-kafkaSpout-executor[2 2]-SendThread(192.168.10.14:2181)] WARN  ClientCnxn - Unable to reconnect to ZooKeeper service, session 0x35da163b17d1d46 has expired
+2017-08-03 17:43:17.441 [Thread-18-kafkaSpout-executor[2 2]-EventThread] WARN  ConnectionState - Session expired event received

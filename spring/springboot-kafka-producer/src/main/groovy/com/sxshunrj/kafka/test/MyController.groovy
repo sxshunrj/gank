@@ -1,17 +1,13 @@
 package com.sxshunrj.kafka.test
 
 import com.alibaba.fastjson.JSON;
-import kafka.admin.AdminUtils;
-import kafka.utils.ZkUtils;
-import org.apache.kafka.common.security.JaasUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate
 import org.springframework.kafka.support.SendResult
-import org.springframework.util.concurrent.FailureCallback
+import org.springframework.util.StringUtils
 import org.springframework.util.concurrent.ListenableFuture
-import org.springframework.util.concurrent.SuccessCallback;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -39,24 +35,28 @@ public class MyController {
     @RequestMapping(value = "/send", method = RequestMethod.GET)
     public String sendKafka(HttpServletRequest request) {
         try {
-            String message = request.getParameter("message");
             String topicName = request.getParameter("topicName")
+            String key = request.getParameter("key")
+            String message = request.getParameter("message");
 
-            ListenableFuture<SendResult<String, String>> future = kafkaTemplate.send(topicName, "key", message);
-//            future.addCallback(new SuccessCallback<SendResult>() {
-//                @Override
-//                void onSuccess(SendResult result) {
-//                    log.info("发送成功，返回结果为："+JSON.toJSONString(result))
-//                }
-//            },new FailureCallback() {
-//                @Override
-//                void onFailure(Throwable ex) {
-//                    log.info("发送失败，异常为："+JSON.toJSONString(ex))
-//                }
-//            });
+            if(StringUtils.isEmpty(key)){
+                key = null
+            }
+
+            /**
+             <1> 若指定Partition ID,则PR被发送至指定Partition
+             <2> 若未指定Partition ID,但指定了Key, PR会按照hasy(key)发送至对应Partition
+             <3> 若既未指定Partition ID也没指定Key，PR会按照round-robin模式发送到每个Partition
+             <4> 若同时指定了Partition ID和Key, PR只会发送到指定的Partition (Key不起作用，代码逻辑决定)
+             */
+            ListenableFuture<SendResult<String, String>> future = kafkaTemplate.send(topicName, key, message);
 
             SendResult sendResult = future.get()
-            log.info("发送成功，返回结果为："+JSON.toJSONString(sendResult))
+            log.info("发送成功，返回结果为：")
+            log.info("--producerRecord:"+JSON.toJSONString(sendResult.producerRecord))
+            log.info("--recordMetadata:"+JSON.toJSONString(sendResult.recordMetadata))
+            log.info("----------------------")
+
             if(null != sendResult){
                 return sendResult
             }

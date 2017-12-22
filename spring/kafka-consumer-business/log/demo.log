@@ -1,0 +1,9 @@
+2017-10-16 17:48:44.535 [main] INFO  Application - Starting Application on ThinkPad-PC with PID 11740 (D:\workspace\clone\gank\spring\kafka-consumer-business\build\classes\main started by Administrator in D:\workspace\clone\gank\spring\kafka-consumer-business)
+2017-10-16 17:48:44.537 [main] INFO  Application - No active profile set, falling back to default profiles: default
+2017-10-16 17:48:48.244 [main] INFO  Application - Started Application in 4.526 seconds (JVM running for 6.089)
+2017-10-16 17:51:42.489 [main] INFO  Application - Starting Application on ThinkPad-PC with PID 7524 (D:\workspace\clone\gank\spring\kafka-consumer-business\build\classes\main started by Administrator in D:\workspace\clone\gank\spring\kafka-consumer-business)
+2017-10-16 17:51:42.491 [main] INFO  Application - No active profile set, falling back to default profiles: default
+2017-10-16 17:51:46.603 [main] INFO  Application - Started Application in 4.982 seconds (JVM running for 6.397)
+2017-10-16 17:54:02.466 [main] INFO  Application - Starting Application on ThinkPad-PC with PID 11540 (D:\workspace\clone\gank\spring\kafka-consumer-business\build\classes\main started by Administrator in D:\workspace\clone\gank\spring\kafka-consumer-business)
+2017-10-16 17:54:02.468 [main] INFO  Application - No active profile set, falling back to default profiles: default
+2017-10-16 17:54:06.685 [main] INFO  Application - Started Application in 4.9 seconds (JVM running for 6.34)
