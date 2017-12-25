@@ -25,6 +25,6 @@
             <AppenderRef ref="RollingFile"/>
         </Root>
 
-        <Logger name="com.sxshunrj" level="info" />
+        <Logger name="com.sxshunrj.springboot.common" level="debug" />
     </Loggers>
 </Configuration>

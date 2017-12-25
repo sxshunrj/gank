@@ -17,7 +17,8 @@ import java.util.Set;
  * Created by IntelliJ IDEA.
  * User: sunxs
  * Date: 2017/12/15 11:36
- * Desc：
+ * Desc：动态注册Bean到spring容器中
+ *      使用此Bean是需要这样获取：AppContext.getAppContext().getBean(RegisterBean.toLowerCaseFirstOne(TestService.class));
  */
 @Component
 public class RegisterBean implements BeanFactoryPostProcessor {
@@ -39,7 +40,7 @@ public class RegisterBean implements BeanFactoryPostProcessor {
 
     @Override
     public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
-        if(null != beanFactory){
+        if(null != beanFactory && this.beanFactory == null){
             this.beanFactory = (DefaultListableBeanFactory) beanFactory;
         }
 
@@ -59,17 +60,20 @@ public class RegisterBean implements BeanFactoryPostProcessor {
                 }
             }
 
-            this.beanFactory.registerBeanDefinition(toLowerCaseFirstOne(beanInfo.getClazz().getSimpleName()), builder.getBeanDefinition());
-            this.beanFactory.initializeBean(beanInfo.getClazz(), beanInfo.getClazz().getName());
+            this.beanFactory.registerBeanDefinition(toLowerCaseFirstOne(beanInfo.getClazz()), builder.getBeanDefinition());
+            this.beanFactory.preInstantiateSingletons();
         }
     }
 
-    public static String toLowerCaseFirstOne(String s){
+    public static String toLowerCaseFirstOne(Class clazz){
+        String s = clazz.getSimpleName();
         if(Character.isLowerCase(s.charAt(0)))
             return s;
         else
             return (new StringBuilder()).append(Character.toLowerCase(s.charAt(0))).append(s.substring(1)).toString();
     }
+
+
 
     public static class BeanInfo<T> {
         private Class<T> clazz;

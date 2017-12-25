@@ -29,11 +29,12 @@ import java.util.Map;
 @Order(value = 0)//value越大 优先级越低
 public class WebRequestAspect {
 
-    public static ThreadLocal<ReqLog> WEBREQTHREADLOCAL = new ThreadLocal<ReqLog>();
+    public static ThreadLocal<ReqLog> WEBREQTHREADLOCAL = new ThreadLocal<>();
 
     private static final Logger logger = LoggerFactory.getLogger(WebRequestAspect.class);
 
-    @Pointcut("@annotation(org.springframework.web.bind.annotation.RequestMapping)")
+//    @Pointcut("@annotation(org.springframework.web.bind.annotation.RequestMapping)")
+    @Pointcut("execution(* com.sxshunrj.springboot.common.controller..*.*(..))")
     public void controllerMethodPointcut(){}
 
     /**

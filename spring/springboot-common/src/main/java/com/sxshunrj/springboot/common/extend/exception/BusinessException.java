@@ -1,5 +1,7 @@
 package com.sxshunrj.springboot.common.extend.exception;
 
+import com.sxshunrj.springboot.common.dto.rsp.Error;
+
 /**
  * Created by IntelliJ IDEA.
  * User: sunxs
@@ -7,8 +9,16 @@ package com.sxshunrj.springboot.common.extend.exception;
  * Desc：
  */
 public class BusinessException extends RuntimeException {
+
+    private Error error;
+
     public BusinessException() {
         super();
+    }
+
+    public BusinessException(Error error) {
+        super(error.getDesc());
+        this.error = error;
     }
 
     public BusinessException(String message) {
@@ -21,5 +31,9 @@ public class BusinessException extends RuntimeException {
 
     public BusinessException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
+    }
+
+    public Error getError() {
+        return error;
     }
 }

@@ -19,20 +19,6 @@ public enum Error {
     system_http(10004,"http出现异常"),
     param_err(10005,"参数异常"),
 
-    user_not_exist(20001,"用户不存在"),
-    user_loginpassword_wrong(20002, "登录密码错误"),
-    user_mobile_exist(20003, "该手机号码已存在"),
-    user_authcode_sended(20004, "验证码已发送"),
-    user_authcode_wrong(20005, "验证码错误"),
-    user_notlogin(20006, "用户未登录"),
-
-    account_not_exist(30001,"账户不存在"),
-
-    trade_paypassword_wrong(40001,"支付密码错误"),
-    trade_notpaytoself(40002,"不能给自己转账"),
-    trade_type_wrong(40003,"不支持的交易类型"),
-    trade_qr_overtime(40005,"二维码超时"),
-
     ;
 
     int code;
