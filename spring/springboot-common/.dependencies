@@ -1,0 +1,1117 @@
+:dependencies
+
+------------------------------------------------------------
+Root project
+------------------------------------------------------------
+
+archives - Configuration for archive artifacts.
+No dependencies
+
+compile - Dependencies for source set 'main'.
++--- org.springframework.boot:spring-boot: -> 1.5.6.RELEASE
+|    +--- org.springframework:spring-core:4.3.10.RELEASE
+|    |    \--- commons-logging:commons-logging:1.2
+|    \--- org.springframework:spring-context:4.3.10.RELEASE
+|         +--- org.springframework:spring-aop:4.3.10.RELEASE
+|         |    +--- org.springframework:spring-beans:4.3.10.RELEASE
+|         |    |    \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         |    \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-beans:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         \--- org.springframework:spring-expression:4.3.10.RELEASE
+|              \--- org.springframework:spring-core:4.3.10.RELEASE (*)
++--- org.springframework.boot:spring-boot-starter-web: -> 1.5.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:1.5.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot:1.5.6.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-autoconfigure:1.5.6.RELEASE
+|    |    |    \--- org.springframework.boot:spring-boot:1.5.6.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-starter-logging:1.5.6.RELEASE
+|    |    |    +--- org.slf4j:jcl-over-slf4j:1.7.25
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    |    |    +--- org.slf4j:jul-to-slf4j:1.7.25
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    |    |    \--- org.slf4j:log4j-over-slf4j:1.7.25
+|    |    |         \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    |    +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|    |    \--- org.yaml:snakeyaml:1.17
+|    +--- org.springframework.boot:spring-boot-starter-tomcat:1.5.6.RELEASE
+|    |    +--- org.apache.tomcat.embed:tomcat-embed-core:8.5.16
+|    |    +--- org.apache.tomcat.embed:tomcat-embed-el:8.5.16
+|    |    \--- org.apache.tomcat.embed:tomcat-embed-websocket:8.5.16
+|    |         \--- org.apache.tomcat.embed:tomcat-embed-core:8.5.16
+|    +--- org.hibernate:hibernate-validator:5.3.5.Final
+|    |    +--- javax.validation:validation-api:1.1.0.Final
+|    |    +--- org.jboss.logging:jboss-logging:3.3.0.Final -> 3.3.1.Final
+|    |    \--- com.fasterxml:classmate:1.3.1 -> 1.3.3
+|    +--- com.fasterxml.jackson.core:jackson-databind:2.8.9
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.8.0
+|    |    \--- com.fasterxml.jackson.core:jackson-core:2.8.9
+|    +--- org.springframework:spring-web:4.3.10.RELEASE
+|    |    +--- org.springframework:spring-aop:4.3.10.RELEASE (*)
+|    |    +--- org.springframework:spring-beans:4.3.10.RELEASE (*)
+|    |    +--- org.springframework:spring-context:4.3.10.RELEASE (*)
+|    |    \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|    \--- org.springframework:spring-webmvc:4.3.10.RELEASE
+|         +--- org.springframework:spring-aop:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-beans:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-context:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-expression:4.3.10.RELEASE (*)
+|         \--- org.springframework:spring-web:4.3.10.RELEASE (*)
++--- org.springframework.boot:spring-boot-starter-aop: -> 1.5.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:1.5.6.RELEASE (*)
+|    +--- org.springframework:spring-aop:4.3.10.RELEASE (*)
+|    \--- org.aspectj:aspectjweaver:1.8.10 -> 1.8.9
++--- org.springframework.boot:spring-boot-starter-log4j2: -> 1.5.6.RELEASE
+|    +--- org.apache.logging.log4j:log4j-slf4j-impl:2.7
+|    |    +--- org.slf4j:slf4j-api:1.7.21 -> 1.7.7
+|    |    \--- org.apache.logging.log4j:log4j-api:2.7
+|    +--- org.apache.logging.log4j:log4j-api:2.7
+|    +--- org.apache.logging.log4j:log4j-core:2.7
+|    |    \--- org.apache.logging.log4j:log4j-api:2.7
+|    +--- org.slf4j:jcl-over-slf4j:1.7.25 (*)
+|    \--- org.slf4j:jul-to-slf4j:1.7.25 (*)
++--- org.apache.commons:commons-lang3:3.4
++--- commons-logging:commons-logging:1.2
++--- com.google.guava:guava:18.0
++--- com.alibaba:fastjson:1.2.4
++--- org.aspectj:aspectjrt:1.8.9
++--- org.aspectj:aspectjweaver:1.8.9
++--- com.sparkjava:spark-core:2.3
+|    +--- org.slf4j:slf4j-api:1.7.12 -> 1.7.7
+|    +--- org.slf4j:slf4j-simple:1.7.12 -> 1.7.25
+|    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    +--- org.eclipse.jetty:jetty-server:9.3.2.v20150730 -> 9.4.6.v20170531
+|    |    +--- javax.servlet:javax.servlet-api:3.1.0
+|    |    +--- org.eclipse.jetty:jetty-http:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531
+|    |    |         \--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    +--- org.eclipse.jetty:jetty-webapp:9.3.2.v20150730 -> 9.4.6.v20170531
+|    |    +--- org.eclipse.jetty:jetty-xml:9.4.6.v20170531
+|    |    |    \--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    \--- org.eclipse.jetty:jetty-servlet:9.4.6.v20170531
+|    |         \--- org.eclipse.jetty:jetty-security:9.4.6.v20170531
+|    |              \--- org.eclipse.jetty:jetty-server:9.4.6.v20170531 (*)
+|    +--- org.eclipse.jetty.websocket:websocket-server:9.3.2.v20150730 -> 9.4.6.v20170531
+|    |    +--- org.eclipse.jetty.websocket:websocket-common:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty.websocket:websocket-api:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    |    +--- org.eclipse.jetty.websocket:websocket-client:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    |    |    +--- org.eclipse.jetty:jetty-client:9.4.6.v20170531
+|    |    |    |    +--- org.eclipse.jetty:jetty-http:9.4.6.v20170531 (*)
+|    |    |    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    |    |    \--- org.eclipse.jetty.websocket:websocket-common:9.4.6.v20170531 (*)
+|    |    +--- org.eclipse.jetty.websocket:websocket-servlet:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty.websocket:websocket-api:9.4.6.v20170531
+|    |    |    \--- javax.servlet:javax.servlet-api:3.1.0
+|    |    +--- org.eclipse.jetty:jetty-servlet:9.4.6.v20170531 (*)
+|    |    \--- org.eclipse.jetty:jetty-http:9.4.6.v20170531 (*)
+|    \--- org.eclipse.jetty.websocket:websocket-servlet:9.3.2.v20150730 -> 9.4.6.v20170531 (*)
++--- org.slf4j:slf4j-api:1.7.7
++--- org.slf4j:slf4j-log4j12:1.7.7
+|    +--- org.slf4j:slf4j-api:1.7.7
+|    \--- log4j:log4j:1.2.17
+\--- log4j:log4j:1.2.17
+
+compileClasspath - Compile classpath for source set 'main'.
++--- org.springframework.boot:spring-boot: -> 1.5.6.RELEASE
+|    +--- org.springframework:spring-core:4.3.10.RELEASE
+|    |    \--- commons-logging:commons-logging:1.2
+|    \--- org.springframework:spring-context:4.3.10.RELEASE
+|         +--- org.springframework:spring-aop:4.3.10.RELEASE
+|         |    +--- org.springframework:spring-beans:4.3.10.RELEASE
+|         |    |    \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         |    \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-beans:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         \--- org.springframework:spring-expression:4.3.10.RELEASE
+|              \--- org.springframework:spring-core:4.3.10.RELEASE (*)
++--- org.springframework.boot:spring-boot-starter-web: -> 1.5.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:1.5.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot:1.5.6.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-autoconfigure:1.5.6.RELEASE
+|    |    |    \--- org.springframework.boot:spring-boot:1.5.6.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-starter-logging:1.5.6.RELEASE
+|    |    |    +--- org.slf4j:jcl-over-slf4j:1.7.25
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    |    |    +--- org.slf4j:jul-to-slf4j:1.7.25
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    |    |    \--- org.slf4j:log4j-over-slf4j:1.7.25
+|    |    |         \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    |    +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|    |    \--- org.yaml:snakeyaml:1.17
+|    +--- org.springframework.boot:spring-boot-starter-tomcat:1.5.6.RELEASE
+|    |    +--- org.apache.tomcat.embed:tomcat-embed-core:8.5.16
+|    |    +--- org.apache.tomcat.embed:tomcat-embed-el:8.5.16
+|    |    \--- org.apache.tomcat.embed:tomcat-embed-websocket:8.5.16
+|    |         \--- org.apache.tomcat.embed:tomcat-embed-core:8.5.16
+|    +--- org.hibernate:hibernate-validator:5.3.5.Final
+|    |    +--- javax.validation:validation-api:1.1.0.Final
+|    |    +--- org.jboss.logging:jboss-logging:3.3.0.Final -> 3.3.1.Final
+|    |    \--- com.fasterxml:classmate:1.3.1 -> 1.3.3
+|    +--- com.fasterxml.jackson.core:jackson-databind:2.8.9
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.8.0
+|    |    \--- com.fasterxml.jackson.core:jackson-core:2.8.9
+|    +--- org.springframework:spring-web:4.3.10.RELEASE
+|    |    +--- org.springframework:spring-aop:4.3.10.RELEASE (*)
+|    |    +--- org.springframework:spring-beans:4.3.10.RELEASE (*)
+|    |    +--- org.springframework:spring-context:4.3.10.RELEASE (*)
+|    |    \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|    \--- org.springframework:spring-webmvc:4.3.10.RELEASE
+|         +--- org.springframework:spring-aop:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-beans:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-context:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-expression:4.3.10.RELEASE (*)
+|         \--- org.springframework:spring-web:4.3.10.RELEASE (*)
++--- org.springframework.boot:spring-boot-starter-aop: -> 1.5.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:1.5.6.RELEASE (*)
+|    +--- org.springframework:spring-aop:4.3.10.RELEASE (*)
+|    \--- org.aspectj:aspectjweaver:1.8.10 -> 1.8.9
++--- org.springframework.boot:spring-boot-starter-log4j2: -> 1.5.6.RELEASE
+|    +--- org.apache.logging.log4j:log4j-slf4j-impl:2.7
+|    |    +--- org.slf4j:slf4j-api:1.7.21 -> 1.7.7
+|    |    \--- org.apache.logging.log4j:log4j-api:2.7
+|    +--- org.apache.logging.log4j:log4j-api:2.7
+|    +--- org.apache.logging.log4j:log4j-core:2.7
+|    |    \--- org.apache.logging.log4j:log4j-api:2.7
+|    +--- org.slf4j:jcl-over-slf4j:1.7.25 (*)
+|    \--- org.slf4j:jul-to-slf4j:1.7.25 (*)
++--- org.apache.commons:commons-lang3:3.4
++--- commons-logging:commons-logging:1.2
++--- com.google.guava:guava:18.0
++--- com.alibaba:fastjson:1.2.4
++--- org.aspectj:aspectjrt:1.8.9
++--- org.aspectj:aspectjweaver:1.8.9
++--- com.sparkjava:spark-core:2.3
+|    +--- org.slf4j:slf4j-api:1.7.12 -> 1.7.7
+|    +--- org.slf4j:slf4j-simple:1.7.12 -> 1.7.25
+|    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    +--- org.eclipse.jetty:jetty-server:9.3.2.v20150730 -> 9.4.6.v20170531
+|    |    +--- javax.servlet:javax.servlet-api:3.1.0
+|    |    +--- org.eclipse.jetty:jetty-http:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531
+|    |    |         \--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    +--- org.eclipse.jetty:jetty-webapp:9.3.2.v20150730 -> 9.4.6.v20170531
+|    |    +--- org.eclipse.jetty:jetty-xml:9.4.6.v20170531
+|    |    |    \--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    \--- org.eclipse.jetty:jetty-servlet:9.4.6.v20170531
+|    |         \--- org.eclipse.jetty:jetty-security:9.4.6.v20170531
+|    |              \--- org.eclipse.jetty:jetty-server:9.4.6.v20170531 (*)
+|    +--- org.eclipse.jetty.websocket:websocket-server:9.3.2.v20150730 -> 9.4.6.v20170531
+|    |    +--- org.eclipse.jetty.websocket:websocket-common:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty.websocket:websocket-api:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    |    +--- org.eclipse.jetty.websocket:websocket-client:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    |    |    +--- org.eclipse.jetty:jetty-client:9.4.6.v20170531
+|    |    |    |    +--- org.eclipse.jetty:jetty-http:9.4.6.v20170531 (*)
+|    |    |    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    |    |    \--- org.eclipse.jetty.websocket:websocket-common:9.4.6.v20170531 (*)
+|    |    +--- org.eclipse.jetty.websocket:websocket-servlet:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty.websocket:websocket-api:9.4.6.v20170531
+|    |    |    \--- javax.servlet:javax.servlet-api:3.1.0
+|    |    +--- org.eclipse.jetty:jetty-servlet:9.4.6.v20170531 (*)
+|    |    \--- org.eclipse.jetty:jetty-http:9.4.6.v20170531 (*)
+|    \--- org.eclipse.jetty.websocket:websocket-servlet:9.3.2.v20150730 -> 9.4.6.v20170531 (*)
++--- org.slf4j:slf4j-api:1.7.7
++--- org.slf4j:slf4j-log4j12:1.7.7
+|    +--- org.slf4j:slf4j-api:1.7.7
+|    \--- log4j:log4j:1.2.17
+\--- log4j:log4j:1.2.17
+
+compileOnly - Compile dependencies for source set 'main'.
++--- org.springframework.boot:spring-boot: -> 1.5.6.RELEASE
+|    +--- org.springframework:spring-core:4.3.10.RELEASE
+|    |    \--- commons-logging:commons-logging:1.2
+|    \--- org.springframework:spring-context:4.3.10.RELEASE
+|         +--- org.springframework:spring-aop:4.3.10.RELEASE
+|         |    +--- org.springframework:spring-beans:4.3.10.RELEASE
+|         |    |    \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         |    \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-beans:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         \--- org.springframework:spring-expression:4.3.10.RELEASE
+|              \--- org.springframework:spring-core:4.3.10.RELEASE (*)
++--- org.springframework.boot:spring-boot-starter-web: -> 1.5.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:1.5.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot:1.5.6.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-autoconfigure:1.5.6.RELEASE
+|    |    |    \--- org.springframework.boot:spring-boot:1.5.6.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-starter-logging:1.5.6.RELEASE
+|    |    |    +--- org.slf4j:jcl-over-slf4j:1.7.25
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    |    |    +--- org.slf4j:jul-to-slf4j:1.7.25
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    |    |    \--- org.slf4j:log4j-over-slf4j:1.7.25
+|    |    |         \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    |    +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|    |    \--- org.yaml:snakeyaml:1.17
+|    +--- org.springframework.boot:spring-boot-starter-tomcat:1.5.6.RELEASE
+|    |    +--- org.apache.tomcat.embed:tomcat-embed-core:8.5.16
+|    |    +--- org.apache.tomcat.embed:tomcat-embed-el:8.5.16
+|    |    \--- org.apache.tomcat.embed:tomcat-embed-websocket:8.5.16
+|    |         \--- org.apache.tomcat.embed:tomcat-embed-core:8.5.16
+|    +--- org.hibernate:hibernate-validator:5.3.5.Final
+|    |    +--- javax.validation:validation-api:1.1.0.Final
+|    |    +--- org.jboss.logging:jboss-logging:3.3.0.Final -> 3.3.1.Final
+|    |    \--- com.fasterxml:classmate:1.3.1 -> 1.3.3
+|    +--- com.fasterxml.jackson.core:jackson-databind:2.8.9
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.8.0
+|    |    \--- com.fasterxml.jackson.core:jackson-core:2.8.9
+|    +--- org.springframework:spring-web:4.3.10.RELEASE
+|    |    +--- org.springframework:spring-aop:4.3.10.RELEASE (*)
+|    |    +--- org.springframework:spring-beans:4.3.10.RELEASE (*)
+|    |    +--- org.springframework:spring-context:4.3.10.RELEASE (*)
+|    |    \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|    \--- org.springframework:spring-webmvc:4.3.10.RELEASE
+|         +--- org.springframework:spring-aop:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-beans:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-context:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-expression:4.3.10.RELEASE (*)
+|         \--- org.springframework:spring-web:4.3.10.RELEASE (*)
++--- org.springframework.boot:spring-boot-starter-aop: -> 1.5.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:1.5.6.RELEASE (*)
+|    +--- org.springframework:spring-aop:4.3.10.RELEASE (*)
+|    \--- org.aspectj:aspectjweaver:1.8.10 -> 1.8.9
++--- org.springframework.boot:spring-boot-starter-log4j2: -> 1.5.6.RELEASE
+|    +--- org.apache.logging.log4j:log4j-slf4j-impl:2.7
+|    |    +--- org.slf4j:slf4j-api:1.7.21 -> 1.7.7
+|    |    \--- org.apache.logging.log4j:log4j-api:2.7
+|    +--- org.apache.logging.log4j:log4j-api:2.7
+|    +--- org.apache.logging.log4j:log4j-core:2.7
+|    |    \--- org.apache.logging.log4j:log4j-api:2.7
+|    +--- org.slf4j:jcl-over-slf4j:1.7.25 (*)
+|    \--- org.slf4j:jul-to-slf4j:1.7.25 (*)
++--- org.apache.commons:commons-lang3:3.4
++--- commons-logging:commons-logging:1.2
++--- com.google.guava:guava:18.0
++--- com.alibaba:fastjson:1.2.4
++--- org.aspectj:aspectjrt:1.8.9
++--- org.aspectj:aspectjweaver:1.8.9
++--- com.sparkjava:spark-core:2.3
+|    +--- org.slf4j:slf4j-api:1.7.12 -> 1.7.7
+|    +--- org.slf4j:slf4j-simple:1.7.12 -> 1.7.25
+|    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    +--- org.eclipse.jetty:jetty-server:9.3.2.v20150730 -> 9.4.6.v20170531
+|    |    +--- javax.servlet:javax.servlet-api:3.1.0
+|    |    +--- org.eclipse.jetty:jetty-http:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531
+|    |    |         \--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    +--- org.eclipse.jetty:jetty-webapp:9.3.2.v20150730 -> 9.4.6.v20170531
+|    |    +--- org.eclipse.jetty:jetty-xml:9.4.6.v20170531
+|    |    |    \--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    \--- org.eclipse.jetty:jetty-servlet:9.4.6.v20170531
+|    |         \--- org.eclipse.jetty:jetty-security:9.4.6.v20170531
+|    |              \--- org.eclipse.jetty:jetty-server:9.4.6.v20170531 (*)
+|    +--- org.eclipse.jetty.websocket:websocket-server:9.3.2.v20150730 -> 9.4.6.v20170531
+|    |    +--- org.eclipse.jetty.websocket:websocket-common:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty.websocket:websocket-api:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    |    +--- org.eclipse.jetty.websocket:websocket-client:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    |    |    +--- org.eclipse.jetty:jetty-client:9.4.6.v20170531
+|    |    |    |    +--- org.eclipse.jetty:jetty-http:9.4.6.v20170531 (*)
+|    |    |    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    |    |    \--- org.eclipse.jetty.websocket:websocket-common:9.4.6.v20170531 (*)
+|    |    +--- org.eclipse.jetty.websocket:websocket-servlet:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty.websocket:websocket-api:9.4.6.v20170531
+|    |    |    \--- javax.servlet:javax.servlet-api:3.1.0
+|    |    +--- org.eclipse.jetty:jetty-servlet:9.4.6.v20170531 (*)
+|    |    \--- org.eclipse.jetty:jetty-http:9.4.6.v20170531 (*)
+|    \--- org.eclipse.jetty.websocket:websocket-servlet:9.3.2.v20150730 -> 9.4.6.v20170531 (*)
++--- org.slf4j:slf4j-api:1.7.7
++--- org.slf4j:slf4j-log4j12:1.7.7
+|    +--- org.slf4j:slf4j-api:1.7.7
+|    \--- log4j:log4j:1.2.17
+\--- log4j:log4j:1.2.17
+
+default - Configuration for default artifacts.
++--- org.springframework.boot:spring-boot: -> 1.5.6.RELEASE
+|    +--- org.springframework:spring-core:4.3.10.RELEASE
+|    |    \--- commons-logging:commons-logging:1.2
+|    \--- org.springframework:spring-context:4.3.10.RELEASE
+|         +--- org.springframework:spring-aop:4.3.10.RELEASE
+|         |    +--- org.springframework:spring-beans:4.3.10.RELEASE
+|         |    |    \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         |    \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-beans:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         \--- org.springframework:spring-expression:4.3.10.RELEASE
+|              \--- org.springframework:spring-core:4.3.10.RELEASE (*)
++--- org.springframework.boot:spring-boot-starter-web: -> 1.5.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:1.5.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot:1.5.6.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-autoconfigure:1.5.6.RELEASE
+|    |    |    \--- org.springframework.boot:spring-boot:1.5.6.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-starter-logging:1.5.6.RELEASE
+|    |    |    +--- org.slf4j:jcl-over-slf4j:1.7.25
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    |    |    +--- org.slf4j:jul-to-slf4j:1.7.25
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    |    |    \--- org.slf4j:log4j-over-slf4j:1.7.25
+|    |    |         \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    |    +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|    |    \--- org.yaml:snakeyaml:1.17
+|    +--- org.springframework.boot:spring-boot-starter-tomcat:1.5.6.RELEASE
+|    |    +--- org.apache.tomcat.embed:tomcat-embed-core:8.5.16
+|    |    +--- org.apache.tomcat.embed:tomcat-embed-el:8.5.16
+|    |    \--- org.apache.tomcat.embed:tomcat-embed-websocket:8.5.16
+|    |         \--- org.apache.tomcat.embed:tomcat-embed-core:8.5.16
+|    +--- org.hibernate:hibernate-validator:5.3.5.Final
+|    |    +--- javax.validation:validation-api:1.1.0.Final
+|    |    +--- org.jboss.logging:jboss-logging:3.3.0.Final -> 3.3.1.Final
+|    |    \--- com.fasterxml:classmate:1.3.1 -> 1.3.3
+|    +--- com.fasterxml.jackson.core:jackson-databind:2.8.9
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.8.0
+|    |    \--- com.fasterxml.jackson.core:jackson-core:2.8.9
+|    +--- org.springframework:spring-web:4.3.10.RELEASE
+|    |    +--- org.springframework:spring-aop:4.3.10.RELEASE (*)
+|    |    +--- org.springframework:spring-beans:4.3.10.RELEASE (*)
+|    |    +--- org.springframework:spring-context:4.3.10.RELEASE (*)
+|    |    \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|    \--- org.springframework:spring-webmvc:4.3.10.RELEASE
+|         +--- org.springframework:spring-aop:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-beans:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-context:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-expression:4.3.10.RELEASE (*)
+|         \--- org.springframework:spring-web:4.3.10.RELEASE (*)
++--- org.springframework.boot:spring-boot-starter-aop: -> 1.5.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:1.5.6.RELEASE (*)
+|    +--- org.springframework:spring-aop:4.3.10.RELEASE (*)
+|    \--- org.aspectj:aspectjweaver:1.8.10 -> 1.8.9
++--- org.springframework.boot:spring-boot-starter-log4j2: -> 1.5.6.RELEASE
+|    +--- org.apache.logging.log4j:log4j-slf4j-impl:2.7
+|    |    +--- org.slf4j:slf4j-api:1.7.21 -> 1.7.7
+|    |    \--- org.apache.logging.log4j:log4j-api:2.7
+|    +--- org.apache.logging.log4j:log4j-api:2.7
+|    +--- org.apache.logging.log4j:log4j-core:2.7
+|    |    \--- org.apache.logging.log4j:log4j-api:2.7
+|    +--- org.slf4j:jcl-over-slf4j:1.7.25 (*)
+|    \--- org.slf4j:jul-to-slf4j:1.7.25 (*)
++--- org.apache.commons:commons-lang3:3.4
++--- commons-logging:commons-logging:1.2
++--- com.google.guava:guava:18.0
++--- com.alibaba:fastjson:1.2.4
++--- org.aspectj:aspectjrt:1.8.9
++--- org.aspectj:aspectjweaver:1.8.9
++--- com.sparkjava:spark-core:2.3
+|    +--- org.slf4j:slf4j-api:1.7.12 -> 1.7.7
+|    +--- org.slf4j:slf4j-simple:1.7.12 -> 1.7.25
+|    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    +--- org.eclipse.jetty:jetty-server:9.3.2.v20150730 -> 9.4.6.v20170531
+|    |    +--- javax.servlet:javax.servlet-api:3.1.0
+|    |    +--- org.eclipse.jetty:jetty-http:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531
+|    |    |         \--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    +--- org.eclipse.jetty:jetty-webapp:9.3.2.v20150730 -> 9.4.6.v20170531
+|    |    +--- org.eclipse.jetty:jetty-xml:9.4.6.v20170531
+|    |    |    \--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    \--- org.eclipse.jetty:jetty-servlet:9.4.6.v20170531
+|    |         \--- org.eclipse.jetty:jetty-security:9.4.6.v20170531
+|    |              \--- org.eclipse.jetty:jetty-server:9.4.6.v20170531 (*)
+|    +--- org.eclipse.jetty.websocket:websocket-server:9.3.2.v20150730 -> 9.4.6.v20170531
+|    |    +--- org.eclipse.jetty.websocket:websocket-common:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty.websocket:websocket-api:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    |    +--- org.eclipse.jetty.websocket:websocket-client:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    |    |    +--- org.eclipse.jetty:jetty-client:9.4.6.v20170531
+|    |    |    |    +--- org.eclipse.jetty:jetty-http:9.4.6.v20170531 (*)
+|    |    |    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    |    |    \--- org.eclipse.jetty.websocket:websocket-common:9.4.6.v20170531 (*)
+|    |    +--- org.eclipse.jetty.websocket:websocket-servlet:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty.websocket:websocket-api:9.4.6.v20170531
+|    |    |    \--- javax.servlet:javax.servlet-api:3.1.0
+|    |    +--- org.eclipse.jetty:jetty-servlet:9.4.6.v20170531 (*)
+|    |    \--- org.eclipse.jetty:jetty-http:9.4.6.v20170531 (*)
+|    \--- org.eclipse.jetty.websocket:websocket-servlet:9.3.2.v20150730 -> 9.4.6.v20170531 (*)
++--- org.slf4j:slf4j-api:1.7.7
++--- org.slf4j:slf4j-log4j12:1.7.7
+|    +--- org.slf4j:slf4j-api:1.7.7
+|    \--- log4j:log4j:1.2.17
+\--- log4j:log4j:1.2.17
+
+runtime - Runtime dependencies for source set 'main'.
++--- org.springframework.boot:spring-boot: -> 1.5.6.RELEASE
+|    +--- org.springframework:spring-core:4.3.10.RELEASE
+|    |    \--- commons-logging:commons-logging:1.2
+|    \--- org.springframework:spring-context:4.3.10.RELEASE
+|         +--- org.springframework:spring-aop:4.3.10.RELEASE
+|         |    +--- org.springframework:spring-beans:4.3.10.RELEASE
+|         |    |    \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         |    \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-beans:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         \--- org.springframework:spring-expression:4.3.10.RELEASE
+|              \--- org.springframework:spring-core:4.3.10.RELEASE (*)
++--- org.springframework.boot:spring-boot-starter-web: -> 1.5.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:1.5.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot:1.5.6.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-autoconfigure:1.5.6.RELEASE
+|    |    |    \--- org.springframework.boot:spring-boot:1.5.6.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-starter-logging:1.5.6.RELEASE
+|    |    |    +--- org.slf4j:jcl-over-slf4j:1.7.25
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    |    |    +--- org.slf4j:jul-to-slf4j:1.7.25
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    |    |    \--- org.slf4j:log4j-over-slf4j:1.7.25
+|    |    |         \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    |    +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|    |    \--- org.yaml:snakeyaml:1.17
+|    +--- org.springframework.boot:spring-boot-starter-tomcat:1.5.6.RELEASE
+|    |    +--- org.apache.tomcat.embed:tomcat-embed-core:8.5.16
+|    |    +--- org.apache.tomcat.embed:tomcat-embed-el:8.5.16
+|    |    \--- org.apache.tomcat.embed:tomcat-embed-websocket:8.5.16
+|    |         \--- org.apache.tomcat.embed:tomcat-embed-core:8.5.16
+|    +--- org.hibernate:hibernate-validator:5.3.5.Final
+|    |    +--- javax.validation:validation-api:1.1.0.Final
+|    |    +--- org.jboss.logging:jboss-logging:3.3.0.Final -> 3.3.1.Final
+|    |    \--- com.fasterxml:classmate:1.3.1 -> 1.3.3
+|    +--- com.fasterxml.jackson.core:jackson-databind:2.8.9
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.8.0
+|    |    \--- com.fasterxml.jackson.core:jackson-core:2.8.9
+|    +--- org.springframework:spring-web:4.3.10.RELEASE
+|    |    +--- org.springframework:spring-aop:4.3.10.RELEASE (*)
+|    |    +--- org.springframework:spring-beans:4.3.10.RELEASE (*)
+|    |    +--- org.springframework:spring-context:4.3.10.RELEASE (*)
+|    |    \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|    \--- org.springframework:spring-webmvc:4.3.10.RELEASE
+|         +--- org.springframework:spring-aop:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-beans:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-context:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-expression:4.3.10.RELEASE (*)
+|         \--- org.springframework:spring-web:4.3.10.RELEASE (*)
++--- org.springframework.boot:spring-boot-starter-aop: -> 1.5.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:1.5.6.RELEASE (*)
+|    +--- org.springframework:spring-aop:4.3.10.RELEASE (*)
+|    \--- org.aspectj:aspectjweaver:1.8.10 -> 1.8.9
++--- org.springframework.boot:spring-boot-starter-log4j2: -> 1.5.6.RELEASE
+|    +--- org.apache.logging.log4j:log4j-slf4j-impl:2.7
+|    |    +--- org.slf4j:slf4j-api:1.7.21 -> 1.7.7
+|    |    \--- org.apache.logging.log4j:log4j-api:2.7
+|    +--- org.apache.logging.log4j:log4j-api:2.7
+|    +--- org.apache.logging.log4j:log4j-core:2.7
+|    |    \--- org.apache.logging.log4j:log4j-api:2.7
+|    +--- org.slf4j:jcl-over-slf4j:1.7.25 (*)
+|    \--- org.slf4j:jul-to-slf4j:1.7.25 (*)
++--- org.apache.commons:commons-lang3:3.4
++--- commons-logging:commons-logging:1.2
++--- com.google.guava:guava:18.0
++--- com.alibaba:fastjson:1.2.4
++--- org.aspectj:aspectjrt:1.8.9
++--- org.aspectj:aspectjweaver:1.8.9
++--- com.sparkjava:spark-core:2.3
+|    +--- org.slf4j:slf4j-api:1.7.12 -> 1.7.7
+|    +--- org.slf4j:slf4j-simple:1.7.12 -> 1.7.25
+|    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    +--- org.eclipse.jetty:jetty-server:9.3.2.v20150730 -> 9.4.6.v20170531
+|    |    +--- javax.servlet:javax.servlet-api:3.1.0
+|    |    +--- org.eclipse.jetty:jetty-http:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531
+|    |    |         \--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    +--- org.eclipse.jetty:jetty-webapp:9.3.2.v20150730 -> 9.4.6.v20170531
+|    |    +--- org.eclipse.jetty:jetty-xml:9.4.6.v20170531
+|    |    |    \--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    \--- org.eclipse.jetty:jetty-servlet:9.4.6.v20170531
+|    |         \--- org.eclipse.jetty:jetty-security:9.4.6.v20170531
+|    |              \--- org.eclipse.jetty:jetty-server:9.4.6.v20170531 (*)
+|    +--- org.eclipse.jetty.websocket:websocket-server:9.3.2.v20150730 -> 9.4.6.v20170531
+|    |    +--- org.eclipse.jetty.websocket:websocket-common:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty.websocket:websocket-api:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    |    +--- org.eclipse.jetty.websocket:websocket-client:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    |    |    +--- org.eclipse.jetty:jetty-client:9.4.6.v20170531
+|    |    |    |    +--- org.eclipse.jetty:jetty-http:9.4.6.v20170531 (*)
+|    |    |    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    |    |    \--- org.eclipse.jetty.websocket:websocket-common:9.4.6.v20170531 (*)
+|    |    +--- org.eclipse.jetty.websocket:websocket-servlet:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty.websocket:websocket-api:9.4.6.v20170531
+|    |    |    \--- javax.servlet:javax.servlet-api:3.1.0
+|    |    +--- org.eclipse.jetty:jetty-servlet:9.4.6.v20170531 (*)
+|    |    \--- org.eclipse.jetty:jetty-http:9.4.6.v20170531 (*)
+|    \--- org.eclipse.jetty.websocket:websocket-servlet:9.3.2.v20150730 -> 9.4.6.v20170531 (*)
++--- org.slf4j:slf4j-api:1.7.7
++--- org.slf4j:slf4j-log4j12:1.7.7
+|    +--- org.slf4j:slf4j-api:1.7.7
+|    \--- log4j:log4j:1.2.17
+\--- log4j:log4j:1.2.17
+
+testCompile - Dependencies for source set 'test'.
++--- org.springframework.boot:spring-boot: -> 1.5.6.RELEASE
+|    +--- org.springframework:spring-core:4.3.10.RELEASE
+|    |    \--- commons-logging:commons-logging:1.2
+|    \--- org.springframework:spring-context:4.3.10.RELEASE
+|         +--- org.springframework:spring-aop:4.3.10.RELEASE
+|         |    +--- org.springframework:spring-beans:4.3.10.RELEASE
+|         |    |    \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         |    \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-beans:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         \--- org.springframework:spring-expression:4.3.10.RELEASE
+|              \--- org.springframework:spring-core:4.3.10.RELEASE (*)
++--- org.springframework.boot:spring-boot-starter-web: -> 1.5.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:1.5.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot:1.5.6.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-autoconfigure:1.5.6.RELEASE
+|    |    |    \--- org.springframework.boot:spring-boot:1.5.6.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-starter-logging:1.5.6.RELEASE
+|    |    |    +--- org.slf4j:jcl-over-slf4j:1.7.25
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    |    |    +--- org.slf4j:jul-to-slf4j:1.7.25
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    |    |    \--- org.slf4j:log4j-over-slf4j:1.7.25
+|    |    |         \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    |    +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|    |    \--- org.yaml:snakeyaml:1.17
+|    +--- org.springframework.boot:spring-boot-starter-tomcat:1.5.6.RELEASE
+|    |    +--- org.apache.tomcat.embed:tomcat-embed-core:8.5.16
+|    |    +--- org.apache.tomcat.embed:tomcat-embed-el:8.5.16
+|    |    \--- org.apache.tomcat.embed:tomcat-embed-websocket:8.5.16
+|    |         \--- org.apache.tomcat.embed:tomcat-embed-core:8.5.16
+|    +--- org.hibernate:hibernate-validator:5.3.5.Final
+|    |    +--- javax.validation:validation-api:1.1.0.Final
+|    |    +--- org.jboss.logging:jboss-logging:3.3.0.Final -> 3.3.1.Final
+|    |    \--- com.fasterxml:classmate:1.3.1 -> 1.3.3
+|    +--- com.fasterxml.jackson.core:jackson-databind:2.8.9
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.8.0
+|    |    \--- com.fasterxml.jackson.core:jackson-core:2.8.9
+|    +--- org.springframework:spring-web:4.3.10.RELEASE
+|    |    +--- org.springframework:spring-aop:4.3.10.RELEASE (*)
+|    |    +--- org.springframework:spring-beans:4.3.10.RELEASE (*)
+|    |    +--- org.springframework:spring-context:4.3.10.RELEASE (*)
+|    |    \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|    \--- org.springframework:spring-webmvc:4.3.10.RELEASE
+|         +--- org.springframework:spring-aop:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-beans:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-context:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-expression:4.3.10.RELEASE (*)
+|         \--- org.springframework:spring-web:4.3.10.RELEASE (*)
++--- org.springframework.boot:spring-boot-starter-aop: -> 1.5.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:1.5.6.RELEASE (*)
+|    +--- org.springframework:spring-aop:4.3.10.RELEASE (*)
+|    \--- org.aspectj:aspectjweaver:1.8.10 -> 1.8.9
++--- org.springframework.boot:spring-boot-starter-log4j2: -> 1.5.6.RELEASE
+|    +--- org.apache.logging.log4j:log4j-slf4j-impl:2.7
+|    |    +--- org.slf4j:slf4j-api:1.7.21 -> 1.7.7
+|    |    \--- org.apache.logging.log4j:log4j-api:2.7
+|    +--- org.apache.logging.log4j:log4j-api:2.7
+|    +--- org.apache.logging.log4j:log4j-core:2.7
+|    |    \--- org.apache.logging.log4j:log4j-api:2.7
+|    +--- org.slf4j:jcl-over-slf4j:1.7.25 (*)
+|    \--- org.slf4j:jul-to-slf4j:1.7.25 (*)
++--- org.apache.commons:commons-lang3:3.4
++--- commons-logging:commons-logging:1.2
++--- com.google.guava:guava:18.0
++--- com.alibaba:fastjson:1.2.4
++--- org.aspectj:aspectjrt:1.8.9
++--- org.aspectj:aspectjweaver:1.8.9
++--- com.sparkjava:spark-core:2.3
+|    +--- org.slf4j:slf4j-api:1.7.12 -> 1.7.7
+|    +--- org.slf4j:slf4j-simple:1.7.12 -> 1.7.25
+|    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    +--- org.eclipse.jetty:jetty-server:9.3.2.v20150730 -> 9.4.6.v20170531
+|    |    +--- javax.servlet:javax.servlet-api:3.1.0
+|    |    +--- org.eclipse.jetty:jetty-http:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531
+|    |    |         \--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    +--- org.eclipse.jetty:jetty-webapp:9.3.2.v20150730 -> 9.4.6.v20170531
+|    |    +--- org.eclipse.jetty:jetty-xml:9.4.6.v20170531
+|    |    |    \--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    \--- org.eclipse.jetty:jetty-servlet:9.4.6.v20170531
+|    |         \--- org.eclipse.jetty:jetty-security:9.4.6.v20170531
+|    |              \--- org.eclipse.jetty:jetty-server:9.4.6.v20170531 (*)
+|    +--- org.eclipse.jetty.websocket:websocket-server:9.3.2.v20150730 -> 9.4.6.v20170531
+|    |    +--- org.eclipse.jetty.websocket:websocket-common:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty.websocket:websocket-api:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    |    +--- org.eclipse.jetty.websocket:websocket-client:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    |    |    +--- org.eclipse.jetty:jetty-client:9.4.6.v20170531
+|    |    |    |    +--- org.eclipse.jetty:jetty-http:9.4.6.v20170531 (*)
+|    |    |    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    |    |    \--- org.eclipse.jetty.websocket:websocket-common:9.4.6.v20170531 (*)
+|    |    +--- org.eclipse.jetty.websocket:websocket-servlet:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty.websocket:websocket-api:9.4.6.v20170531
+|    |    |    \--- javax.servlet:javax.servlet-api:3.1.0
+|    |    +--- org.eclipse.jetty:jetty-servlet:9.4.6.v20170531 (*)
+|    |    \--- org.eclipse.jetty:jetty-http:9.4.6.v20170531 (*)
+|    \--- org.eclipse.jetty.websocket:websocket-servlet:9.3.2.v20150730 -> 9.4.6.v20170531 (*)
++--- org.slf4j:slf4j-api:1.7.7
++--- org.slf4j:slf4j-log4j12:1.7.7
+|    +--- org.slf4j:slf4j-api:1.7.7
+|    \--- log4j:log4j:1.2.17
++--- log4j:log4j:1.2.17
++--- org.springframework.boot:spring-boot-starter-test: -> 1.5.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-test:1.5.6.RELEASE
+|    |    \--- org.springframework.boot:spring-boot:1.5.6.RELEASE (*)
+|    +--- org.springframework.boot:spring-boot-test-autoconfigure:1.5.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot-test:1.5.6.RELEASE (*)
+|    |    \--- org.springframework.boot:spring-boot-autoconfigure:1.5.6.RELEASE (*)
+|    +--- com.jayway.jsonpath:json-path:2.2.0
+|    |    +--- net.minidev:json-smart:2.2.1
+|    |    |    \--- net.minidev:accessors-smart:1.1
+|    |    |         \--- org.ow2.asm:asm:5.0.3
+|    |    \--- org.slf4j:slf4j-api:1.7.16 -> 1.7.7
+|    +--- junit:junit:4.12
+|    |    \--- org.hamcrest:hamcrest-core:1.3
+|    +--- org.assertj:assertj-core:2.6.0
+|    +--- org.mockito:mockito-core:1.10.19
+|    |    +--- org.hamcrest:hamcrest-core:1.1 -> 1.3
+|    |    \--- org.objenesis:objenesis:2.1
+|    +--- org.hamcrest:hamcrest-core:1.3
+|    +--- org.hamcrest:hamcrest-library:1.3
+|    |    \--- org.hamcrest:hamcrest-core:1.3
+|    +--- org.skyscreamer:jsonassert:1.4.0
+|    |    \--- com.vaadin.external.google:android-json:0.0.20131108.vaadin1
+|    +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|    \--- org.springframework:spring-test:4.3.10.RELEASE
+|         \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+\--- junit:junit:4.12 (*)
+
+testCompileClasspath - Compile classpath for source set 'test'.
++--- org.springframework.boot:spring-boot: -> 1.5.6.RELEASE
+|    +--- org.springframework:spring-core:4.3.10.RELEASE
+|    |    \--- commons-logging:commons-logging:1.2
+|    \--- org.springframework:spring-context:4.3.10.RELEASE
+|         +--- org.springframework:spring-aop:4.3.10.RELEASE
+|         |    +--- org.springframework:spring-beans:4.3.10.RELEASE
+|         |    |    \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         |    \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-beans:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         \--- org.springframework:spring-expression:4.3.10.RELEASE
+|              \--- org.springframework:spring-core:4.3.10.RELEASE (*)
++--- org.springframework.boot:spring-boot-starter-web: -> 1.5.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:1.5.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot:1.5.6.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-autoconfigure:1.5.6.RELEASE
+|    |    |    \--- org.springframework.boot:spring-boot:1.5.6.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-starter-logging:1.5.6.RELEASE
+|    |    |    +--- org.slf4j:jcl-over-slf4j:1.7.25
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    |    |    +--- org.slf4j:jul-to-slf4j:1.7.25
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    |    |    \--- org.slf4j:log4j-over-slf4j:1.7.25
+|    |    |         \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    |    +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|    |    \--- org.yaml:snakeyaml:1.17
+|    +--- org.springframework.boot:spring-boot-starter-tomcat:1.5.6.RELEASE
+|    |    +--- org.apache.tomcat.embed:tomcat-embed-core:8.5.16
+|    |    +--- org.apache.tomcat.embed:tomcat-embed-el:8.5.16
+|    |    \--- org.apache.tomcat.embed:tomcat-embed-websocket:8.5.16
+|    |         \--- org.apache.tomcat.embed:tomcat-embed-core:8.5.16
+|    +--- org.hibernate:hibernate-validator:5.3.5.Final
+|    |    +--- javax.validation:validation-api:1.1.0.Final
+|    |    +--- org.jboss.logging:jboss-logging:3.3.0.Final -> 3.3.1.Final
+|    |    \--- com.fasterxml:classmate:1.3.1 -> 1.3.3
+|    +--- com.fasterxml.jackson.core:jackson-databind:2.8.9
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.8.0
+|    |    \--- com.fasterxml.jackson.core:jackson-core:2.8.9
+|    +--- org.springframework:spring-web:4.3.10.RELEASE
+|    |    +--- org.springframework:spring-aop:4.3.10.RELEASE (*)
+|    |    +--- org.springframework:spring-beans:4.3.10.RELEASE (*)
+|    |    +--- org.springframework:spring-context:4.3.10.RELEASE (*)
+|    |    \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|    \--- org.springframework:spring-webmvc:4.3.10.RELEASE
+|         +--- org.springframework:spring-aop:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-beans:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-context:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-expression:4.3.10.RELEASE (*)
+|         \--- org.springframework:spring-web:4.3.10.RELEASE (*)
++--- org.springframework.boot:spring-boot-starter-aop: -> 1.5.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:1.5.6.RELEASE (*)
+|    +--- org.springframework:spring-aop:4.3.10.RELEASE (*)
+|    \--- org.aspectj:aspectjweaver:1.8.10 -> 1.8.9
++--- org.springframework.boot:spring-boot-starter-log4j2: -> 1.5.6.RELEASE
+|    +--- org.apache.logging.log4j:log4j-slf4j-impl:2.7
+|    |    +--- org.slf4j:slf4j-api:1.7.21 -> 1.7.7
+|    |    \--- org.apache.logging.log4j:log4j-api:2.7
+|    +--- org.apache.logging.log4j:log4j-api:2.7
+|    +--- org.apache.logging.log4j:log4j-core:2.7
+|    |    \--- org.apache.logging.log4j:log4j-api:2.7
+|    +--- org.slf4j:jcl-over-slf4j:1.7.25 (*)
+|    \--- org.slf4j:jul-to-slf4j:1.7.25 (*)
++--- org.apache.commons:commons-lang3:3.4
++--- commons-logging:commons-logging:1.2
++--- com.google.guava:guava:18.0
++--- com.alibaba:fastjson:1.2.4
++--- org.aspectj:aspectjrt:1.8.9
++--- org.aspectj:aspectjweaver:1.8.9
++--- com.sparkjava:spark-core:2.3
+|    +--- org.slf4j:slf4j-api:1.7.12 -> 1.7.7
+|    +--- org.slf4j:slf4j-simple:1.7.12 -> 1.7.25
+|    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    +--- org.eclipse.jetty:jetty-server:9.3.2.v20150730 -> 9.4.6.v20170531
+|    |    +--- javax.servlet:javax.servlet-api:3.1.0
+|    |    +--- org.eclipse.jetty:jetty-http:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531
+|    |    |         \--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    +--- org.eclipse.jetty:jetty-webapp:9.3.2.v20150730 -> 9.4.6.v20170531
+|    |    +--- org.eclipse.jetty:jetty-xml:9.4.6.v20170531
+|    |    |    \--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    \--- org.eclipse.jetty:jetty-servlet:9.4.6.v20170531
+|    |         \--- org.eclipse.jetty:jetty-security:9.4.6.v20170531
+|    |              \--- org.eclipse.jetty:jetty-server:9.4.6.v20170531 (*)
+|    +--- org.eclipse.jetty.websocket:websocket-server:9.3.2.v20150730 -> 9.4.6.v20170531
+|    |    +--- org.eclipse.jetty.websocket:websocket-common:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty.websocket:websocket-api:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    |    +--- org.eclipse.jetty.websocket:websocket-client:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    |    |    +--- org.eclipse.jetty:jetty-client:9.4.6.v20170531
+|    |    |    |    +--- org.eclipse.jetty:jetty-http:9.4.6.v20170531 (*)
+|    |    |    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    |    |    \--- org.eclipse.jetty.websocket:websocket-common:9.4.6.v20170531 (*)
+|    |    +--- org.eclipse.jetty.websocket:websocket-servlet:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty.websocket:websocket-api:9.4.6.v20170531
+|    |    |    \--- javax.servlet:javax.servlet-api:3.1.0
+|    |    +--- org.eclipse.jetty:jetty-servlet:9.4.6.v20170531 (*)
+|    |    \--- org.eclipse.jetty:jetty-http:9.4.6.v20170531 (*)
+|    \--- org.eclipse.jetty.websocket:websocket-servlet:9.3.2.v20150730 -> 9.4.6.v20170531 (*)
++--- org.slf4j:slf4j-api:1.7.7
++--- org.slf4j:slf4j-log4j12:1.7.7
+|    +--- org.slf4j:slf4j-api:1.7.7
+|    \--- log4j:log4j:1.2.17
++--- log4j:log4j:1.2.17
++--- org.springframework.boot:spring-boot-starter-test: -> 1.5.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-test:1.5.6.RELEASE
+|    |    \--- org.springframework.boot:spring-boot:1.5.6.RELEASE (*)
+|    +--- org.springframework.boot:spring-boot-test-autoconfigure:1.5.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot-test:1.5.6.RELEASE (*)
+|    |    \--- org.springframework.boot:spring-boot-autoconfigure:1.5.6.RELEASE (*)
+|    +--- com.jayway.jsonpath:json-path:2.2.0
+|    |    +--- net.minidev:json-smart:2.2.1
+|    |    |    \--- net.minidev:accessors-smart:1.1
+|    |    |         \--- org.ow2.asm:asm:5.0.3
+|    |    \--- org.slf4j:slf4j-api:1.7.16 -> 1.7.7
+|    +--- junit:junit:4.12
+|    |    \--- org.hamcrest:hamcrest-core:1.3
+|    +--- org.assertj:assertj-core:2.6.0
+|    +--- org.mockito:mockito-core:1.10.19
+|    |    +--- org.hamcrest:hamcrest-core:1.1 -> 1.3
+|    |    \--- org.objenesis:objenesis:2.1
+|    +--- org.hamcrest:hamcrest-core:1.3
+|    +--- org.hamcrest:hamcrest-library:1.3
+|    |    \--- org.hamcrest:hamcrest-core:1.3
+|    +--- org.skyscreamer:jsonassert:1.4.0
+|    |    \--- com.vaadin.external.google:android-json:0.0.20131108.vaadin1
+|    +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|    \--- org.springframework:spring-test:4.3.10.RELEASE
+|         \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+\--- junit:junit:4.12 (*)
+
+testCompileOnly - Compile dependencies for source set 'test'.
++--- org.springframework.boot:spring-boot: -> 1.5.6.RELEASE
+|    +--- org.springframework:spring-core:4.3.10.RELEASE
+|    |    \--- commons-logging:commons-logging:1.2
+|    \--- org.springframework:spring-context:4.3.10.RELEASE
+|         +--- org.springframework:spring-aop:4.3.10.RELEASE
+|         |    +--- org.springframework:spring-beans:4.3.10.RELEASE
+|         |    |    \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         |    \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-beans:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         \--- org.springframework:spring-expression:4.3.10.RELEASE
+|              \--- org.springframework:spring-core:4.3.10.RELEASE (*)
++--- org.springframework.boot:spring-boot-starter-web: -> 1.5.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:1.5.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot:1.5.6.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-autoconfigure:1.5.6.RELEASE
+|    |    |    \--- org.springframework.boot:spring-boot:1.5.6.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-starter-logging:1.5.6.RELEASE
+|    |    |    +--- org.slf4j:jcl-over-slf4j:1.7.25
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    |    |    +--- org.slf4j:jul-to-slf4j:1.7.25
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    |    |    \--- org.slf4j:log4j-over-slf4j:1.7.25
+|    |    |         \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    |    +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|    |    \--- org.yaml:snakeyaml:1.17
+|    +--- org.springframework.boot:spring-boot-starter-tomcat:1.5.6.RELEASE
+|    |    +--- org.apache.tomcat.embed:tomcat-embed-core:8.5.16
+|    |    +--- org.apache.tomcat.embed:tomcat-embed-el:8.5.16
+|    |    \--- org.apache.tomcat.embed:tomcat-embed-websocket:8.5.16
+|    |         \--- org.apache.tomcat.embed:tomcat-embed-core:8.5.16
+|    +--- org.hibernate:hibernate-validator:5.3.5.Final
+|    |    +--- javax.validation:validation-api:1.1.0.Final
+|    |    +--- org.jboss.logging:jboss-logging:3.3.0.Final -> 3.3.1.Final
+|    |    \--- com.fasterxml:classmate:1.3.1 -> 1.3.3
+|    +--- com.fasterxml.jackson.core:jackson-databind:2.8.9
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.8.0
+|    |    \--- com.fasterxml.jackson.core:jackson-core:2.8.9
+|    +--- org.springframework:spring-web:4.3.10.RELEASE
+|    |    +--- org.springframework:spring-aop:4.3.10.RELEASE (*)
+|    |    +--- org.springframework:spring-beans:4.3.10.RELEASE (*)
+|    |    +--- org.springframework:spring-context:4.3.10.RELEASE (*)
+|    |    \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|    \--- org.springframework:spring-webmvc:4.3.10.RELEASE
+|         +--- org.springframework:spring-aop:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-beans:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-context:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-expression:4.3.10.RELEASE (*)
+|         \--- org.springframework:spring-web:4.3.10.RELEASE (*)
++--- org.springframework.boot:spring-boot-starter-aop: -> 1.5.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:1.5.6.RELEASE (*)
+|    +--- org.springframework:spring-aop:4.3.10.RELEASE (*)
+|    \--- org.aspectj:aspectjweaver:1.8.10 -> 1.8.9
++--- org.springframework.boot:spring-boot-starter-log4j2: -> 1.5.6.RELEASE
+|    +--- org.apache.logging.log4j:log4j-slf4j-impl:2.7
+|    |    +--- org.slf4j:slf4j-api:1.7.21 -> 1.7.7
+|    |    \--- org.apache.logging.log4j:log4j-api:2.7
+|    +--- org.apache.logging.log4j:log4j-api:2.7
+|    +--- org.apache.logging.log4j:log4j-core:2.7
+|    |    \--- org.apache.logging.log4j:log4j-api:2.7
+|    +--- org.slf4j:jcl-over-slf4j:1.7.25 (*)
+|    \--- org.slf4j:jul-to-slf4j:1.7.25 (*)
++--- org.apache.commons:commons-lang3:3.4
++--- commons-logging:commons-logging:1.2
++--- com.google.guava:guava:18.0
++--- com.alibaba:fastjson:1.2.4
++--- org.aspectj:aspectjrt:1.8.9
++--- org.aspectj:aspectjweaver:1.8.9
++--- com.sparkjava:spark-core:2.3
+|    +--- org.slf4j:slf4j-api:1.7.12 -> 1.7.7
+|    +--- org.slf4j:slf4j-simple:1.7.12 -> 1.7.25
+|    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    +--- org.eclipse.jetty:jetty-server:9.3.2.v20150730 -> 9.4.6.v20170531
+|    |    +--- javax.servlet:javax.servlet-api:3.1.0
+|    |    +--- org.eclipse.jetty:jetty-http:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531
+|    |    |         \--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    +--- org.eclipse.jetty:jetty-webapp:9.3.2.v20150730 -> 9.4.6.v20170531
+|    |    +--- org.eclipse.jetty:jetty-xml:9.4.6.v20170531
+|    |    |    \--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    \--- org.eclipse.jetty:jetty-servlet:9.4.6.v20170531
+|    |         \--- org.eclipse.jetty:jetty-security:9.4.6.v20170531
+|    |              \--- org.eclipse.jetty:jetty-server:9.4.6.v20170531 (*)
+|    +--- org.eclipse.jetty.websocket:websocket-server:9.3.2.v20150730 -> 9.4.6.v20170531
+|    |    +--- org.eclipse.jetty.websocket:websocket-common:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty.websocket:websocket-api:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    |    +--- org.eclipse.jetty.websocket:websocket-client:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    |    |    +--- org.eclipse.jetty:jetty-client:9.4.6.v20170531
+|    |    |    |    +--- org.eclipse.jetty:jetty-http:9.4.6.v20170531 (*)
+|    |    |    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    |    |    \--- org.eclipse.jetty.websocket:websocket-common:9.4.6.v20170531 (*)
+|    |    +--- org.eclipse.jetty.websocket:websocket-servlet:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty.websocket:websocket-api:9.4.6.v20170531
+|    |    |    \--- javax.servlet:javax.servlet-api:3.1.0
+|    |    +--- org.eclipse.jetty:jetty-servlet:9.4.6.v20170531 (*)
+|    |    \--- org.eclipse.jetty:jetty-http:9.4.6.v20170531 (*)
+|    \--- org.eclipse.jetty.websocket:websocket-servlet:9.3.2.v20150730 -> 9.4.6.v20170531 (*)
++--- org.slf4j:slf4j-api:1.7.7
++--- org.slf4j:slf4j-log4j12:1.7.7
+|    +--- org.slf4j:slf4j-api:1.7.7
+|    \--- log4j:log4j:1.2.17
++--- log4j:log4j:1.2.17
++--- org.springframework.boot:spring-boot-starter-test: -> 1.5.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-test:1.5.6.RELEASE
+|    |    \--- org.springframework.boot:spring-boot:1.5.6.RELEASE (*)
+|    +--- org.springframework.boot:spring-boot-test-autoconfigure:1.5.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot-test:1.5.6.RELEASE (*)
+|    |    \--- org.springframework.boot:spring-boot-autoconfigure:1.5.6.RELEASE (*)
+|    +--- com.jayway.jsonpath:json-path:2.2.0
+|    |    +--- net.minidev:json-smart:2.2.1
+|    |    |    \--- net.minidev:accessors-smart:1.1
+|    |    |         \--- org.ow2.asm:asm:5.0.3
+|    |    \--- org.slf4j:slf4j-api:1.7.16 -> 1.7.7
+|    +--- junit:junit:4.12
+|    |    \--- org.hamcrest:hamcrest-core:1.3
+|    +--- org.assertj:assertj-core:2.6.0
+|    +--- org.mockito:mockito-core:1.10.19
+|    |    +--- org.hamcrest:hamcrest-core:1.1 -> 1.3
+|    |    \--- org.objenesis:objenesis:2.1
+|    +--- org.hamcrest:hamcrest-core:1.3
+|    +--- org.hamcrest:hamcrest-library:1.3
+|    |    \--- org.hamcrest:hamcrest-core:1.3
+|    +--- org.skyscreamer:jsonassert:1.4.0
+|    |    \--- com.vaadin.external.google:android-json:0.0.20131108.vaadin1
+|    +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|    \--- org.springframework:spring-test:4.3.10.RELEASE
+|         \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+\--- junit:junit:4.12 (*)
+
+testRuntime - Runtime dependencies for source set 'test'.
++--- org.springframework.boot:spring-boot: -> 1.5.6.RELEASE
+|    +--- org.springframework:spring-core:4.3.10.RELEASE
+|    |    \--- commons-logging:commons-logging:1.2
+|    \--- org.springframework:spring-context:4.3.10.RELEASE
+|         +--- org.springframework:spring-aop:4.3.10.RELEASE
+|         |    +--- org.springframework:spring-beans:4.3.10.RELEASE
+|         |    |    \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         |    \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-beans:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         \--- org.springframework:spring-expression:4.3.10.RELEASE
+|              \--- org.springframework:spring-core:4.3.10.RELEASE (*)
++--- org.springframework.boot:spring-boot-starter-web: -> 1.5.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:1.5.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot:1.5.6.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-autoconfigure:1.5.6.RELEASE
+|    |    |    \--- org.springframework.boot:spring-boot:1.5.6.RELEASE (*)
+|    |    +--- org.springframework.boot:spring-boot-starter-logging:1.5.6.RELEASE
+|    |    |    +--- org.slf4j:jcl-over-slf4j:1.7.25
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    |    |    +--- org.slf4j:jul-to-slf4j:1.7.25
+|    |    |    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    |    |    \--- org.slf4j:log4j-over-slf4j:1.7.25
+|    |    |         \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    |    +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|    |    \--- org.yaml:snakeyaml:1.17
+|    +--- org.springframework.boot:spring-boot-starter-tomcat:1.5.6.RELEASE
+|    |    +--- org.apache.tomcat.embed:tomcat-embed-core:8.5.16
+|    |    +--- org.apache.tomcat.embed:tomcat-embed-el:8.5.16
+|    |    \--- org.apache.tomcat.embed:tomcat-embed-websocket:8.5.16
+|    |         \--- org.apache.tomcat.embed:tomcat-embed-core:8.5.16
+|    +--- org.hibernate:hibernate-validator:5.3.5.Final
+|    |    +--- javax.validation:validation-api:1.1.0.Final
+|    |    +--- org.jboss.logging:jboss-logging:3.3.0.Final -> 3.3.1.Final
+|    |    \--- com.fasterxml:classmate:1.3.1 -> 1.3.3
+|    +--- com.fasterxml.jackson.core:jackson-databind:2.8.9
+|    |    +--- com.fasterxml.jackson.core:jackson-annotations:2.8.0
+|    |    \--- com.fasterxml.jackson.core:jackson-core:2.8.9
+|    +--- org.springframework:spring-web:4.3.10.RELEASE
+|    |    +--- org.springframework:spring-aop:4.3.10.RELEASE (*)
+|    |    +--- org.springframework:spring-beans:4.3.10.RELEASE (*)
+|    |    +--- org.springframework:spring-context:4.3.10.RELEASE (*)
+|    |    \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|    \--- org.springframework:spring-webmvc:4.3.10.RELEASE
+|         +--- org.springframework:spring-aop:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-beans:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-context:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|         +--- org.springframework:spring-expression:4.3.10.RELEASE (*)
+|         \--- org.springframework:spring-web:4.3.10.RELEASE (*)
++--- org.springframework.boot:spring-boot-starter-aop: -> 1.5.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-starter:1.5.6.RELEASE (*)
+|    +--- org.springframework:spring-aop:4.3.10.RELEASE (*)
+|    \--- org.aspectj:aspectjweaver:1.8.10 -> 1.8.9
++--- org.springframework.boot:spring-boot-starter-log4j2: -> 1.5.6.RELEASE
+|    +--- org.apache.logging.log4j:log4j-slf4j-impl:2.7
+|    |    +--- org.slf4j:slf4j-api:1.7.21 -> 1.7.7
+|    |    \--- org.apache.logging.log4j:log4j-api:2.7
+|    +--- org.apache.logging.log4j:log4j-api:2.7
+|    +--- org.apache.logging.log4j:log4j-core:2.7
+|    |    \--- org.apache.logging.log4j:log4j-api:2.7
+|    +--- org.slf4j:jcl-over-slf4j:1.7.25 (*)
+|    \--- org.slf4j:jul-to-slf4j:1.7.25 (*)
++--- org.apache.commons:commons-lang3:3.4
++--- commons-logging:commons-logging:1.2
++--- com.google.guava:guava:18.0
++--- com.alibaba:fastjson:1.2.4
++--- org.aspectj:aspectjrt:1.8.9
++--- org.aspectj:aspectjweaver:1.8.9
++--- com.sparkjava:spark-core:2.3
+|    +--- org.slf4j:slf4j-api:1.7.12 -> 1.7.7
+|    +--- org.slf4j:slf4j-simple:1.7.12 -> 1.7.25
+|    |    \--- org.slf4j:slf4j-api:1.7.25 -> 1.7.7
+|    +--- org.eclipse.jetty:jetty-server:9.3.2.v20150730 -> 9.4.6.v20170531
+|    |    +--- javax.servlet:javax.servlet-api:3.1.0
+|    |    +--- org.eclipse.jetty:jetty-http:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531
+|    |    |         \--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    +--- org.eclipse.jetty:jetty-webapp:9.3.2.v20150730 -> 9.4.6.v20170531
+|    |    +--- org.eclipse.jetty:jetty-xml:9.4.6.v20170531
+|    |    |    \--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    \--- org.eclipse.jetty:jetty-servlet:9.4.6.v20170531
+|    |         \--- org.eclipse.jetty:jetty-security:9.4.6.v20170531
+|    |              \--- org.eclipse.jetty:jetty-server:9.4.6.v20170531 (*)
+|    +--- org.eclipse.jetty.websocket:websocket-server:9.3.2.v20150730 -> 9.4.6.v20170531
+|    |    +--- org.eclipse.jetty.websocket:websocket-common:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty.websocket:websocket-api:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    |    +--- org.eclipse.jetty.websocket:websocket-client:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-util:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    |    |    +--- org.eclipse.jetty:jetty-client:9.4.6.v20170531
+|    |    |    |    +--- org.eclipse.jetty:jetty-http:9.4.6.v20170531 (*)
+|    |    |    |    \--- org.eclipse.jetty:jetty-io:9.4.6.v20170531 (*)
+|    |    |    \--- org.eclipse.jetty.websocket:websocket-common:9.4.6.v20170531 (*)
+|    |    +--- org.eclipse.jetty.websocket:websocket-servlet:9.4.6.v20170531
+|    |    |    +--- org.eclipse.jetty.websocket:websocket-api:9.4.6.v20170531
+|    |    |    \--- javax.servlet:javax.servlet-api:3.1.0
+|    |    +--- org.eclipse.jetty:jetty-servlet:9.4.6.v20170531 (*)
+|    |    \--- org.eclipse.jetty:jetty-http:9.4.6.v20170531 (*)
+|    \--- org.eclipse.jetty.websocket:websocket-servlet:9.3.2.v20150730 -> 9.4.6.v20170531 (*)
++--- org.slf4j:slf4j-api:1.7.7
++--- org.slf4j:slf4j-log4j12:1.7.7
+|    +--- org.slf4j:slf4j-api:1.7.7
+|    \--- log4j:log4j:1.2.17
++--- log4j:log4j:1.2.17
++--- org.springframework.boot:spring-boot-starter-test: -> 1.5.6.RELEASE
+|    +--- org.springframework.boot:spring-boot-test:1.5.6.RELEASE
+|    |    \--- org.springframework.boot:spring-boot:1.5.6.RELEASE (*)
+|    +--- org.springframework.boot:spring-boot-test-autoconfigure:1.5.6.RELEASE
+|    |    +--- org.springframework.boot:spring-boot-test:1.5.6.RELEASE (*)
+|    |    \--- org.springframework.boot:spring-boot-autoconfigure:1.5.6.RELEASE (*)
+|    +--- com.jayway.jsonpath:json-path:2.2.0
+|    |    +--- net.minidev:json-smart:2.2.1
+|    |    |    \--- net.minidev:accessors-smart:1.1
+|    |    |         \--- org.ow2.asm:asm:5.0.3
+|    |    \--- org.slf4j:slf4j-api:1.7.16 -> 1.7.7
+|    +--- junit:junit:4.12
+|    |    \--- org.hamcrest:hamcrest-core:1.3
+|    +--- org.assertj:assertj-core:2.6.0
+|    +--- org.mockito:mockito-core:1.10.19
+|    |    +--- org.hamcrest:hamcrest-core:1.1 -> 1.3
+|    |    \--- org.objenesis:objenesis:2.1
+|    +--- org.hamcrest:hamcrest-core:1.3
+|    +--- org.hamcrest:hamcrest-library:1.3
+|    |    \--- org.hamcrest:hamcrest-core:1.3
+|    +--- org.skyscreamer:jsonassert:1.4.0
+|    |    \--- com.vaadin.external.google:android-json:0.0.20131108.vaadin1
+|    +--- org.springframework:spring-core:4.3.10.RELEASE (*)
+|    \--- org.springframework:spring-test:4.3.10.RELEASE
+|         \--- org.springframework:spring-core:4.3.10.RELEASE (*)
+\--- junit:junit:4.12 (*)
+
+(*) - dependencies omitted (listed previously)
+
+BUILD SUCCESSFUL
+
+Total time: 6.127 secs

@@ -1,0 +1,7 @@
+
+/.idea/
+/netty-http.ipr
+/netty-http.iws
+/.gradle/
+/build/
+/log/
