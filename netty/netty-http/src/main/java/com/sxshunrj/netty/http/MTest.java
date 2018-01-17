@@ -1,12 +1,6 @@
 package com.sxshunrj.netty.http;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
-import com.google.common.collect.Maps;
-import com.sxshunrj.netty.http.business.param.ARequestParam;
 import com.sxshunrj.netty.http.util.CommonUtil;
-
-import java.util.Map;
 
 /**
  * Created by IntelliJ IDEA.

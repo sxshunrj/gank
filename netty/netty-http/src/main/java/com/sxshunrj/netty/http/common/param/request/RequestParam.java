@@ -2,6 +2,7 @@ package com.sxshunrj.netty.http.common.param.request;
 
 import com.google.common.collect.Maps;
 import com.sxshunrj.netty.http.common.param.Param;
+import com.sxshunrj.netty.http.util.CommonUtil;
 
 import java.util.Map;
 

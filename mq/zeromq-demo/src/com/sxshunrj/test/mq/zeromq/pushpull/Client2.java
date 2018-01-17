@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * Date: 2017/12/22 16:21
  * Desc：
  */
-public class Client {
+public class Client2 {
     public static void main(String[] args)  {
         final AtomicInteger number = new AtomicInteger(0);
         for (int i = 0; i < 5; i++) {

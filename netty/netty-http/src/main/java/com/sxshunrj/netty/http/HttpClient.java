@@ -43,14 +43,16 @@ public class HttpClient {
             });
 
             ChannelFuture f = b.connect(host, port).sync();
-            URI uri = new URI("http://127.0.0.1:8000/test/aqq/getA");
-            String msg = "Are you ok?";
+            URI uri = new URI("test/aqq/getA");
+            String msg;
 
 
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("appId", "111");
             Map<String, Object> businessParam = new HashMap<>();
             businessParam.put("age", 22);
+            businessParam.put("address", "beijing");
+            businessParam.put("name", "jack");
             jsonObject.put("businessParam", businessParam);
 
             msg = jsonObject.toJSONString();

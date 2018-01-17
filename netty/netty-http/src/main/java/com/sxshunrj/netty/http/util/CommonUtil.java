@@ -5,7 +5,7 @@ import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import org.springframework.cglib.beans.BeanMap;
+import net.sf.cglib.beans.BeanMap;
 
 import java.io.IOException;
 import java.util.List;
@@ -41,7 +41,7 @@ public class CommonUtil {
      * @param bean
      * @return
      */
-    public static <T> T mapToBean(Map<String, Object> map,T bean) {
+    public static <T> T mapToBean(Map<String, Object> map, T bean) {
         BeanMap beanMap = BeanMap.create(bean);
         beanMap.putAll(map);
         return bean;

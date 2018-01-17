@@ -40,7 +40,7 @@ public class HttpServerHandler extends ChannelInboundHandlerAdapter {
             logger.info("HttpRequest jsonstr:"+JSON.toJSONString(request));
 
             String uriStr = request.uri();
-            // uriStr   http://127.0.0.1:8000/projectName/clazzName/methodName
+            // uriStr     projectName/clazzName/methodName
             this.parseRequestMethod(uriStr, requestParam);
         }
         if (msg instanceof HttpContent) {
@@ -73,16 +73,15 @@ public class HttpServerHandler extends ChannelInboundHandlerAdapter {
 
     private void parseRequestMethod(String uriStr, RequestParam requestParam){
         try {
-            uriStr = uriStr.replace("http://", "");
 
             String[] ps = uriStr.split("/");
-            requestParam.setClazzName(ps[2]);
-            requestParam.setMethodName(ps[3]);
+            requestParam.setClazzName(ps[1]);
+            requestParam.setMethodName(ps[2]);
 
-            String clazzAllName = HANDLERPREFIX+ CommonUtil.captureName(ps[2])+"Handler";
+            String clazzAllName = HANDLERPREFIX+ CommonUtil.captureName(ps[1])+"Handler";
             System.out.println("clazzAllName:"+clazzAllName);
             businessHandler = (AbstractBusinessHandler) cglibProxy.getProxy(Class.forName(clazzAllName));
-        } catch (ClassNotFoundException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

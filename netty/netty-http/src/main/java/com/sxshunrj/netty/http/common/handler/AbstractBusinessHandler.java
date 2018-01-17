@@ -44,9 +44,12 @@ public abstract class AbstractBusinessHandler<T extends RequestParam> {
 
                     if(0 == paramCount){
                         methodRet = method.invoke(this);
-                    }else if(1 == paramCount && method.getParameterTypes()[0].getDeclaringClass().isAssignableFrom(RequestParam.class)){
+                    }else if(1 == paramCount && method.getParameterTypes()[0].getName().equals(RequestParam.class.getName())){
                         methodRet = method.invoke(this, requestParam);
+                    }else{
+                        throw new BusinessException("request param error");
                     }
+                    System.out.println("invoke method:"+JSON.toJSONString(method)+",methodRet:"+JSON.toJSONString(methodRet));
 
                     if(null == methodRet){
                         return new Rsp(true);
@@ -57,7 +60,6 @@ public abstract class AbstractBusinessHandler<T extends RequestParam> {
                         return new Rsp(true, methodRet);
                     }
                 } catch (Exception e) {
-                    e.printStackTrace();
                     throw e;
                 }
             }
