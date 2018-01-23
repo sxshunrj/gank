@@ -1,5 +1,6 @@
 package com.sxshunrj.springcloud.configclient;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,10 +17,20 @@ public class ConfigClientApplication {
 
 	@Value("${foo}")
 	String foo;
+
+	@Value("${name}")
+	String name;
+
+	@Value("${age}")
+	Integer age;
+
 	@RequestMapping(value = "/hi")
 	public String hi(){
 		System.out.println("config-client...");
-		return foo;
+		System.out.println("foo:"+foo);
+		System.out.println("name:"+name);
+		System.out.println("age:"+age);
+		return foo + name + age;
 	}
 
 }

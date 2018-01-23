@@ -9,6 +9,9 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
+/**
+ * http://127.0.0.1:19904/hi?name=111
+ */
 @EnableDiscoveryClient
 @SpringBootApplication
 @EnableHystrix
