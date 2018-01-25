@@ -1,0 +1,7 @@
+
+    com.sxshunrj.springboot.websocket3.SpringbootWebsocketApplication
+    resources/static/index.html
+
+    1：群发
+    2：单发
+    3：踢人

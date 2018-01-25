@@ -25,4 +25,3 @@ nbdist/
 /mvnw.cmd
 /.mvn/
 /mvnw
-/dependency-reduced-pom.xml

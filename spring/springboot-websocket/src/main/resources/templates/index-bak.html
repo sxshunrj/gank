@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="http://cdn.bootcss.com/sockjs-client/1.1.1/sockjs.min.js"></script>
+<script src="http://cdn.bootcss.com/stomp.js/2.3.3/stomp.js"></script>
+<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    var stompClient = null;
+    function connect() {
+        var userName = $("#userName").val();
+        var socket = new SockJS("http://127.0.0.1:20001/hello");
+        stompClient = Stomp.over(socket);
+        stompClient.connect({login:userName}, function(frame) {
+            console.log('Connected: ' + frame);
+
+            // 该方法是接收广播消息。
+            stompClient.subscribe('/topic/greetings', function(greeting){
+                $("#content").append("<h1>"+JSON.parse(greeting.body).content+"</h1>")
+            });
+
+            // 该方法表示接收一对一消息，其主题是"/user/"+userId+"/message"，不同客户端具有不同的id。
+            // 如果两个或多个客户端具有相同的id，那么服务器端给该userId发送消息时，这些客户端都可以收到。
+            stompClient.subscribe('/user/' + userName + '/message',function(greeting){
+                alert(JSON.parse(greeting.body).content);
+                $("#content").append("<h1>"+JSON.parse(greeting.body).content+"</h1>")
+            });
+        });
+    }
+
+    function disconnect() {
+        if (stompClient != null) {
+            stompClient.disconnect();
+        }
+        console.log("Disconnected");
+    }
+
+    
+    function sendToAll() {
+        
+    }
+
+</script>
+<body>
+<div class="row">
+    <input id="userName" type="text" />
+    <input type="button" value="连接" onclick="connect()">
+    <input type="button" value="断开" onclick="disconnect()">
+    <br />
+    user:<input id="toUserName" type="text" />
+    msg:<input id="msg" type="text" />
+    <input type="button" value="发送" onclick="sendToUser()">
+    <br />
+    pubmsg:<input id="pubmsg" type="text" />
+    <input type="button" value="发送" onclick="sendToAll()">
+    <br />
+    <h1>==================Content===================================</h1>
+    <div id="content">
+
+    </div>
+</div>
+</body>
+</html>

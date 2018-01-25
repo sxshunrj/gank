@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+      <title>Spring Boot WebSocket Chat Application</title>
+      <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <noscript>
+      <h2>Sorry! Your browser doesn't support Javascript</h2>
+    </noscript>
+
+    <div id="username-page">
+        <div class="username-page-container">
+            <h1 class="title">Type your username</h1>
+            <form id="usernameForm" name="usernameForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Username" autocomplete="off" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <button type="button" class="accent username-submit" onclick="login()">Start Chatting</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="chat-page" class="hidden">
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2>Spring WebSocket Chat Demo</h2>
+            </div>
+            <!--<div class="connecting">-->
+                <!--Connecting...-->
+            <!--</div>-->
+            <ul id="messageArea">
+
+            </ul>
+            <form id="messageForm" name="messageForm" nameForm="messageForm">
+                <div class="form-group">
+                    <div class="input-group clearfix">
+                        <input style="width: 10%;padding-right: 10px;" type="text" id="touser" placeholder="To user" autocomplete="off" class="form-control"/>
+                        <input style="width: 70%" type="text" id="message" placeholder="Type a message..." autocomplete="off" class="form-control"/>
+                        <button type="button" class="primary" onclick="sendMsg()">Send</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/sockjs.min.js"></script>
+    <script src="/js/stomp.min.js"></script>
+    <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        var ws = null;
+        function login() {
+            var name = $("#name").val();
+            $.ajax({url:"http://127.0.0.1:20001/login/"+name, success:function(result){
+                if(result){
+                    connect();
+                }else{
+                    alert("error");
+                }
+            }});
+        }
+
+        function appendChatPan(content) {
+            $("#username-page").hide();
+            $("#chat-page").show();
+            var textElement = document.createElement('p');
+            var messageText = document.createTextNode(content);
+            textElement.appendChild(messageText);
+            $("#messageArea").append(textElement);
+        }
+
+        function sendMsg() {
+            var touser = $("#touser").val();
+            var message = $("#message").val();
+
+            $.ajax({
+                url:'http://127.0.0.1:20001/message',
+                type:'POST',
+                data:{
+                    touserid:touser, message:message
+                },
+                dataType:'json',    //返回的数据格式：json/xml/html/script/jsonp/text
+                success:function(data){
+                    appendChatPan(data);
+                }
+            })
+
+        }
+
+        function connect() {
+            ws = new WebSocket("ws://127.0.0.1:20001/app")
+            ws.onopen = function () {
+                console.log("onpen");
+            }
+            ws.onclose = function () {
+                console.log("onclose");
+            }
+            ws.onmessage = function (msg) {
+                console.log(msg.data);
+                appendChatPan(msg.data);
+            }
+        }
+    </script>
+  </body>
+</html>
