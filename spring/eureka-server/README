@@ -61,7 +61,7 @@ springboot项目部署到远程docker
              ---> Running in fa53f8df14a6
              ---> e9c2529886b4
             Removing intermediate container fa53f8df14a6
-            Step 4/4 : EXPOSE 29901
+            Step 4/4 : EXPOSE 19901
              ---> Running in dad6d134cc65
              ---> c802fb0b0ec4
             Removing intermediate container dad6d134cc65
@@ -79,11 +79,11 @@ springboot项目部署到远程docker
         EPOSITORY               TAG                 IMAGE ID            CREATED             SIZE
         sxshunrj/eureka-server   latest              c802fb0b0ec4        14 minutes ago      683MB
     7：操作镜像
-        启动：docker run -p 29901:29901 -d sxshunrj/eureka-server
+        启动：docker run -p 19901:19901 -d sxshunrj/eureka-server
         终止：
             a：docker ps
                 CONTAINER ID        IMAGE                    COMMAND               CREATED             STATUS              PORTS                      NAMES
-                97bd07f4deed        sxshunrj/eureka-server   "java -jar app.jar"   16 minutes ago      Up 16 minutes       0.0.0.0:29901->29901/tcp   quirky_bell
+                97bd07f4deed        sxshunrj/eureka-server   "java -jar app.jar"   16 minutes ago      Up 16 minutes       0.0.0.0:19901->19901/tcp   quirky_bell
             b：docker stop 97bd07f4deed
 
 三：坑
