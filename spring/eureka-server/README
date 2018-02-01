@@ -1,0 +1,96 @@
+springboot项目部署到远程docker
+
+一、CentOS 7安装最新Docker
+    1、yum install gcc-c++ -y && yum install gcc* -y && yum install vim -y && yum update -y
+    2、yum -y install epel-release && yum -y install python-pip && pip install -U docker-compose
+    3、vim /etc/yum.repos.d/docker.repo
+        [dockerrepo]
+        name=Docker Repository
+        baseurl=https://yum.dockerproject.org/repo/main/centos/$releasever/
+        enabled=1
+        gpgcheck=1
+        gpgkey=https://yum.dockerproject.org/gpg
+    4、yum clean all && yum makecache
+    5、yum install -y docker-engine
+    6、systemctl start docker.service
+    7、systemctl enable docker.service
+
+二、项目操作步骤
+    1：pom.xml文件中添加plugin
+        <!-- <docker.image.prefix>sxshunrj</docker.image.prefix> -->
+        <plugin>
+            <groupId>com.spotify</groupId>
+            <artifactId>docker-maven-plugin</artifactId>
+            <version>0.4.3</version>
+            <configuration>
+                <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
+                <dockerDirectory>src/main/docker</dockerDirectory>
+                <resources>
+                    <resource>
+                        <targetPath>/</targetPath>
+                        <directory>${project.build.directory}</directory>
+                        <include>${project.build.finalName}.jar</include>
+                    </resource>
+                </resources>
+            </configuration>
+        </plugin>
+    2：在<dockerDirectory>目录下添加Dockerfile文件，内容如下
+        FROM java:8
+        ADD eureka-server-0.0.1-SNAPSHOT.jar app.jar
+        ENTRYPOINT ["java","-jar","app.jar"]
+        EXPOSE 19901
+    3：查看远程服务器docker的2375端口是否开启(netstat -ano|grep 2375)
+        如果没开启的话执行以下步骤
+            a：vim /usr/lib/systemd/system/docker.service
+                在[Service]节点加入 ExecStart=
+                                    ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2375 -H unix://var/run/docker.sock
+            b：docker重新读取配置文件，重新启动docker服务
+                systemctl daemon-reload
+                systemctl restart docker
+    4：Windows增加DOCKER_HOST环境变量
+        DOCKER_HOST：tcp://192.168.10.183:2375
+    5：在项目跟目录下执行mvn命令
+        mvn clean package docker:build -DskipTests -X
+        出现以下步骤表明上传成功
+            Step 1/4 : FROM java:8
+             ---> d23bdf5b1b1b
+            Step 2/4 : ADD eureka-server-0.0.1-SNAPSHOT.jar app.jar
+             ---> cd366aa60fd5
+            Removing intermediate container 09a9b5a19aac
+            Step 3/4 : ENTRYPOINT java -jar app.jar
+             ---> Running in fa53f8df14a6
+             ---> e9c2529886b4
+            Removing intermediate container fa53f8df14a6
+            Step 4/4 : EXPOSE 29901
+             ---> Running in dad6d134cc65
+             ---> c802fb0b0ec4
+            Removing intermediate container dad6d134cc65
+            Successfully built c802fb0b0ec4
+            Successfully tagged sxshunrj/eureka-server:latest
+            [INFO] Built sxshunrj/eureka-server
+            [INFO] ------------------------------------------------------------------------
+            [INFO] BUILD SUCCESS
+            [INFO] ------------------------------------------------------------------------
+            [INFO] Total time: 40.744 s
+            [INFO] Finished at: 2018-02-01T10:48:14+08:00
+            [INFO] Final Memory: 56M/609M
+            [INFO] ------------------------------------------------------------------------
+    6：在服务器上使用docker images查看镜像
+        EPOSITORY               TAG                 IMAGE ID            CREATED             SIZE
+        sxshunrj/eureka-server   latest              c802fb0b0ec4        14 minutes ago      683MB
+    7：操作镜像
+        启动：docker run -p 29901:29901 -d sxshunrj/eureka-server
+        终止：
+            a：docker ps
+                CONTAINER ID        IMAGE                    COMMAND               CREATED             STATUS              PORTS                      NAMES
+                97bd07f4deed        sxshunrj/eureka-server   "java -jar app.jar"   16 minutes ago      Up 16 minutes       0.0.0.0:29901->29901/tcp   quirky_bell
+            b：docker stop 97bd07f4deed
+
+三：坑
+    1：建议使用CentOS 7
+    1：COMMAND_FAILED: '/sbin/iptables -t nat -A DOCKER -p tcp -d 0/0 --dport 8111 -j DNAT --to-destination 172.17.0.6:8111 ! -i docker0' failed: iptables: No chain/target/match by that name.
+        pkill docker
+        iptables -t nat -F
+        ifconfig docker0 down
+        brctl delbr docker0
+        重启docker后解决
